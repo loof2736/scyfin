@@ -1,0 +1,11 @@
+/*Transparent top header */
+
+.skinHeader {
+    background-color: transparent !important;
+}
+
+.headerTabs {
+    background-color:rgba(25, 25, 25, 0.5) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(50px) !important;
+}

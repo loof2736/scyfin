@@ -1,0 +1,7 @@
+/* Rounded cards */
+
+.cardContent,
+.cardPadder,
+.cardOverlayContainer {
+    border-radius: 15px !important;
+}
