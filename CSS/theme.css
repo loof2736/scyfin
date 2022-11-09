@@ -1,3 +1,5 @@
+/*Transparent top header */
+
 .skinHeader {
     background-color: transparent !important;
 }
@@ -8,7 +10,31 @@
     backdrop-filter: blur(50px) !important;
 }
 
+/* Rounded cards */
+
 .cardContent,
-.cardPadder {
+.cardPadder,
+.cardOverlayContainer {
     border-radius: 15px !important;
+}
+
+/* Static left drawer */
+
+.layout-desktop .mainDrawer {
+    transform: none !important;
+    left: 0 !important;
+    top: 65px !important;
+    width: 250px !important;
+}
+
+.layout-desktop .libraryPage {
+    margin-left: 225px !important;
+}
+
+.layout-desktop .touch-menu-la.transition {
+    transition: none !important;
+}
+
+.layout-desktop .mainDrawerButton {
+    display: none !important;
 }
