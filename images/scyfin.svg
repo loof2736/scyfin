@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46667 135.46666"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="scyfin.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2838" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#fff6ef;fill-opacity:1;stroke-width:0.336858"
+       id="path2056"
+       cx="67.73333"
+       cy="67.73333"
+       r="67.73333" />
+    <text
+       xml:space="preserve"
+       style="font-size:165.834px;font-family:'Arista Pro Alternate';-inkscape-font-specification:'Arista Pro Alternate';fill:#fffffb;stroke-width:0.863717"
+       x="24.691196"
+       y="106.16783"
+       id="text360"
+       transform="scale(0.99779368,1.0022112)"><tspan
+         sodipodi:role="line"
+         id="tspan358"
+         style="fill:#ffb17e;fill-opacity:1;stroke-width:0.863717"
+         x="24.691196"
+         y="106.16783">σ</tspan></text>
+  </g>
+</svg>
