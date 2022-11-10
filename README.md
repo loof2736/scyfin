@@ -10,6 +10,10 @@ Static Left Drawer
 
 <img src="./images/static-left-drawer-demo.png" alt="static left drawer" width="80%"/>
 
+Example of how borken it is :)
+
+<img src="./images/borken.png" alt="static left drawer" width="80%"/>
+
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin/CSS/static-left-drawer.css');
 
 ---
