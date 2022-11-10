@@ -1,16 +1,30 @@
+/* Increase size of Jellyfin logo */
+.pageTitleWithLogo {
+    margin-left: 15px !important;
+    height: 40px !important;
+}
+
+
+
 /* Static left drawer */
 .layout-desktop .mainDrawer {
     transform: none !important;
     left: 0 !important;
-    top: 65px !important;
+    top: 0 !important;
     width: 250px !important;
     /* Modified background color */
     background-color: #181818 !important;
     /* Added border to right side */
     border-right: 1px solid #3B3B3B;
+    /* Move drawer behind header */
+    z-index: 998 !important;
+}
+/* Lower drawer buttons */
+.mainDrawer-scrollContainer {
+    margin-top: 95px !important;
 }
 /* Shift content to the right */
-.layout-desktop .libraryPage {
+.layout-desktop .libraryPage:not(#quickConnectPreferencesPage) {
     margin-left: 250px !important;
 }
 /* Hide transition on page load */
@@ -21,11 +35,17 @@
 .layout-desktop .mainDrawerButton {
     display: none !important;
 }
-/* Fix for dashboard drawer height */
-.layout-desktop .dashboardDocument .mainDrawer {
-    top: 0px !important;
+/* Fix for dashboard drawer button height */
+.layout-desktop .dashboardDocument .mainDrawer-scrollContainer {
+    padding-top: 0 !important;
 }
-
+/* Hide home button */
+.layout-desktop .headerHomeButton {
+    display: none !important;
+}
+.layout-desktop .dashboardDocument .headerHomeButton {
+    display: block !important;
+}
 
 
 /* Rounded cards */
@@ -47,6 +67,7 @@
     width: 85% !important;
     margin: auto !important;
     text-align: center !important;
+    height: 45px !important;
 }
 /* Center icons and text and shift to the left */
 .navMenuOptionIcon,
@@ -54,10 +75,6 @@
     position: inherit !important;
     left: -10% !important;
     margin-top: 0 !important;
-}
-/* Modified button height */
-.emby-button {
-    height: 45px !important;
 }
 /* Fix for header buttons */
 .emby-button-foreground {
@@ -86,13 +103,72 @@ html {
 /* Transparent header bar */
 .skinHeader {
     background-color: transparent !important;
+    margin-top: 1.5em !important;
 }
 /* Rounded header buttons */
-.headerTabs {
-    background-color:rgba(25, 25, 25, 0.5) !important;
+.headerTabs,
+.headerRight {
+    background-color:rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
-    margin-top: -1.7em !important;
     margin-left: 250px !important;
+    margin-bottom: 10px !important;
+}
+/* Button height */
+.headerRight,
+.emby-tab-button {
+    height: 45px !important;
+}
+/* Lower header and add padding to right buttons */
+.headerRight {
+    padding: 0px 5px !important;
+}
+/* Move left header back up */
+.headerLeft {
+    position: relative !important;
+    top: -17px !important;
 }
 
+
+
+/* Settings and dashboard modifications */
+.emby-input,
+.emby-textarea,
+.paperList,
+.listItem:hover,
+.subtitleappearance-preview {
+    border-radius: 15px !important;
+}
+.button-submit,
+.emby-select,
+.checkboxOutline,
+.btnRefresh,
+#btnShutdown {
+    border-radius: 100px !important;
+}
+.raised:not(.button-submit, .btnRefresh, #btnShutdown) {
+    background: transparent !important;
+    font-weight: normal !important;
+}
+/* Red shutdown button */
+#btnShutdown {
+    background: #AE3739 !important;
+}
+/* Remove border under certain dashboard items */
+.listItem-border {
+    border: 0 !important;
+}
+/* Add padding to list items */
+.listItem {
+    padding-left: 15px !important;
+}
+/* Rounded dashboard cards */
+.cardBox {
+    border-radius: 15px !important;
+}
+/* Removed ugliness of Networking section in dashboard */
+.dashboardHostingForm .verticalSection {
+    border-radius: 15px !important;
+    border-color: #3B3B3B !important;
+    padding: 10px 35px !important;
+}
