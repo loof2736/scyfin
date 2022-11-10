@@ -18,3 +18,7 @@
 .layout-desktop .mainDrawerButton {
     display: none !important;
 }
+
+.layout-desktop .dashboardDocument .mainDrawer {
+    top: 0px !important;
+}
