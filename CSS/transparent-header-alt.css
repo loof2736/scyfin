@@ -1,0 +1,29 @@
+/* Transparent header bar */
+.skinHeader {
+    background-color: transparent !important;
+    margin-top: 0.2em !important;
+}
+
+/* Rounded header buttons */
+.headerTabs,
+.headerRight {
+    background-color:rgba(35, 35, 35, 0.5) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(50px) !important;
+}
+
+/* Lower header and add padding to right buttons */
+.headerRight {
+    padding: 5px !important;
+}
+
+/* Header size */
+.headerTabs {
+    height: 52px !important;
+    top: 1px !important;
+}
+
+/* Center text */
+.emby-button-foreground {
+    top: -6px !important;
+}
