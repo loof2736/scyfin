@@ -5,6 +5,10 @@
     border-radius: 100px !important;
     width: 85% !important;
     margin: auto !important;
+
+    /* Modify button height (optional)
+    height: 45px !important;
+    */
 }
 
 /* Center content vertically and shift to the left */
