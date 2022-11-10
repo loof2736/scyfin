@@ -2,4 +2,4 @@
 
 ---
 
-Custom theme for Jellyfin WebUI
+Custom CSS bits for the Jellyfin WebUI and a (VERY WIP) custom theme
