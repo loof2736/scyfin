@@ -6,7 +6,7 @@ Custom CSS bits for the Jellyfin WebUI and a (VERY WIP) custom theme
 
 ---
 
-Static Left Drawer
+Static Left Drawer (Partially broken on login screen)
 
 <img src="./images/static-left-drawer-demo.png" alt="static left drawer" width="80%"/>
 
