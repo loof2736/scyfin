@@ -1,21 +1,16 @@
 /* Rounded buttons */
-
 .navMenuOption,
 .navMenuOption:hover,
 .navMenuOption-selected {
     border-radius: 100px !important;
     width: 85% !important;
     margin: auto !important;
-    text-align: center !important;
 }
 
+/* Center content vertically and shift to the left */
 .navMenuOptionIcon,
 .navMenuOptionText {
     position: inherit !important;
-    left: -10% !important;
+    left: -7% !important;
     margin-top: 0 !important;
-}
-
-.emby-button {
-    height: 47px !important;
 }
