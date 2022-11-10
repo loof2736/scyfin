@@ -1,9 +1,0 @@
-/* Background color */
-.backdropImage {
-    display: none !important;
-}
-
-.backgroundContainer {
-    background-color: #0F0F0F !important;
-    background-size: cover !important;
-}
