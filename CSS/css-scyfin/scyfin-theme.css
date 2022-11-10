@@ -1,3 +1,16 @@
+/* Scyfin icon */
+.imgLogoIcon {
+    content: url(https://i.imgur.com/R0qqaRd.png) !important;
+}
+.adminDrawerLogo img {
+    content: url(https://i.imgur.com/R0qqaRd.png) !important;
+}
+.pageTitleWithLogo {
+    background-image: url(https://i.imgur.com/R0qqaRd.png) !important;
+}
+
+
+
 /* Static left drawer */
 .layout-desktop .mainDrawer {
     transform: none !important;
