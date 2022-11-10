@@ -25,3 +25,8 @@
 .layout-desktop .dashboardDocument .mainDrawer {
     top: 0px !important;
 }
+
+/* Re-center header buttons */
+.headerTabs {
+    margin-left: 250px !important;
+}
