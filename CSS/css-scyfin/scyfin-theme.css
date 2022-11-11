@@ -69,6 +69,29 @@
 
 
 
+/* Floating progress bar */
+.innerCardFooter {
+    bottom: 5% !important;
+    width: 90% !important;
+    margin: auto !important;
+    border-radius: 100px !important;
+}
+.itemProgressBar {
+    height: 8px !important;
+}
+.innerCardFooterClear {
+    background-color: black !important;
+}
+
+
+
+/* Green watched indicator */
+.playedIndicator {
+    background: #409843 !important;
+}
+
+
+
 /* Rounded left drawer buttons */
 .navMenuOption,
 .navMenuOption:hover,
