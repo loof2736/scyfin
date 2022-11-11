@@ -202,7 +202,7 @@ html {
         margin-right: 15px !important;
     }
     .sectionTabs {
-        width: 11% !important;
+        width: auto !important;
         align-self: center !important;
     }
     .emby-button-foreground {
