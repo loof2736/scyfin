@@ -102,6 +102,9 @@
     text-align: center !important;
     height: 45px !important;
 }
+.navMenuOption:hover:not(.navMenuOption-selected) {
+    background-color: rgba(44, 44, 44, 0.7);
+}
 /* Center icons and text and shift to the left */
 .navMenuOptionIcon,
 .navMenuOptionText {
@@ -116,10 +119,10 @@
 
 
 
-/* Left drawer button color */
+/* Custom button color */
 .navMenuOption-selected {
-    background: #46372D!important;
-    color: #FFB380 !important;
+    background: rgba(33, 149, 243, 0.2) !important;
+    color: rgb(33, 149, 243) !important;
 }
 
 
