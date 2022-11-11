@@ -2,9 +2,6 @@
 .skinHeader {
     background-color: transparent !important;
 }
-.layout-desktop .skinHeader {
-    padding-top: 1.5em !important;
-}
 
 /* Rounded header buttons */
 .headerTabs,
@@ -16,7 +13,7 @@
 
 /* Lower header and add padding to right buttons */
 .layout-desktop .headerRight {
-    padding: 0px 5px !important;
+    padding: 5px !important;
 }
 
 /* Header size */
