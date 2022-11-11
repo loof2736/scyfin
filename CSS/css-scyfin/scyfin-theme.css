@@ -1,5 +1,5 @@
 /* Increase size of Jellyfin logo */
-.pageTitleWithLogo {
+.layout-desktop .pageTitleWithLogo {
     margin-left: 15px !important;
     height: 40px !important;
     margin-top: 5px !important;
@@ -21,8 +21,11 @@
     z-index: 998 !important;
 }
 /* Lower drawer buttons */
-.mainDrawer-scrollContainer {
+.layout-desktop .mainDrawer-scrollContainer {
     margin-top: 95px !important;
+}
+.layout-mobile .mainDrawer-scrollContainer {
+    margin-top: 20px !important;
 }
 /* Shift content to the right */
 .layout-desktop .libraryPage:not(#quickConnectPreferencesPage) {
@@ -49,7 +52,7 @@
 }
 /* Fix for video player and login page */
 .layout-desktop .hide-scroll .mainDrawer,
-.hideMainDrawer .mainDrawer {
+.layout-desktop .hideMainDrawer .mainDrawer {
     left: -320px !important;
 }
 
@@ -84,7 +87,7 @@
     margin-top: 0 !important;
 }
 /* Fix for header buttons */
-.emby-button-foreground {
+.layout-desktop .emby-button-foreground {
     top: -9px !important;
 }
 
@@ -110,7 +113,9 @@ html {
 /* Transparent header bar */
 .skinHeader {
     background-color: transparent !important;
-    margin-top: 1.5em !important;
+}
+.layout-desktop .skinHeader {
+    padding-top: 1.5em !important;
 }
 /* Rounded header buttons */
 .headerTabs,
@@ -118,6 +123,9 @@ html {
     background-color:rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
+}
+.layout-desktop .headerTabs,
+.layout-desktop .headerRight {
     margin-left: 250px !important;
     margin-bottom: 10px !important;
 }
@@ -127,13 +135,25 @@ html {
     height: 45px !important;
 }
 /* Lower header and add padding to right buttons */
-.headerRight {
+.layout-desktop .headerRight {
     padding: 0px 5px !important;
 }
 /* Move left header back up */
-.headerLeft {
+.layout-desktop .headerLeft {
     position: relative !important;
     top: -17px !important;
+}
+/* Mobile fixes */
+.layout-mobile .headroom--unpinned {
+    transform: translateY(-50%);
+}
+.layout-mobile .sectionTabs {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: auto !important;
+}
+.layout-mobile .emby-button-foreground {
+    top: -2px !important;
 }
 
 
@@ -166,7 +186,7 @@ html {
     border: 0 !important;
 }
 /* Add padding to list items */
-.listItem {
+.layout-desktop .listItem {
     padding-left: 15px !important;
 }
 /* Rounded dashboard cards */
@@ -184,28 +204,28 @@ html {
 
 /* Fix for scaling issues */
 @media (width: 1600px) {
-    .headerRight {
+    .layout-desktop .headerRight {
         margin-bottom: 0 !important;
     }
-    .emby-button-foreground {
+    .layout-desktop .emby-button-foreground {
         top: -4px !important;
     }
 }
 @media (max-width: 1599px) {
-    .pageTitleWithLogo {
+    .layout-desktop .pageTitleWithLogo {
         margin-left: 25px !important;
     }
-    .headerTabs {
+    .layout-desktop .headerTabs {
         margin-top: -65px !important;
     }
-    .headerRight {
+    .layout-desktop .headerRight {
         margin-right: 15px !important;
     }
-    .sectionTabs {
+    .layout-desktop .sectionTabs {
         width: auto !important;
         align-self: center !important;
     }
-    .emby-button-foreground {
+    .layout-desktop .emby-button-foreground {
         top: -2px !important;
     }
 }
