@@ -53,6 +53,10 @@
 .layout-desktop .hideMainDrawer .mainDrawer {
     left: -320px !important;
 }
+/* Fix for scroll menus on home page */
+.emby-scroller {
+    margin-right: -2% !important;
+}
 
 
 
