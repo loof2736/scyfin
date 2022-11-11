@@ -2,7 +2,18 @@
 
 ---
 
-Custom CSS bits for the Jellyfin WebUI and a (VERY WIP) custom theme
+Custom CSS bits for the Jellyfin WebUI and a complete custom theme
+
+---
+
+Scyfin Complete Theme
+
+<img src="./images/scyfin/scyfin1.png" alt="scyfin1" width="80%"/>
+<img src="./images/scyfin/scyfin2.jpg" alt="scyfin2" width="80%"/>
+<img src="./images/scyfin/scyfin3.png" alt="scyfin3" width="80%"/>
+<img src="./images/scyfin/scyfin4.png" alt="scyfin4" width="80%"/>
+
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v0.0.3/CSS/css-scyfin/scyfin-theme.css');
 
 ---
 
