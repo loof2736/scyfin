@@ -27,11 +27,11 @@
 }
 
 /* Re-center header buttons */
-.headerTabs {
+.layout-desktop .headerTabs {
     margin-left: 250px !important;
 }
 /* Fix for video player and login page */
 .layout-desktop .hide-scroll .mainDrawer,
-.hideMainDrawer .mainDrawer {
+.layout-desktop .hideMainDrawer .mainDrawer {
     left: -320px !important;
 }
