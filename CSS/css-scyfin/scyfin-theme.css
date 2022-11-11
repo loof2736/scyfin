@@ -2,6 +2,7 @@
 .pageTitleWithLogo {
     margin-left: 15px !important;
     height: 40px !important;
+    margin-top: 5px !important;
 }
 
 
@@ -46,6 +47,12 @@
 .layout-desktop .dashboardDocument .headerHomeButton {
     display: block !important;
 }
+/* Fix for video player and login page */
+.layout-desktop .hide-scroll .mainDrawer,
+.hideMainDrawer .mainDrawer {
+    left: -320px !important;
+}
+
 
 
 /* Rounded cards */
