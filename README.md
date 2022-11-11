@@ -32,14 +32,6 @@ Rounded Drawer Buttons
 
 Transparent Header
 
-<img src="./images/transparent-header-demo.png" alt="transparent header" width="80%"/>
-
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@main/CSS/transparent-header.css');
-
----
-
-Transparent Header Alternative
-
 <img src="./images/transparent-header-alt-demo.png" alt="transparent header alt" width="80%"/>
 
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@main/CSS/transparent-header-alt.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@main/CSS/transparent-header.css');
