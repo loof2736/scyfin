@@ -179,3 +179,33 @@ html {
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
 }
+
+
+
+/* Fix for scaling issues */
+@media (width: 1600px) {
+    .headerRight {
+        margin-bottom: 0 !important;
+    }
+    .emby-button-foreground {
+        top: -4px !important;
+    }
+}
+@media (max-width: 1599px) {
+    .pageTitleWithLogo {
+        margin-left: 25px !important;
+    }
+    .headerTabs {
+        margin-top: -65px !important;
+    }
+    .headerRight {
+        margin-right: 15px !important;
+    }
+    .sectionTabs {
+        width: 11% !important;
+        align-self: center !important;
+    }
+    .emby-button-foreground {
+        top: -2px !important;
+    }
+}
