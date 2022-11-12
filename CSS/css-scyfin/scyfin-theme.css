@@ -232,6 +232,122 @@ html {
 
 
 
+/* Remove show/movie image on details page */
+.layout-desktop .detailImageContainer {
+    display: none !important;
+}
+
+/* Re-position content on details page */
+.layout-desktop .detailSection {
+    margin-right: 0 !important;
+}
+.layout-desktop .detailPageContent {
+    padding-left: 4% !important;
+}
+
+/* Re-position logo */
+.layout-desktop .detailLogo {
+    right: 0 !important;
+    left: 4% !important;
+    top: 14vh !important;
+}
+
+/* Transparent ribbon bar */
+.detailRibbon {
+    background: transparent !important;
+}
+
+/* Add card around top-right buttons */
+.mainDetailButtons {
+    background: rgba(35, 35, 35, 0.5) !important;
+    border-radius: 100px !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Add card around groups section */
+.layout-desktop .detailsGroupItem {
+    background: #181818 !important;
+    padding: 10px 20px !important;
+    border-radius: 100px !important;
+    width: fit-content !important;
+    max-width: max-content !important;
+}
+
+/* Fix for groups section card */
+.layout-desktop .content.focuscontainer-x {
+    white-space: nowrap !important;
+    padding-right: 48px !important;
+}
+
+/* Alternative mobile group section card */
+.layout-mobile .itemDetailsGroup {
+    background: #181818 !important;
+    padding: 15px 20px 5px 20px !important;
+    border-radius: 15px !important;
+}
+
+/* Add card around description */
+.layout-desktop .detailSectionContent {
+    background: #181818 !important;
+    border-radius: 15px !important;
+    padding: 40px 20px 10px 20px !important;
+    margin-top: 50px !important;
+}
+.layout-mobile .detailSectionContent {
+    background: #181818 !important;
+    border-radius: 15px !important;
+    padding: 10px 20px !important;
+}
+
+/* Add card around track selection */
+.trackSelections {
+    background: #181818 !important;
+    border-radius: 15px !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+}
+
+/* Re-position title */
+.layout-desktop .infoWrapper {
+    margin-top: 245px !important;
+}
+.layout-desktop .detailPagePrimaryContainer {
+    padding-left: 4% !important;
+}
+.layout-desktop .nameContainer {
+    padding-bottom: 30px !important;
+}
+.layout-desktop .itemMiscInfo {
+    margin-left: 21px !important;
+}
+
+/* Move track selection box */
+.detailSection {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+}
+.detailSection .detailSectionContent {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+}
+.detailSection .trackSelections {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+}
+.detailSection .itemDetailsGroup {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    box-ordinal-group: 3;
+}
+
+
+
 /* Fix for scaling issues */
 @media (width: 1600px) {
     .layout-desktop .headerRight {
