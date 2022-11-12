@@ -19,6 +19,7 @@ Scyfin Complete Theme
 ---
 
 Scyfin Complete Theme - Backdrops Supported
+
 Note - Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops) for backdrop supported version to display properly
 
 <img src="./images/scyfin/scyfin-backdrop1.jpg" alt="scyfin-backdrop1" width="80%"/>
