@@ -248,19 +248,24 @@
 }
 
 /* Add card around top-right buttons */
-.mainDetailButtons {
+.layout-desktop .mainDetailButtons {
     background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 100px !important;
     backdrop-filter: blur(10px) !important;
 }
+.layout-mobile .mainDetailButtons {
+    background: #181818 !important;
+    border-radius: 100px !important;
+}
 
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
-    background: #181818 !important;
+    background: rgba(35, 35, 35, 0.5) !important;
     padding: 10px 20px !important;
     border-radius: 100px !important;
     width: fit-content !important;
     max-width: max-content !important;
+    backdrop-filter: blur(40px) !important;
 }
 
 /* Fix for groups section card */
@@ -278,10 +283,11 @@
 
 /* Add card around description */
 .layout-desktop .detailSectionContent {
-    background: #181818 !important;
+    background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 15px !important;
     padding: 40px 20px 10px 20px !important;
     margin-top: 50px !important;
+    backdrop-filter: blur(40px) !important;
 }
 .layout-mobile .detailSectionContent {
     background: #181818 !important;
@@ -290,7 +296,14 @@
 }
 
 /* Add card around track selection */
-.trackSelections {
+.layout-desktop .trackSelections {
+    background: rgba(35, 35, 35, 0.5) !important;
+    border-radius: 15px !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+    backdrop-filter: blur(40px) !important;
+}
+.layout-mobile .trackSelections {
     background: #181818 !important;
     border-radius: 15px !important;
     padding: 10px 20px !important;
@@ -334,6 +347,13 @@
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
     box-ordinal-group: 3;
+}
+/* Fix for backdrops */
+.layout-desktop #itemBackdrop {
+    display: none !important;
+}
+.layout-desktop .detailPageWrapperContainer {
+    padding-top: 20% !important;
 }
 
 
