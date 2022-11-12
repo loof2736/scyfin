@@ -14,7 +14,7 @@ Scyfin Complete Theme
 <img src="./images/scyfin/scyfin4.png" alt="scyfin4" width="80%"/>
 <img src="./images/scyfin/scyfin5.png" alt="scyfin5" width="80%"/>
 
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v0.0.3/CSS/css-scyfin/scyfin-theme.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.0/CSS/css-scyfin/scyfin-theme.css');
 
 ---
 
@@ -24,6 +24,8 @@ Note - Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops)
 <img src="./images/scyfin/scyfin-backdrop1.jpg" alt="scyfin-backdrop1" width="80%"/>
 <img src="./images/scyfin/scyfin-backdrop2.png" alt="scyfin-backdrop2" width="80%"/>
 <img src="./images/scyfin/scyfin-backdrop3.jpg" alt="scyfin-backdrop3" width="80%"/>
+
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.0/CSS/css-scyfin/scyfin-theme-backdrop.css');
 
 ---
 
