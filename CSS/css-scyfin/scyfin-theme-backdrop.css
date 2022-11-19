@@ -213,8 +213,8 @@
 .cardBox {
     border-radius: 15px !important;
 }
-/* Removed ugliness of Networking section in dashboard */
-.dashboardHostingForm .verticalSection {
+/* Removed ugliness of border-card styling */
+.layout-desktop fieldset.verticalSection-extrabottompadding {
     border-radius: 15px !important;
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
@@ -318,10 +318,13 @@
     padding-left: 4% !important;
 }
 .layout-desktop .nameContainer {
-    padding-bottom: 30px !important;
+    position: absolute !important;
+    margin-top: -50px !important;
 }
 .layout-desktop .itemMiscInfo {
+    position: absolute !important;
     margin-left: 21px !important;
+    margin-top: 16px !important;
 }
 
 /* Move track selection box */
@@ -354,6 +357,26 @@
 }
 .layout-desktop .detailPageWrapperContainer {
     padding-top: 20% !important;
+}
+/* Move episode title */
+.layout-desktop .nameContainer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+}
+.layout-desktop .nameContainer .parentName {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+}
+.layout-desktop .nameContainer .itemName {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    margin: 0.45em 0 0 0 !important;
 }
 
 
