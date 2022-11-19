@@ -223,8 +223,9 @@ html {
 .cardBox {
     border-radius: 15px !important;
 }
-/* Removed ugliness of Networking section in dashboard */
-.dashboardHostingForm .verticalSection {
+/* Removed ugliness of border-card styling */
+.layout-desktop .verticalSection,
+.layout-desktop .verticalSection-extrabottompadding {
     border-radius: 15px !important;
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
