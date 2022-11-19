@@ -224,8 +224,7 @@ html {
     border-radius: 15px !important;
 }
 /* Removed ugliness of border-card styling */
-.layout-desktop .verticalSection,
-.layout-desktop .verticalSection-extrabottompadding {
+.layout-desktop fieldset.verticalSection-extrabottompadding {
     border-radius: 15px !important;
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
