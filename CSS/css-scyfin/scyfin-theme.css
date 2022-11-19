@@ -346,7 +346,7 @@ html {
     box-ordinal-group: 3;
 }
 /* Move episode title */
-.nameContainer {
+.layout-desktop .nameContainer {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -354,17 +354,17 @@ html {
     -moz-box-orient: horizontal;
     box-orient: horizontal;
 }
-.nameContainer .parentName {
+.layout-desktop .nameContainer .parentName {
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     box-ordinal-group: 1;
 }
-.nameContainer .itemName {
+.layout-desktop .nameContainer .itemName {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
 }
-.itemName.subtitle {
+.layout-desktop .itemName.subtitle {
     margin: 0.45em 0 0 0 !important;
 }
 
