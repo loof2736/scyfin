@@ -315,10 +315,13 @@ html {
     padding-left: 4% !important;
 }
 .layout-desktop .nameContainer {
-    padding-bottom: 30px !important;
+    position: absolute !important;
+    margin-top: -50px !important;
 }
 .layout-desktop .itemMiscInfo {
+    position: absolute !important;
     margin-left: 21px !important;
+    margin-top: 16px !important;
 }
 
 /* Move track selection box */
@@ -363,10 +366,7 @@ html {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
-}
-.layout-desktop .itemName.subtitle {
     margin: 0.45em 0 0 0 !important;
-}
 
 
 
