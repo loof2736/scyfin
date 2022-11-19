@@ -26,7 +26,7 @@
     margin-top: 20px !important;
 }
 /* Shift content to the right */
-.layout-desktop .libraryPage:not(#quickConnectPreferencesPage) {
+.layout-desktop .libraryPage:not(#quickConnectPreferencesPage, #editItemMetadataPage) {
     margin-left: 250px !important;
 }
 /* Hide transition on page load */
@@ -218,6 +218,35 @@
     border-radius: 15px !important;
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
+}
+
+
+
+/* Metadata editor fixes */
+.editPageSidebar {
+    margin-left: 250px !important;
+    width: 20% !important;
+}
+.layout-desktop #editItemMetadataPage {
+    margin-left: 215px !important;
+}
+.jstree-default-large .jstree-node {
+    line-height: 35px !important;
+}
+.jstree-default .jstree-wholerow-clicked {
+    background: rgba(33, 149, 243, 0.2) !important;
+}
+.jstree-wholerow-hovered {
+    background: rgba(35, 35, 35, 0.5) !important;
+}
+.jstree-children {
+    margin-left: -10px !important;
+}
+#editItemMetadataPage .btnHeaderSave {
+    background: #00A4DC !important;
+    border-radius: 100px !important;
+    height: 40px !important;
+    color: white !important;
 }
 
 
