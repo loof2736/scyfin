@@ -195,8 +195,11 @@
     border-radius: 100px !important;
 }
 /* Modify username placement on profile page */
-.username {
-    margin: 0px 0px 10px -50px !important;
+.layout-desktop #userProfilePage .readOnlyContent div:not([class]), div[class=""]{
+    align-items: initial !important;
+}
+.layout-desktop .username {
+    margin: 0px 0px 10px 10px !important;
 }
 /* Red shutdown button */
 #btnShutdown {
@@ -417,7 +420,7 @@
 
 
 /* Live TV guide reposition */
-#guideTab {
+.layout-desktop #guideTab {
     margin-left: -75px !important;
 }
 .guide-channelHeaderCell {
