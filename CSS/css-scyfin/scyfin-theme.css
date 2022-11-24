@@ -368,15 +368,20 @@ html {
     -moz-box-ordinal-group: 1;
     box-ordinal-group: 1;
 }
-.detailSection .trackSelections {
+.detailSection .recordingFields {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
 }
-.detailSection .itemDetailsGroup {
+.detailSection .trackSelections {
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
     box-ordinal-group: 3;
+}
+.detailSection .itemDetailsGroup {
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    box-ordinal-group: 4;
 }
 /* Move episode title */
 .layout-desktop .nameContainer {
@@ -397,6 +402,34 @@ html {
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
     margin: 0.45em 0 0 0 !important;
+}
+
+
+
+/* Live TV guide reposition */
+#guideTab {
+    margin-left: -75px !important;
+}
+.guide-channelHeaderCell {
+    border-style: none !important;
+}
+/* Modified background color of active guide cells */
+.programCell-active {
+    background: #181818 !important;
+}
+/* Repositioned record button */
+.recordingFields {
+    margin: 5px 0 -7px 0 !important;
+}
+.recordingButton {
+    height: 40px !important;
+}
+.recordingIcon {
+    color: red !important;
+}
+/* Remove overlapping text */
+.itemMiscInfo.itemMiscInfo-secondary {
+    margin-left: 65px !important;
 }
 
 

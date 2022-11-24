@@ -371,15 +371,20 @@
     -moz-box-ordinal-group: 1;
     box-ordinal-group: 1;
 }
-.detailSection .trackSelections {
+.detailSection .recordingFields {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
 }
-.detailSection .itemDetailsGroup {
+.detailSection .trackSelections {
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
     box-ordinal-group: 3;
+}
+.detailSection .itemDetailsGroup {
+    -webkit-box-ordinal-group: 4;
+    -moz-box-ordinal-group: 4;
+    box-ordinal-group: 4;
 }
 /* Fix for backdrops */
 .layout-desktop #itemBackdrop {
@@ -407,6 +412,39 @@
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
     margin: 0.45em 0 0 0 !important;
+}
+
+
+
+/* Live TV guide reposition */
+#guideTab {
+    margin-left: -75px !important;
+}
+.guide-channelHeaderCell {
+    border-style: none !important;
+}
+/* Modified background color of active guide cells */
+.programCell-active {
+    background: #181818 !important;
+}
+/* Translucent buttons */
+.raised.emby-button:not(.button-submit) {
+    background: rgba(35, 35, 35, 0.5) !important;
+    backdrop-filter: blur(40px) !important;
+}
+/* Repositioned record button */
+.recordingFields {
+    margin: 5px 0 -7px 0 !important;
+}
+.recordingButton {
+    height: 40px !important;
+}
+.recordingIcon {
+    color: red !important;
+}
+/* Remove overlapping text */
+.itemMiscInfo.itemMiscInfo-secondary {
+    margin-left: 65px !important;
 }
 
 
