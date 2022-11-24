@@ -190,12 +190,9 @@
 .emby-select,
 .checkboxOutline,
 .btnRefresh,
-#btnShutdown {
+#btnShutdown,
+.raised {
     border-radius: 100px !important;
-}
-.raised:not(.button-submit, .btnRefresh, #btnShutdown) {
-    background: transparent !important;
-    font-weight: normal !important;
 }
 /* Red shutdown button */
 #btnShutdown {
