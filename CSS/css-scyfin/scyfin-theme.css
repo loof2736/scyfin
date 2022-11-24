@@ -204,6 +204,10 @@ html {
 .raised {
     border-radius: 100px !important;
 }
+/* Modify username placement on profile page */
+.username {
+    margin: 0px 0px 10px -50px !important;
+}
 /* Red shutdown button */
 #btnShutdown {
     background: #AE3739 !important;
