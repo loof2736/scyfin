@@ -409,13 +409,7 @@ html {
 
 
 
-/* Live TV guide reposition */
-.layout-desktop #guideTab {
-    margin-left: -75px !important;
-}
-.guide-channelHeaderCell {
-    border-style: none !important;
-}
+/* Live TV */
 /* Modified background color of active guide cells */
 .programCell-active {
     background: #181818 !important;
