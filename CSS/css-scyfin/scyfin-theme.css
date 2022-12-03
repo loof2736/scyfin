@@ -188,8 +188,8 @@ html {
 
 
 
-/* Modified next up card and added support for Intro Skipper plugin */
-.upNextContainer, .toastVisible {
+/* Player modifications */
+.upNextContainer, .toastVisible, .sliderBubble {
     backdrop-filter: blur(50px) !important;
 }
 .upNextContainer {
@@ -199,6 +199,11 @@ html {
 .toastVisible {
     border-radius: 30px !important;
     background-color: rgba(35, 35, 35, 0.5) !important;
+}
+.sliderBubble {
+    border-radius: 15px !important;
+    background-color: rgba(0,0,0,0.5) !important;
+    height: 55px !important
 }
 
 
