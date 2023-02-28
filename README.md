@@ -16,6 +16,13 @@ Scyfin Complete Theme
 
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.7/CSS/css-scyfin/scyfin-theme.css');
 
+Note: If you use the Jellyfin Media Player desktop app, you need to add this CSS bit (navigate to Settings>Display>Custom CSS Code if you only want it to apply to one client, ie the desktop app) or else the content will be covered by the sidebar:
+
+```
+/* Scyfin Media Player fix */
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {margin-left: 250px !important;}
+```
+
 ---
 
 Scyfin Complete Theme - Backdrops Supported
@@ -27,6 +34,13 @@ Note - Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops)
 <img src="./images/scyfin/scyfin-backdrop3.jpg" alt="scyfin-backdrop3" width="80%"/>
 
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.7/CSS/css-scyfin/scyfin-theme-backdrop.css');
+
+Note: If you use the Jellyfin Media Player desktop app, you need to add this CSS bit (navigate to Settings>Display>Custom CSS Code if you only want it to apply to one client, ie the desktop app) or else the content will be covered by the sidebar:
+
+```
+/* Scyfin Media Player fix */
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {margin-left: 250px !important;}
+```
 
 ---
 
