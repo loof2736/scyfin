@@ -28,7 +28,11 @@
     margin-top: 20px !important;
 }
 /* Shift content to the right */
-.layout-desktop .libraryPage:not(#quickConnectPreferencesPage, #editItemMetadataPage) {
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+    margin-left: 250px !important;
+}
+/* Fix for Jellyfin Media Player */
+.quickConnectSettingsContainer {
     margin-left: 250px !important;
 }
 /* Hide transition on page load */
