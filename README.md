@@ -2,7 +2,7 @@
 
 ---
 
-Custom CSS bits for the Jellyfin WebUI and a complete custom theme (Plus a backdrops supported version)
+Custom CSS theme for Jellyfin (plus a backdrops supported version)
 
 ---
 
@@ -16,11 +16,22 @@ Scyfin Complete Theme
 
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.7/CSS/css-scyfin/scyfin-theme.css');
 
+Note: If you use the Jellyfin Media Player desktop app, you need to add this CSS bit (navigate to Settings>Display>Custom CSS Code if you only want it to apply to one client, ie the desktop app) or else the content will be covered by the sidebar:
+
+```
+/* Scyfin Media Player fix */
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {margin-left: 250px !important;}
+```
+
 ---
 
 Scyfin Complete Theme - Backdrops Supported
 
-Note - Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops) for backdrop supported version to display properly
+Note - 
+
+ Only add 1 version of the theme, do not add both the normal Scyfin theme and the backdrops supported version together
+ 
+ Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops) for backdrop supported version to display properly
 
 <img src="./images/scyfin/scyfin-backdrop1.jpg" alt="scyfin-backdrop1" width="80%"/>
 <img src="./images/scyfin/scyfin-backdrop2.png" alt="scyfin-backdrop2" width="80%"/>
@@ -28,34 +39,9 @@ Note - Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops)
 
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.7/CSS/css-scyfin/scyfin-theme-backdrop.css');
 
----
+Note - If you use the Jellyfin Media Player desktop app, you need to add this CSS bit (navigate to Settings>Display>Custom CSS Code if you only want it to apply to one client, ie the desktop app) or else the content will be covered by the sidebar:
 
-Static Left Drawer
-
-<img src="./images/static-left-drawer-demo.png" alt="static left drawer" width="80%"/>
-
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@m0.0.1-alpha/CSS/static-left-drawer.css');
-
----
-
-Rounded Cards
-
-<img src="./images/rounded-cards-demo.png" alt="rounded cards" width="80%"/>
-
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@m0.0.1-alpha/CSS/rounded-cards.css');
-
----
-
-Rounded Drawer Buttons
-
-<img src="./images/rounded-drawer-buttons-demo.png" alt="rounded drawer buttons" width="80%"/>
-
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@m0.0.1-alpha/CSS/rounded-drawer-buttons.css');
-
----
-
-Transparent Header
-
-<img src="./images/transparent-header-alt-demo.png" alt="transparent header alt" width="80%"/>
-
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@m0.0.1-alpha/CSS/transparent-header.css');
+```
+/* Scyfin Media Player fix */
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {margin-left: 250px !important;}
+```
