@@ -14,7 +14,10 @@ Scyfin Complete Theme
 <img src="./images/scyfin/scyfin4.png" alt="scyfin4" width="80%"/>
 <img src="./images/scyfin/scyfin5.png" alt="scyfin5" width="80%"/>
 
+```css
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.8/CSS/css-scyfin/scyfin-theme.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.8/CSS/css-colors/scyfin-theme.css');
+```
 
 ---
 
@@ -30,4 +33,7 @@ Note -
 <img src="./images/scyfin/scyfin-backdrop2.png" alt="scyfin-backdrop2" width="80%"/>
 <img src="./images/scyfin/scyfin-backdrop3.jpg" alt="scyfin-backdrop3" width="80%"/>
 
+```css
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.8/CSS/css-scyfin/scyfin-theme-backdrop.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.8/CSS/css-colors/scyfin-theme-backdrop.css');
+```
