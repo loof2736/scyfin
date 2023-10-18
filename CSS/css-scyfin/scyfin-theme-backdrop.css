@@ -85,16 +85,9 @@
 .itemProgressBar {
     height: 8px !important;
 }
-.innerCardFooterClear {
-    background-color: black !important;
-}
 
 
 
-/* Green watched indicator */
-.playedIndicator {
-    background: #409843 !important;
-}
 
 
 
@@ -107,9 +100,6 @@
     margin: auto !important;
     text-align: center !important;
     height: 45px !important;
-}
-.navMenuOption:hover:not(.navMenuOption-selected) {
-    background-color: rgba(44, 44, 44, 0.7);
 }
 /* Center icons and text and shift to the left */
 .navMenuOptionIcon,
@@ -127,8 +117,6 @@
 
 /* Custom button color */
 .navMenuOption-selected {
-    background: rgba(33, 149, 243, 0.2) !important;
-    color: rgb(33, 149, 243) !important;
     backdrop-filter: blur(50px) !important;
 }
 
@@ -144,7 +132,6 @@
 /* Rounded header buttons */
 .headerTabs,
 .headerRight {
-    background-color:rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
 }
@@ -205,10 +192,6 @@
 .layout-desktop .username {
     margin: 0px 0px 10px 10px !important;
 }
-/* Red shutdown button */
-#btnShutdown {
-    background: #AE3739 !important;
-}
 /* Remove border under certain dashboard items */
 .listItem-border {
     border: 0 !important;
@@ -224,7 +207,6 @@
 /* Removed ugliness of border-card styling */
 .layout-desktop fieldset.verticalSection-extrabottompadding {
     border-radius: 15px !important;
-    border-color: #3B3B3B !important;
     padding: 10px 35px !important;
 }
 
@@ -241,20 +223,12 @@
 .jstree-default-large .jstree-node {
     line-height: 35px !important;
 }
-.jstree-default .jstree-wholerow-clicked {
-    background: rgba(33, 149, 243, 0.2) !important;
-}
-.jstree-wholerow-hovered {
-    background: rgba(35, 35, 35, 0.5) !important;
-}
 .jstree-children {
     margin-left: -10px !important;
 }
 #editItemMetadataPage .btnHeaderSave {
-    background: #00A4DC !important;
     border-radius: 100px !important;
     height: 40px !important;
-    color: white !important;
 }
 
 
@@ -286,7 +260,6 @@
 
 /* Add card around top-right buttons */
 .layout-desktop .mainDetailButtons {
-    background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 100px !important;
     backdrop-filter: blur(10px) !important;
 }
@@ -297,7 +270,6 @@
 
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
-    background: rgba(35, 35, 35, 0.5) !important;
     padding: 10px 20px !important;
     border-radius: 100px !important;
     width: fit-content !important;
@@ -313,35 +285,30 @@
 
 /* Alternative mobile group section card */
 .layout-mobile .itemDetailsGroup {
-    background: #181818 !important;
     padding: 15px 20px 5px 20px !important;
     border-radius: 15px !important;
 }
 
 /* Add card around description */
 .layout-desktop .detailSectionContent {
-    background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 15px !important;
     padding: 40px 20px 10px 20px !important;
     margin-top: 50px !important;
     backdrop-filter: blur(40px) !important;
 }
 .layout-mobile .detailSectionContent {
-    background: #181818 !important;
     border-radius: 15px !important;
     padding: 10px 20px !important;
 }
 
 /* Add card around track selection */
 .layout-desktop .trackSelections {
-    background: rgba(35, 35, 35, 0.5) !important;
     border-radius: 15px !important;
     padding: 10px 20px !important;
     margin-top: 20px !important;
     backdrop-filter: blur(40px) !important;
 }
 .layout-mobile .trackSelections {
-    background: #181818 !important;
     border-radius: 15px !important;
     padding: 10px 20px !important;
     margin-top: 20px !important;
@@ -424,13 +391,8 @@
 
 
 /* Live TV */
-/* Modified background color of active guide cells */
-.programCell-active {
-    background: #181818 !important;
-}
 /* Translucent buttons */
 .raised.emby-button:not(.button-submit) {
-    background: rgba(35, 35, 35, 0.5) !important;
     backdrop-filter: blur(40px) !important;
 }
 /* Repositioned record button */
@@ -440,9 +402,7 @@
 .recordingButton {
     height: 40px !important;
 }
-.recordingIcon {
-    color: red !important;
-}
+
 /* Remove overlapping text */
 .itemMiscInfo.itemMiscInfo-secondary {
     margin-left: 65px !important;
@@ -456,15 +416,12 @@
 }
 .upNextContainer {
     border-radius: 15px !important;
-    background-color: rgba(0, 0, 0, 0.7) !important;
 }
 .toastVisible {
     border-radius: 30px !important;
-    background-color: rgba(35, 35, 35, 0.5) !important;
 }
 .sliderBubble {
     border-radius: 15px !important;
-    background-color: rgba(0,0,0,0.5) !important;
     height: 55px !important
 }
 /* Support for Jellyscrub plugin */

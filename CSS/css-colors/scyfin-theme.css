@@ -1,0 +1,147 @@
+
+/* Static left drawer */
+.layout-desktop .mainDrawer {
+
+    /* Modified background color */
+    background-color: #181818 !important;
+    /* Added border to right side */
+    border-right: 1px solid #3B3B3B !important;
+    /* Move drawer behind header */
+}
+
+
+.innerCardFooterClear {
+    background-color: black !important;
+}
+
+/* Green watched indicator */
+.playedIndicator {
+    background: #409843 !important;
+}
+
+
+
+
+.navMenuOption:hover:not(.navMenuOption-selected) {
+    background-color: rgba(44, 44, 44, 0.7);
+}
+
+
+
+
+
+/* Custom button color */
+.navMenuOption-selected {
+    background: rgba(33, 149, 243, 0.2) !important;
+    color: rgb(33, 149, 243) !important;
+}
+
+
+
+/* Modified background color */
+.backgroundContainer,
+.dialog,
+html {
+    background-color: #0F0F0F !important;
+}
+
+
+
+/* Transparent header bar */
+.skinHeader {
+    background-color: transparent !important;
+}
+
+
+
+/* Player modifications */
+.upNextContainer {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.toastVisible {
+    background-color: rgba(35, 35, 35, 0.5) !important;
+}
+.sliderBubble {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+
+
+
+/* Settings and dashboard modifications */
+/* Red shutdown button */
+#btnShutdown {
+    background: #AE3739 !important;
+}
+
+/* Removed ugliness of border-card styling */
+.layout-desktop fieldset.verticalSection-extrabottompadding {
+    border-color: #3B3B3B !important;
+}
+
+
+
+/* Metadata editor fixes */
+.jstree-default .jstree-wholerow-clicked {
+    background: rgba(33, 149, 243, 0.2) !important;
+}
+.jstree-wholerow-hovered {
+    background: rgba(35, 35, 35, 0.5) !important;
+}
+#editItemMetadataPage .btnHeaderSave {
+    background: #00A4DC !important;
+    color: white !important;
+}
+
+
+
+
+
+
+/* Transparent ribbon bar */
+.detailRibbon {
+    background: transparent !important;
+}
+
+/* Add card around top-right buttons */
+.mainDetailButtons {
+    background: rgba(35, 35, 35, 0.5) !important;
+}
+
+/* Add card around groups section */
+.layout-desktop .detailsGroupItem {
+    background: #181818 !important;
+}
+
+
+
+/* Alternative mobile group section card */
+.layout-mobile .itemDetailsGroup {
+    background: #181818 !important;
+}
+
+/* Add card around description */
+.layout-desktop .detailSectionContent {
+    background: #181818 !important;
+}
+.layout-mobile .detailSectionContent {
+    background: #181818 !important;
+}
+
+/* Add card around track selection */
+.trackSelections {
+    background: #181818 !important;
+}
+
+
+
+
+/* Live TV */
+/* Modified background color of active guide cells */
+.programCell-active {
+    background: #181818 !important;
+}
+
+.recordingIcon {
+    color: red !important;
+}
