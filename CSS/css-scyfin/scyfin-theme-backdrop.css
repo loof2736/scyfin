@@ -347,6 +347,11 @@
     margin-top: 20px !important;
 }
 
+/* Fix for track select dropdowns */
+.trackSelections .selectContainer .detailTrackSelect {
+    padding: 0 10px;
+}
+
 /* Re-position title */
 .layout-desktop .infoWrapper {
     margin-top: 245px !important;
