@@ -6,7 +6,7 @@
 }
 
 /* Un-static left drawer */
-.layout-desktop .mainDrawer {
+.layout-desktop .mainDrawer:not(.dashboardDocument .mainDrawer) {
     left: -345px !important;
     width: 275px !important;
     /* Move drawer behind header */
@@ -38,13 +38,19 @@
 }
 
 /* Show hamburger button */
-.layout-desktop .mainDrawerButton {
+.layout-desktop .mainDrawerButton:not(.dashboardDocument .mainDrawerButton) {
     display: inline-flex !important;
 }
 
-/* Fix for dashboard height */
+/* Fix for dashboard */
 .layout-desktop .dashboardDocument .mainDrawer {
     top: 0px !important;
+    left: 0px !important;
+    width: 300px !important;
+    z-index: 998 !important;
+}
+.layout-desktop .dashboardDocument .mainDrawer-scrollContainer {
+    padding-top: 75px !important;
 }
 
 /* Re-center header buttons */
@@ -66,11 +72,21 @@
 }
 
 /* Background for home, hamburger, and Jellyfin */
-.layout-desktop .headerLeft {
-    top: -3px !important;
+.layout-desktop .headerLeft::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 45px;
     background-color: rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
+}
+.layout-desktop .headerLeft {
     padding: 2px !important;
-    margin-right: 1180px !important;
+    top: -3px !important;
+}
+.layout-desktop .pageTitle {
+    z-index: 1099 !important;
 }
