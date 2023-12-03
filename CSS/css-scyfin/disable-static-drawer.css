@@ -1,0 +1,70 @@
+/* Reset size of Jellyfin logo */
+.layout-desktop .pageTitleWithLogo {
+    margin-left: 25px !important;
+    height: 30px !important;
+    margin-top: 0px !important;
+}
+
+/* Un-static left drawer */
+.layout-desktop .mainDrawer {
+    left: -320px !important;
+    /* Move drawer behind header */
+    z-index: 1099 !important;
+}
+
+/* Lower drawer buttons */
+.layout-desktop .mainDrawer-scrollContainer {
+    margin-top: 15px !important;
+}
+
+/* Shift content back to the left */
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+    margin-left: 0px !important;
+}
+/* Fix for Jellyfin Media Player */
+.quickConnectSettingsContainer {
+    margin-left: 0px !important;
+}
+
+/* Add transition back */
+.layout-desktop .touch-menu-la.transition {
+    transition: transform .24s ease-out,left .26s ease-out,-webkit-transform .24s ease-out !important;
+}
+
+/* Show hamburger button */
+.layout-desktop .mainDrawerButton {
+    display: inline-flex !important;
+}
+
+/* Fix for dashboard height */
+.layout-desktop .dashboardDocument .mainDrawer {
+    top: 0px !important;
+}
+
+/* Re-center header buttons */
+.layout-desktop .headerTabs {
+    margin-left: 0px !important;
+}
+
+/* Hide home button */
+.layout-desktop .headerHomeButton {
+    display: block !important;
+}
+.layout-desktop .dashboardDocument .headerHomeButton {
+    display: block !important;
+}
+
+/* Fix for scroll menus on home page */
+.emby-scroller {
+    margin-right: 3.3% !important;
+}
+
+/* Background for home, hamburger, and Jellyfin */
+.layout-desktop .headerLeft {
+    top: -3px !important;
+    background-color: rgba(35, 35, 35, 0.5) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(50px) !important;
+    padding: 2px !important;
+    margin-right: 1180px !important;
+}

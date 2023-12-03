@@ -9,7 +9,6 @@
 
 /* Static left drawer */
 .layout-desktop .mainDrawer {
-    transform: none !important;
     left: 0 !important;
     top: 0 !important;
     width: 250px !important;
