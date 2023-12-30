@@ -82,3 +82,5 @@
     * Example:
     * <img src="./images/install4.png" alt="install4" width="60%"/>
 * Click "Save"
+
+---
