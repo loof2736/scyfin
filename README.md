@@ -60,10 +60,10 @@
     * Note - 
         * Only install ONE version of the theme, do not install both the normal version and the backdrops supported version
     * Example:
-    * <img src="./images/install.png" alt="install" width="60%"/>
+    * <img src="./images/install.png" alt="install" width="80%"/>
 * Optional - Paste the `@import url` for any options you want
     * Example:
-    * <img src="./images/install2.png" alt="install2" width="60%"/>
+    * <img src="./images/install2.png" alt="install2" width="80%"/>
 * Click "Save"
 
 ---
@@ -77,10 +77,10 @@
         * Only install ONE version of the theme, do not install both the normal version and the backdrops supported version
         * If there is any server-wide custom CSS, you may want to enable "Disable server-provided custom CSS code", as the two themes WILL interfere with each other
     * Example:
-    * <img src="./images/install3.png" alt="install3" width="60%"/>
+    * <img src="./images/install3.png" alt="install3" width="80%"/>
 * Optional - Paste the `@import url` for any options you want
     * Example:
-    * <img src="./images/install4.png" alt="install4" width="60%"/>
+    * <img src="./images/install4.png" alt="install4" width="80%"/>
 * Click "Save"
 
 ---
