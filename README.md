@@ -6,7 +6,31 @@ Custom CSS theme for Jellyfin (plus a backdrops supported version)
 
 ---
 
-Scyfin Complete Theme
+## Table of contents
+
+- [Installation](#installation)
+- [Themes](#themes)
+  - [Complete theme](#complete-theme)
+  - [Complete theme + without static drawer](#complete-theme-without-static-drawer-and-with-backdrop)
+  - [Complete theme + without static drawer + with backdrop](#complete-theme-without-static-drawer)
+
+## Installation
+1. Click on ``Settings`` in the navigation bar
+2. Click on ``Dashboard`` below ``Administration``
+3. Click on ``General`` below ``Server``.
+4. Scroll to the bottom of the page and enter the custom CSS code of your desired theme.
+5. Click ``Save``
+6. Press ``CTRL`` + ``F5``
+
+> [!WARNING]  
+> Only add 1 version of the theme, do not add both the normal Scyfin theme and the backdrops supported version together
+
+## Themes
+### Complete theme
+
+```css
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/scyfin-theme.css');
+```
 
 <img src="./images/scyfin/scyfin1.png" alt="scyfin1" width="80%"/>
 <img src="./images/scyfin/scyfin2.png" alt="scyfin2" width="80%"/>
@@ -14,28 +38,24 @@ Scyfin Complete Theme
 <img src="./images/scyfin/scyfin4.png" alt="scyfin4" width="80%"/>
 <img src="./images/scyfin/scyfin5.png" alt="scyfin5" width="80%"/>
 
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/scyfin-theme.css');`
+### Complete theme without static drawer and with backdrop
 
-Options (Add these below the full theme)
-- Disable static left drawer `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer.css');`
-- Disable static left drawer (BACKDROP VERSION) `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
+```css
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer.css');
+```
 
----
+### Complete theme without static drawer
 
-Scyfin Complete Theme - Backdrops Supported
+```css
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer-backdrop.css');
+```
 
-Note - 
+> [!NOTE]  
+> Backdrops need to be enabled in Jellyfin (`Settings` > `Display` > `Backdrop`) for backdrop supported version to display properly
 
- Only add 1 version of the theme, do not add both the normal Scyfin theme and the backdrops supported version together
- 
- Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops) for backdrop supported version to display properly
 
 <img src="./images/scyfin/scyfin-backdrop1.jpg" alt="scyfin-backdrop1" width="80%"/>
 <img src="./images/scyfin/scyfin-backdrop2.png" alt="scyfin-backdrop2" width="80%"/>
 <img src="./images/scyfin/scyfin-backdrop3.jpg" alt="scyfin-backdrop3" width="80%"/>
 
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/scyfin-theme-backdrop.css');`
 
-Options (Add these below the full theme)
-- Disable static left drawer `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer.css');`
-- Disable static left drawer (BACKDROP VERSION) `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
