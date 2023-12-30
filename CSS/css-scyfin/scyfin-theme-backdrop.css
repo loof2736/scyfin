@@ -68,8 +68,16 @@
 .cardPadder,
 .cardOverlayContainer,
 .blurhash-canvas,
-.dialog {
+.dialog,
+.itemSelectionPanel {
     border-radius: 10px !important;
+}
+/* Rounded selection menu */
+.itemSelectionPanel {
+    border: 2px solid #00a4dc !important;
+}
+.itemSelectionPanel .checkboxOutline {
+    margin: 7px !important;
 }
 
 
