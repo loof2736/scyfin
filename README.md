@@ -22,9 +22,9 @@
 
 ### Options (Add these below the full theme)
 - Disable static left drawer 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer.css');`
+    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.12/CSS/css-scyfin/disable-static-drawer.css');`
 - Disable static left drawer (BACKDROP VERSION) 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
+    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.12/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
 
 ---
 
@@ -42,9 +42,9 @@
 
 ### Options (Add these below the full theme)
 - Disable static left drawer 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer.css');`
+    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.12/CSS/css-scyfin/disable-static-drawer.css');`
 - Disable static left drawer (BACKDROP VERSION) 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.10/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
+    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.12/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
 
 ---
 
