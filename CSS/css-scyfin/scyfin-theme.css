@@ -472,6 +472,24 @@ html {
 
 
 
+/* Music Player */
+.layout-desktop .appfooter {
+    margin-left: 250px !important;
+}
+.layout-desktop .appfooter .nowPlayingBarInfoContainer {
+    margin-left: 10px !important;
+}
+.layout-desktop .volumeOsd {
+    border-radius: 10px !important;
+    background: rgba(0,0,0,.6) !important;
+}
+.layout-desktop .nameContainer .musicParentName {
+    margin-top: 18px !important;
+    margin-right: 22px !important;
+}
+
+
+
 /* Fix for scaling issues */
 @media (width: 1600px) {
     .layout-desktop .headerRight {
