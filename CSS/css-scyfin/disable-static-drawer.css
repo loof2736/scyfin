@@ -84,3 +84,8 @@
 .layout-desktop .pageTitle {
     z-index: 1099 !important;
 }
+
+/* Music Player */
+.layout-desktop .appfooter {
+    margin-left: 0px !important;
+}
