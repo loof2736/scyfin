@@ -477,12 +477,13 @@
 .sliderBubble {
     border-radius: 15px !important;
     background-color: rgba(0,0,0,0.5) !important;
-    height: 55px !important
 }
 /* Support for Jellyscrub plugin */
 .chapterThumbContainer {
-    margin-bottom: 135px !important;
     border-radius: 15px !important;
+}
+.chapterThumbTextContainer {
+    background: rgba(35,35,35,0.5) !important;
 }
 
 
