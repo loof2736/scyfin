@@ -72,7 +72,7 @@
 }
 
 /* Background for home, hamburger, and Jellyfin */
-.layout-desktop .headerLeft::before {
+.layout-desktop:not(.transparentDocument) .headerLeft::before {
     content: "";
     position: absolute;
     top: 0;
