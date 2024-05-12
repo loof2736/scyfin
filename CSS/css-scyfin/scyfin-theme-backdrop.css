@@ -129,6 +129,9 @@
 .layout-desktop .emby-button-foreground {
     top: -9px !important;
 }
+.layout-tv .emby-button-foreground {
+    top: -14px !important;
+}
 
 
 
@@ -145,7 +148,8 @@
 .skinHeader {
     background-color: transparent !important;
 }
-.layout-desktop .skinHeader {
+.layout-desktop .skinHeader,
+.layout-tv .skinHeader {
     padding-top: 1.5em !important;
 }
 /* Rounded header buttons */
@@ -156,9 +160,14 @@
     backdrop-filter: blur(50px) !important;
 }
 .layout-desktop .headerTabs,
+.layout-desktop .headerRight,
+.layout-tv .headerTabs,
+.layout-tv .headerRight {
+    margin-bottom: 10px !important;
+}
+.layout-desktop .headerTabs,
 .layout-desktop .headerRight {
     margin-left: 250px !important;
-    margin-bottom: 10px !important;
 }
 /* Button height */
 .headerRight,
@@ -170,7 +179,8 @@
     padding: 0px 5px !important;
 }
 /* Move left header back up */
-.layout-desktop .headerLeft {
+.layout-desktop .headerLeft
+.layout-tv .headerLeft {
     position: relative !important;
     top: -17px !important;
 }
@@ -221,7 +231,8 @@
     border: 0 !important;
 }
 /* Add padding to list items */
-.layout-desktop .listItem {
+.layout-desktop .listItem,
+.layout-tv .listItem {
     padding-left: 15px !important;
 }
 /* Rounded dashboard cards */
@@ -229,7 +240,8 @@
     border-radius: 15px !important;
 }
 /* Removed ugliness of border-card styling */
-.layout-desktop fieldset.verticalSection-extrabottompadding {
+.layout-desktop fieldset.verticalSection-extrabottompadding,
+.layout-tv fieldset.verticalSection-extrabottompadding {
     border-radius: 15px !important;
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
@@ -280,7 +292,8 @@
 }
 
 /* Re-position logo */
-.layout-desktop .detailLogo {
+.layout-desktop .detailLogo,
+.layout-tv .detailLogo {
     right: 0 !important;
     left: 4% !important;
     top: 14vh !important;
@@ -532,4 +545,9 @@
     .layout-desktop .emby-button-foreground {
         top: -2px !important;
     }
+}
+
+/* Fixes for TV Layout */
+.layout-tv .sectionTabs {
+    width: auto !important;
 }
