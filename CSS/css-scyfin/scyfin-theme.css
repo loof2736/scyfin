@@ -356,7 +356,7 @@ html {
 
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
-    background: rgba(35, 35, 35, 0.5) !important;
+    background: #181818 !important;
     padding: 10px 20px !important;
     border-radius: 100px !important;
     width: fit-content !important;
