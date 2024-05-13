@@ -1,3 +1,7 @@
+:root {
+    --swiper-theme-color: #2195f3;
+}
+
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
     margin-left: 15px !important;
@@ -76,7 +80,7 @@
 }
 /* Rounded selection menu */
 .itemSelectionPanel {
-    border: 2px solid #00a4dc !important;
+    border: 2px solid var(--swiper-theme-color) !important;
 }
 .itemSelectionPanel .checkboxOutline {
     margin: 7px !important;
@@ -140,7 +144,7 @@
 /* Custom button color */
 .navMenuOption-selected {
     background: rgba(33, 149, 243, 0.2) !important;
-    color: rgb(33, 149, 243) !important;
+    color: var(--swiper-theme-color) !important;
 }
 
 
@@ -167,7 +171,8 @@ html {
 .headerRight {
     background-color:rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
-    backdrop-filter: blur(50px) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
 }
 .layout-desktop .headerTabs,
 .layout-desktop .headerRight,
@@ -175,10 +180,7 @@ html {
 .layout-tv .headerRight {
     margin-bottom: 10px !important;
 }
-.layout-desktop .headerTabs,
-.layout-desktop .headerRight {
-    margin-left: 250px !important;
-}
+
 /* Button height */
 .headerRight,
 .emby-tab-button {
@@ -186,7 +188,7 @@ html {
 }
 /* Lower header and add padding to right buttons */
 .layout-desktop .headerRight {
-    padding: 0px 5px !important;
+    padding: 2px 2px !important;
 }
 .layout-tv .headerRight {
     padding: 20px 10px !important;
@@ -204,17 +206,24 @@ html {
 .layout-mobile .sectionTabs {
     margin-left: auto !important;
     margin-right: auto !important;
-    width: auto !important;
+    width: 85% !important;
 }
 .layout-mobile .emby-button-foreground {
     top: -2px !important;
 }
 
+.layout-mobile .itemBackdrop {
+    background-position: center;
+}
 
+.layout-mobile .itemBackdrop {
+    margin-top: 0;
+}
 
 /* Player modifications */
 .upNextContainer, .toastVisible, .sliderBubble {
-    backdrop-filter: blur(50px) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
 }
 .upNextContainer {
     border-radius: 15px !important;
@@ -272,8 +281,9 @@ html {
 /* Add padding to list items */
 .layout-desktop .listItem,
 .layout-tv .listItem {
-    padding-left: 15px !important;
+    padding: 15px;
 }
+
 /* Rounded dashboard cards */
 .cardBox {
     border-radius: 15px !important;
@@ -309,7 +319,7 @@ html {
     margin-left: -10px !important;
 }
 #editItemMetadataPage .btnHeaderSave {
-    background: #00A4DC !important;
+    background: rgba(var(--swiper-theme-color), 0.5) !important;
     border-radius: 100px !important;
     height: 40px !important;
     color: white !important;
