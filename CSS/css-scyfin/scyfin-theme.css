@@ -356,17 +356,21 @@ html {
 
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
-    background: #181818 !important;
+    background: rgba(35, 35, 35, 0.5) !important;
     padding: 10px 20px !important;
     border-radius: 100px !important;
     width: fit-content !important;
     max-width: max-content !important;
+    backdrop-filter: blur(40px) !important;
+    display: flex;
+    gap: 1em;
 }
 
-/* Fix for groups section card */
-.layout-desktop .content.focuscontainer-x {
-    white-space: nowrap !important;
-    padding-right: 48px !important;
+/* Fix for group section labels */
+.detailsGroupItem .label, .trackSelections .selectContainer .selectLabel {
+    min-width: 75px;
+    flex-basis: unset;
+    margin: unset;
 }
 
 /* Alternative mobile group section card */
