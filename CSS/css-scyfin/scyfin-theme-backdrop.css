@@ -40,6 +40,10 @@
 .layout-desktop .mainDrawerButton {
     display: none !important;
 }
+/* Fix for dashboard leaking out of the sections */
+.dashboardColumn {
+    flex-shrink: inherit;
+}
 /* Fix for dashboard drawer button height */
 .layout-desktop .dashboardDocument .mainDrawer-scrollContainer {
     padding-top: 0 !important;
