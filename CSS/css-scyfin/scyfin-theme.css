@@ -361,7 +361,6 @@ html {
     border-radius: 100px !important;
     width: fit-content !important;
     max-width: max-content !important;
-    backdrop-filter: blur(40px) !important;
     display: flex;
     gap: 1em;
 }
