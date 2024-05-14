@@ -551,3 +551,6 @@
 .layout-tv .sectionTabs {
     width: auto !important;
 }
+.layout-tv .headerLeft {
+    padding: 5px !important;
+}

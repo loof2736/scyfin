@@ -6,7 +6,7 @@
 }
 
 /* Un-static left drawer */
-.layout-desktop .mainDrawer:not(.dashboardDocument .mainDrawer) {
+.layout-desktop .mainDrawer:not(.dashboardDocument) {
     left: -345px !important;
     width: 275px !important;
     /* Move drawer behind header */
@@ -38,7 +38,7 @@
 }
 
 /* Show hamburger button */
-.layout-desktop .mainDrawerButton:not(.dashboardDocument .mainDrawerButton) {
+.layout-desktop .mainDrawerButton:not(.dashboardDocument) {
     display: inline-flex !important;
 }
 
@@ -75,8 +75,8 @@
 .layout-desktop:not(.transparentDocument) .headerLeft::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 39px;
+    left: 10px;
     width: 270px;
     height: 45px;
     background-color: rgba(35, 35, 35, 0.5) !important;
@@ -89,6 +89,18 @@
 }
 .layout-desktop .pageTitle {
     z-index: 1099 !important;
+}
+@media (width: 1600px) {
+    .layout-desktop:not(.transparentDocument) .headerLeft::before {
+        top: 35px;
+        left: 10px;
+    }
+}
+@media (max-width: 1599px) {
+    .layout-desktop:not(.transparentDocument) .headerLeft::before {
+        top: 35px;
+        left: 5px;
+    }
 }
 
 /* Music Player */
