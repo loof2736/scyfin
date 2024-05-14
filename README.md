@@ -18,7 +18,7 @@
 <img src="./images/scyfin/scyfin4.png" alt="scyfin4" width="100%"/>
 <img src="./images/scyfin/scyfin5.png" alt="scyfin5" width="100%"/>
 
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.16/CSS/css-scyfin/scyfin-theme.css');`
+`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.17/CSS/css-scyfin/scyfin-theme.css');`
 
 ### Options (Add these below the full theme)
 - Disable static left drawer 
@@ -38,7 +38,7 @@
 <img src="./images/scyfin/scyfin-backdrop2.png" alt="scyfin-backdrop2" width="100%"/>
 <img src="./images/scyfin/scyfin-backdrop3.jpg" alt="scyfin-backdrop3" width="100%"/>
 
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.16/CSS/css-scyfin/scyfin-theme-backdrop.css');`
+`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.0.17/CSS/css-scyfin/scyfin-theme-backdrop.css');`
 
 ### Options (Add these below the full theme)
 - Disable static left drawer 
