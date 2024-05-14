@@ -42,6 +42,10 @@
 .layout-desktop .mainDrawerButton {
     display: none !important;
 }
+/* Fix for dashboard leaking out of the sections */
+.dashboardColumn {
+    flex-shrink: inherit;
+}
 /* Fix for dashboard drawer button height */
 .layout-desktop .dashboardDocument .mainDrawer-scrollContainer {
     padding-top: 0 !important;
@@ -357,12 +361,15 @@ html {
     border-radius: 100px !important;
     width: fit-content !important;
     max-width: max-content !important;
+    display: flex;
+    gap: 1em;
 }
 
-/* Fix for groups section card */
-.layout-desktop .content.focuscontainer-x {
-    white-space: nowrap !important;
-    padding-right: 48px !important;
+/* Fix for group section labels */
+.detailsGroupItem .label, .trackSelections .selectContainer .selectLabel {
+    min-width: 75px;
+    flex-basis: unset;
+    margin: unset;
 }
 
 /* Alternative mobile group section card */
