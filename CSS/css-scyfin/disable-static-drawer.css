@@ -71,25 +71,34 @@
     position: absolute;
     top: 39px;
     left: 10px;
-    width: 270px;
+    width: 245px;
     height: 45px;
     background-color: rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
 }
+
+/* Reduce the size of the header when the logo is not present */
+.layout-desktop .skinHeader.semiTransparent .headerTop .headerLeft::before {
+    width: 160px;
+}
+
 .layout-desktop .headerLeft {
     padding: 2px !important;
     top: -3px !important;
 }
+
 .layout-desktop .pageTitle {
     z-index: 1099 !important;
 }
+
 @media (width: 1600px) {
     .layout-desktop:not(.transparentDocument) .headerLeft::before {
         top: 35px;
         left: 10px;
     }
 }
+
 @media (max-width: 1599px) {
     .layout-desktop:not(.transparentDocument) .headerLeft::before {
         top: 35px;
