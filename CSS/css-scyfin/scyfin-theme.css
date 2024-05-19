@@ -13,8 +13,6 @@
     width: 250px !important;
     /* Modified background color */
     background-color: #181818 !important;
-    /* Added border to right side */
-    border-right: 1px solid #3B3B3B !important;
     /* Move drawer behind header */
     z-index: 998 !important;
 }
