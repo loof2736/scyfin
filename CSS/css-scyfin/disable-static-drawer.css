@@ -1,8 +1,6 @@
 /* Reset size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
-    margin-left: 25px !important;
     height: 30px !important;
-    margin-top: 0px !important;
 }
 
 /* Un-static left drawer */
