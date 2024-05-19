@@ -1,11 +1,10 @@
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
     margin-left: 15px !important;
+    width: 100px !important;
     height: 40px !important;
     margin-top: 5px !important;
 }
-
-
 
 /* Static left drawer */
 .layout-desktop .mainDrawer {
@@ -14,8 +13,6 @@
     width: 250px !important;
     /* Modified background color */
     background-color: #181818 !important;
-    /* Added border to right side */
-    border-right: 1px solid #3B3B3B !important;
     /* Move drawer behind header */
     z-index: 998 !important;
 }
@@ -147,15 +144,11 @@
     color: rgb(33, 149, 243) !important;
 }
 
-
-
 /* Modified background color */
-.backgroundContainer,
 .dialog,
 html {
     background-color: #0F0F0F !important;
 }
-
 
 
 /* Transparent header bar */
