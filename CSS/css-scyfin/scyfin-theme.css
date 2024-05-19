@@ -146,15 +146,11 @@
     color: rgb(33, 149, 243) !important;
 }
 
-
-
 /* Modified background color */
-.backgroundContainer,
 .dialog,
 html {
     background-color: #0F0F0F !important;
 }
-
 
 
 /* Transparent header bar */
