@@ -96,6 +96,9 @@
 .innerCardFooterClear {
     background-color: black !important;
 }
+.innerCardFooter .cardText {
+    padding: 0 0 0 26px !important
+}
 
 
 
@@ -156,6 +159,9 @@ html {
 .layout-desktop .skinHeader,
 .layout-tv .skinHeader {
     padding-top: 1.5em !important;
+}
+.layout-tv .skinHeader {
+    padding-bottom: 10px !important;
 }
 /* Rounded header buttons */
 .headerTabs,
