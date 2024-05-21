@@ -64,7 +64,21 @@
     margin-right: -2% !important;
 }
 
+/* Hide 'My Media' title on Homepage */
+#indexPage .section0 .sectionTitle {
+    display: none;
+}
 
+/* Centralise the 'My Media (small)'  */
+#indexPage .section0 .itemsContainer.padded-left.padded-right {
+    justify-content: center;
+    padding-top: 15px;
+}
+
+#indexPage .section0 .itemsContainer.padded-left.padded-right .emby-button {
+    background: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(50px);
+}
 
 /* Rounded cards */
 .cardContent,
