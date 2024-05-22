@@ -1,4 +1,4 @@
-<img src="./images/scyfin-full.svg" alt="scyfin logo" width="200"/>
+<img src="./images/scyfin-full.png" alt="scyfin logo" width="200"/>
 
 ---
 
