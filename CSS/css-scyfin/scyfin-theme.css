@@ -176,9 +176,8 @@ html {
 .layout-tv .headerRight {
     margin-bottom: 10px !important;
 }
-.layout-desktop .headerTabs,
-.layout-desktop .headerRight {
-    margin-left: 250px !important;
+.layout-desktop .headerTabs {
+    margin-left: 160px !important;
 }
 /* Button height */
 .headerRight,
