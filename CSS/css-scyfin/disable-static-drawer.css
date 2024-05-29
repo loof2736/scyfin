@@ -1,8 +1,7 @@
 /* Reset size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
-    margin-left: 25px !important;
     height: 30px !important;
-    margin-top: 0px !important;
+    width: 100px !important;
 }
 
 /* Un-static left drawer */
@@ -65,27 +64,26 @@
     margin-right: 3.3% !important;
 }
 
-/* Background for home, hamburger, and Jellyfin */
-.layout-desktop:not(.transparentDocument) .headerLeft::before {
-    content: "";
-    position: absolute;
-    top: 39px;
-    left: 10px;
-    width: 245px;
-    height: 45px;
+/* Background for top left buttons */
+.layout-desktop .headerLeft {
+    padding: 2px 15px 2px 2px !important;
+    top: -3px !important;
     background-color: rgba(35, 35, 35, 0.5) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
+}
+.headerLeft {
+    flex-grow: 0 !important;
+    -webkit-flex-grow: 0 !important;
+}
+.headerRight {
+    position: absolute !important;
+    right: 12px !important;
 }
 
 /* Reduce the size of the header when the logo is not present */
 .layout-desktop .skinHeader.semiTransparent .headerTop .headerLeft::before {
     width: 160px;
-}
-
-.layout-desktop .headerLeft {
-    padding: 2px !important;
-    top: -3px !important;
 }
 
 .layout-desktop .pageTitle {

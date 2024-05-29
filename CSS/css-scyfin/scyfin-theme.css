@@ -1,9 +1,7 @@
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
-    margin-left: 15px !important;
-    width: 100px !important;
+    margin-left: 10px !important;
     height: 40px !important;
-    margin-top: 5px !important;
 }
 
 /* Static left drawer */
@@ -101,16 +99,34 @@
 
 /* Floating progress bar */
 .innerCardFooter {
+    border-radius: 15px !important;
+    width: 100px !important;
+    margin-left: 5px !important;
+    margin-bottom: 5px !important;
+    padding: 5px !important;
+    bottom: 0% !important;
+    background: rgba(0,0,0,0.5) !important;
+}
+.fullInnerCardFooter {
     bottom: 5% !important;
     width: 90% !important;
     margin: auto !important;
     border-radius: 100px !important;
+    padding: 0px !important;
 }
 .itemProgressBar {
-    height: 8px !important;
+    height: 10px !important;
+    background: rgba(35,35,35,0.75) !important;
+    backdrop-filter: blur(2px) !important;
 }
 .innerCardFooterClear {
-    background-color: black !important;
+    background-color: none !important;
+}
+.innerCardFooter .cardText {
+    padding: 0 0 0 10px !important
+}
+.itemProgressBarForeground {
+    border-radius: 100px !important;
 }
 
 /* Green watched indicator */
@@ -174,6 +190,9 @@ html {
 .layout-tv .skinHeader {
     padding-top: 1.5em !important;
 }
+.layout-tv .skinHeader {
+    padding-bottom: 10px !important;
+}
 /* Rounded header buttons */
 .headerTabs,
 .headerRight {
@@ -187,9 +206,8 @@ html {
 .layout-tv .headerRight {
     margin-bottom: 10px !important;
 }
-.layout-desktop .headerTabs,
-.layout-desktop .headerRight {
-    margin-left: 250px !important;
+.layout-desktop .headerTabs {
+    margin-left: 160px !important;
 }
 /* Button height */
 .headerRight,
@@ -225,7 +243,7 @@ html {
 
 
 /* Player modifications */
-.upNextContainer, .toastVisible, .sliderBubble {
+.upNextContainer, .toastVisible {
     backdrop-filter: blur(50px) !important;
 }
 .upNextContainer {
@@ -238,14 +256,42 @@ html {
 }
 .sliderBubble {
     border-radius: 15px !important;
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(10px) !important;
 }
+.mdl-slider-background-flex {
+    height: 10px !important;
+    margin-top: -5px !important;
+    border-radius: 100px !important;
+    background: hsla(0,0%,100%,.2) !important;
+}
+.mdl-slider-background-lower {
+    border-radius: 100px !important;
+}
+.mdl-slider::-moz-range-thumb {
+    background: rgba(0,0,0,0) !important;
+}
+.mdl-slider-background-upper {
+    display: none !important;
+}
+
 /* Support for Jellyscrub plugin */
 .chapterThumbContainer {
+    background: none !important;
     border-radius: 15px !important;
 }
+.chapterThumb {
+    border-radius: 15px !important;
+    margin-bottom: 40px !important;
+}
 .chapterThumbTextContainer {
-    background: rgba(35,35,35,0.5) !important;
+    background: none !important;
+}
+.chapterThumbText {
+    text-align: center !important;
+}
+.chapterThumbText-dim {
+    display: none !important;
 }
 
 
@@ -550,10 +596,99 @@ html {
     }
 }
 
+
+
 /* Fixes for TV Layout */
 .layout-tv .sectionTabs {
     width: auto !important;
 }
 .layout-tv .headerLeft {
     padding: 5px !important;
+}
+
+
+
+/* Login page */
+.layout-desktop #loginPage {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
+    background: #181818 !important;
+    width: 400px !important;
+    border-radius: 25px !important;
+    padding: 50px !important;
+}
+.layout-desktop #loginPage .manualLoginForm .btnCancel {
+    position: absolute !important;
+    background: none !important;
+    width: 100px !important;
+    margin-left: -10px !important;
+    margin-top: 70px !important;
+    text-align: left !important;
+}
+.layout-desktop #loginPage .visualLoginForm {
+    position: relative !important;
+    background: #181818 !important;
+    z-index: 1000 !important;
+}
+.layout-desktop #loginPage .btnForgotPassword {
+    background: none !important;
+    font-weight: normal !important;
+    width: 150px !important;
+    text-align: right !important;
+    position: absolute !important;
+    margin-left: 255px !important;
+    margin-top: -195px !important;
+    font-size: smaller !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    z-index: 1 !important;
+}
+.layout-desktop #loginPage .disclaimerContainer {
+    top: 130px !important;
+    position: relative !important;
+    left: -50px !important;
+    width: 500px !important;
+    margin-top: -35px !important;
+}
+.layout-desktop #loginPage .squareCard {
+    width: 25% !important;
+    font-size: smaller !important;
+}
+@media (max-width: 100em) {
+    .layout-desktop #loginPage .squareCard {
+        width: 20% !important;
+    }
+    .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
+        width: 600px !important;
+    }
+    .layout-desktop #loginPage .btnForgotPassword {
+        margin-left: 450px !important;
+    }
+    .layout-desktop #loginPage .disclaimerContainer {
+        width: 700px !important;
+    }
+}
+@media (max-width: 87.5em) {
+    .layout-desktop #loginPage .squareCard {
+        width: 20% !important;
+    }
+}
+@media (max-width: 75em) {
+    .layout-desktop #loginPage .squareCard {
+        width: 20% !important;
+    }
+}
+@media (max-width: 43.75em) {
+    .layout-desktop #loginPage .squareCard {
+        width: 20% !important;
+    }
+}
+
+
+
+/* Dialog box */
+.layout-desktop .dialog {
+    padding: 0px 10px 10px 10px !important;
 }
