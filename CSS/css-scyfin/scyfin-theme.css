@@ -610,9 +610,9 @@ html {
 
 /* Login page */
 .layout-desktop #loginPage {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
     background: #181818 !important;
