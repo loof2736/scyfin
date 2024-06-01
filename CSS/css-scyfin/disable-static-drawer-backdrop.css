@@ -11,8 +11,8 @@
     /* Move drawer behind header */
     z-index: 1099 !important;
     /* Modified background color */
-    background-color: rgba(35, 35, 35, 0.5) !important;
-    border-radius: 25px !important;
+    background-color: var(--main-background-transparent) !important;
+    border-radius: var(--rounded-cards) !important;
     backdrop-filter: blur(50px) !important;
 }
 
@@ -71,10 +71,10 @@
 }
 
 /* Background for top left buttons */
-.layout-desktop .headerLeft {
+.layout-desktop .headerLeft:not(.libraryDocument:has(.videoPlayerContainer) .headerLeft) {
     padding: 2px 15px 2px 2px !important;
     top: -3px !important;
-    background-color: rgba(35, 35, 35, 0.5) !important;
+    background-color: var(--main-background-transparent) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
 }

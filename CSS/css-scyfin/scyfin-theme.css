@@ -1,3 +1,45 @@
+/* Variables */
+:root {
+    --main-accent-color: #00a4dc;
+    --secondary-accent-color: rgba(0, 164, 220, 0.2);
+    --main-background-color: #0F0F0F;
+    --secondary-background-color: #181818;
+    --main-background-transparent: rgba(35,35,35,0.5);
+    --secondary-background-transparent: rgba(0,0,0,0.6);
+    --rounded-cards: 15px;
+}
+
+/* Setting accent color variable */
+.listItemIcon:not(.listItemIcon-transparent):not(.notification_important),
+.emby-checkbox:checked + span + .checkboxOutline,
+.countIndicator {
+    background: var(--main-accent-color) !important;
+}
+.emby-checkbox:checked + span + .checkboxOutline,
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select-withcolor:focus,
+.mdl-spinner__layer-1,
+.mdl-spinner__layer-2,
+.mdl-spinner__layer-3,
+.mdl-spinner__layer-4 {
+    border-color: var(--main-accent-color) !important;
+}
+.button-link:not(.itemDetailPage .button-link),
+.selectLabelFocused,
+.textareaLabelFocused,
+.inputLabelFocused,
+.emby-tab-button:hover,
+.metadataSidebarIcon {
+    color: var(--main-accent-color) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+    .paper-icon-button-light:hover:not(:disabled) {
+        color: var(--main-accent-color) !important;
+        background-color: var(--secondary-accent-color) !important;
+    }
+}
+
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
     margin-left: 10px !important;
@@ -10,7 +52,7 @@
     top: 0 !important;
     width: 250px !important;
     /* Modified background color */
-    background-color: #181818 !important;
+    background-color: var(--secondary-background-color) !important;
     /* Move drawer behind header */
     z-index: 998 !important;
 }
@@ -61,6 +103,10 @@
 .emby-scroller {
     margin-right: -2% !important;
 }
+/* Fix for collection items misalignment */
+.layout-desktop .collectionItems .collectionItemsContainer {
+    padding-left: 0% !important;
+}
 
 
 
@@ -71,11 +117,11 @@
 .blurhash-canvas,
 .dialog,
 .itemSelectionPanel {
-    border-radius: 10px !important;
+    border-radius: var(--rounded-cards) !important;
 }
 /* Rounded selection menu */
 .itemSelectionPanel {
-    border: 2px solid #00a4dc !important;
+    border: 2px solid var(--main-accent-color) !important;
 }
 .itemSelectionPanel .checkboxOutline {
     margin: 7px !important;
@@ -85,7 +131,7 @@
 
 /* Floating progress bar */
 .innerCardFooter {
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
     width: 100px !important;
     margin-left: 5px !important;
     margin-bottom: 5px !important;
@@ -102,7 +148,7 @@
 }
 .itemProgressBar {
     height: 10px !important;
-    background: rgba(35,35,35,0.75) !important;
+    background: var(--main-background-transparent) !important;
     backdrop-filter: blur(2px) !important;
 }
 .innerCardFooterClear {
@@ -113,6 +159,7 @@
 }
 .itemProgressBarForeground {
     border-radius: 100px !important;
+    background: var(--main-accent-color) !important;
 }
 
 
@@ -156,14 +203,14 @@
 
 /* Custom button color */
 .navMenuOption-selected {
-    background: rgba(33, 149, 243, 0.2) !important;
-    color: rgb(33, 149, 243) !important;
+    background: var(--secondary-accent-color) !important;
+    color: var(--main-accent-color) !important;
 }
 
 /* Modified background color */
 .dialog,
 html {
-    background-color: #0F0F0F !important;
+    background-color: var(--main-background-color) !important;
 }
 
 
@@ -181,7 +228,7 @@ html {
 /* Rounded header buttons */
 .headerTabs,
 .headerRight {
-    background-color:rgba(35, 35, 35, 0.5) !important;
+    background-color: var(--main-background-transparent) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
 }
@@ -232,16 +279,16 @@ html {
     backdrop-filter: blur(50px) !important;
 }
 .upNextContainer {
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
     background-color: rgba(0, 0, 0, 0.7) !important;
 }
 .toastVisible {
     border-radius: 30px !important;
-    background-color: rgba(35, 35, 35, 0.5) !important;
+    background-color: var(--main-background-transparent) !important;
 }
 .sliderBubble {
-    border-radius: 15px !important;
-    background-color: rgba(0,0,0,0.6) !important;
+    border-radius: var(--rounded-cards) !important;
+    background-color: var(--secondary-background-transparent) !important;
     backdrop-filter: blur(10px) !important;
 }
 .mdl-slider-background-flex {
@@ -252,6 +299,7 @@ html {
 }
 .mdl-slider-background-lower {
     border-radius: 100px !important;
+    background-color: var(--main-accent-color) !important;
 }
 .mdl-slider::-moz-range-thumb {
     background: rgba(0,0,0,0) !important;
@@ -259,14 +307,17 @@ html {
 .mdl-slider-background-upper {
     display: none !important;
 }
+.iconOsdProgressInner {
+    background: var(--main-accent-color) !important;
+}
 
 /* Support for Jellyscrub plugin */
 .chapterThumbContainer {
     background: none !important;
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
 }
 .chapterThumb {
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
     margin-bottom: 40px !important;
 }
 .chapterThumbTextContainer {
@@ -287,7 +338,7 @@ html {
 .paperList,
 .listItem:hover,
 .subtitleappearance-preview {
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
 }
 .button-submit,
 .emby-select,
@@ -296,6 +347,9 @@ html {
 #btnShutdown,
 .raised {
     border-radius: 100px !important;
+}
+.button-submit {
+    background: var(--main-accent-color) !important;
 }
 /* Modify username placement on profile page */
 .layout-desktop #userProfilePage .readOnlyContent div:not([class]), div[class=""]{
@@ -319,14 +373,32 @@ html {
 }
 /* Rounded dashboard cards */
 .cardBox {
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
 }
 /* Removed ugliness of border-card styling */
 .layout-desktop fieldset.verticalSection-extrabottompadding,
 .layout-tv fieldset.verticalSection-extrabottompadding {
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
     border-color: #3B3B3B !important;
     padding: 10px 35px !important;
+}
+/* Rounded tab selections in dashboard */
+.layout-desktop .localnav {
+    border-radius: 100px !important;
+    background: #202020 !important;
+    width: fit-content !important;
+}
+.layout-desktop a[data-role="button"] {
+    background: none !important;
+
+}
+.layout-desktop div[data-role="controlgroup"] a.ui-btn-active {
+    background: var(--main-accent-color) !important;
+    border-radius: 100px !important;
+}
+/* Re-align active devices in dashboard */
+.activeDevices.itemsContainer {
+    margin: 0px !important;
 }
 
 
@@ -343,16 +415,16 @@ html {
     line-height: 35px !important;
 }
 .jstree-default .jstree-wholerow-clicked {
-    background: rgba(33, 149, 243, 0.2) !important;
+    background: var(--secondary-accent-color) !important;
 }
 .jstree-wholerow-hovered {
-    background: rgba(35, 35, 35, 0.5) !important;
+    background: var(--main-background-transparent) !important;
 }
 .jstree-children {
     margin-left: -10px !important;
 }
 #editItemMetadataPage .btnHeaderSave {
-    background: #00A4DC !important;
+    background: var(--main-accent-color) !important;
     border-radius: 100px !important;
     height: 40px !important;
     color: white !important;
@@ -388,14 +460,14 @@ html {
 
 /* Add card around top-right buttons */
 .mainDetailButtons {
-    background: rgba(35, 35, 35, 0.5) !important;
+    background: var(--main-background-transparent) !important;
     border-radius: 100px !important;
     backdrop-filter: blur(10px) !important;
 }
 
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
-    background: #181818 !important;
+    background: var(--secondary-background-color) !important;
     padding: 10px 20px !important;
     border-radius: 100px !important;
     width: fit-content !important;
@@ -413,28 +485,28 @@ html {
 
 /* Alternative mobile group section card */
 .layout-mobile .itemDetailsGroup {
-    background: #181818 !important;
+    background: var(--secondary-background-color) !important;
     padding: 15px 20px 5px 20px !important;
-    border-radius: 15px !important;
+    border-radius: var(--rounded-cards) !important;
 }
 
 /* Add card around description */
 .layout-desktop .detailSectionContent {
-    background: #181818 !important;
-    border-radius: 15px !important;
+    background: var(--secondary-background-color) !important;
+    border-radius: var(--rounded-cards) !important;
     padding: 40px 20px 10px 20px !important;
     margin-top: 50px !important;
 }
 .layout-mobile .detailSectionContent {
-    background: #181818 !important;
-    border-radius: 15px !important;
+    background: var(--secondary-background-color) !important;
+    border-radius: var(--rounded-cards) !important;
     padding: 10px 20px !important;
 }
 
 /* Add card around track selection */
 .trackSelections {
-    background: #181818 !important;
-    border-radius: 15px !important;
+    background: var(--secondary-background-color) !important;
+    border-radius: var(--rounded-cards) !important;
     padding: 10px 20px !important;
     margin-top: 20px !important;
 }
@@ -510,13 +582,30 @@ html {
     box-ordinal-group: 2;
     margin: 0.45em 0 0 0 !important;
 }
+/* Modify play button */
+.layout-desktop .mainDetailButtons .btnPlay::after {
+    content: "Play" !important;
+}
+.layout-desktop .mainDetailButtons .btnPlay {
+    position: relative !important;
+    margin-right: -85px !important;
+    padding-right: 20px !important;
+    right: 110px !important;
+    background: var(--main-accent-color) !important;
+    border-radius: 100px !important;
+    color: var(--secondary-background-color) !important;
+}
+.layout-desktop .mainDetailButtons .detailButton {
+    -webkit-flex-direction: row !important;
+    flex-direction: row !important;
+}
 
 
 
 /* Live TV */
 /* Modified background color of active guide cells */
 .programCell-active {
-    background: #181818 !important;
+    background: var(--secondary-background-color) !important;
 }
 /* Repositioned record button */
 .recordingFields {
@@ -543,12 +632,18 @@ html {
     margin-left: 10px !important;
 }
 .layout-desktop .volumeOsd {
-    border-radius: 10px !important;
-    background: rgba(0,0,0,.6) !important;
+    border-radius: var(--rounded-cards) !important;
+    background: var(--secondary-background-transparent) !important;
 }
 .layout-desktop .nameContainer .musicParentName {
     margin-top: 18px !important;
     margin-right: 22px !important;
+}
+.layout-desktop .appfooter .nowPlayingBar {
+    margin-top: 20px !important;
+}
+.layout-desktop .appfooter .nowPlayingBar .nowPlayingBarPositionContainer {
+    top: -15px !important;
 }
 
 
@@ -595,12 +690,12 @@ html {
 
 /* Login page */
 .layout-desktop #loginPage {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
-    background: #181818 !important;
+    background: var(--secondary-background-color) !important;
     width: 400px !important;
     border-radius: 25px !important;
     padding: 50px !important;
@@ -615,7 +710,7 @@ html {
 }
 .layout-desktop #loginPage .visualLoginForm {
     position: relative !important;
-    background: #181818 !important;
+    background: var(--secondary-background-color) !important;
     z-index: 1000 !important;
 }
 .layout-desktop #loginPage .btnForgotPassword {

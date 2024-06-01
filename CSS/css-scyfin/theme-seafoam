@@ -1,0 +1,4 @@
+:root {
+    --main-accent-color: #6D9887;
+    --secondary-accent-color: rgba(109, 152, 135, 0.2);
+}
