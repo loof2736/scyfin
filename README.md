@@ -23,6 +23,13 @@
 ### Options (Add these below the full theme)
 - Disable static left drawer 
     - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/disable-static-drawer.css');`
+- Themes:
+    - Seafoam
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/theme-seafoam.css');`
+    - Coral
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/theme-coral.css');`
+    - Snow
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/theme-snow.css');`
 
 ---
 
@@ -41,6 +48,13 @@
 ### Options (Add these below the full theme)
 - Disable static left drawer (BACKDROP VERSION) 
     - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
+- Themes:
+    - Seafoam
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/theme-seafoam.css');`
+    - Coral
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/theme-coral.css');`
+    - Snow
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.2.0/CSS/css-scyfin/theme-snow.css');`
 
 ---
 
