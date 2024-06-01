@@ -12,11 +12,11 @@
 /* Setting accent color variable */
 .listItemIcon:not(.listItemIcon-transparent):not(.notification_important),
 .emby-checkbox:checked + span + .checkboxOutline,
-.emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
 .countIndicator {
     background: var(--main-accent-color) !important;
 }
 .emby-checkbox:checked + span + .checkboxOutline,
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
 .emby-input:focus,
 .emby-textarea:focus,
 .emby-select-withcolor:focus,
