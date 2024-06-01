@@ -2,3 +2,9 @@
     --main-accent-color: #E8ECEF;
     --secondary-accent-color: rgba(232, 236, 239, 0.2);
 }
+
+.layout-desktop .button-submit,
+.layout-desktop .checkboxIcon,
+.layout-desktop .countIndicator {
+    color: var(--secondary-background-color) !important;
+}
