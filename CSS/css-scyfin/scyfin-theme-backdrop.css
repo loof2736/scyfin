@@ -3,7 +3,7 @@
     --main-accent-color: #00a4dc;
     --secondary-accent-color: rgba(0, 164, 220, 0.2);
     --main-background-color: #0F0F0F;
-    --secondary-background-color: var(--secondary-background-color);
+    --secondary-background-color: #181818;
     --main-background-transparent: rgba(35,35,35,0.5);
     --secondary-background-transparent: rgba(0,0,0,0.6);
     --rounded-cards: 15px;
@@ -43,7 +43,7 @@
 
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
-    margin-left: 10px !important;
+    margin-left: 25px !important;
     height: 40px !important;
 }
 
@@ -60,6 +60,7 @@
 /* Lower drawer buttons */
 .layout-desktop .mainDrawer-scrollContainer {
     margin-top: 95px !important;
+    margin-left: 10px !important;
 }
 .layout-mobile .mainDrawer-scrollContainer {
     margin-top: 20px !important;
@@ -133,12 +134,12 @@
 /* Floating progress bar */
 .innerCardFooter {
     border-radius: var(--rounded-cards) !important;
-    width: 100px !important;
     margin-left: 5px !important;
     margin-bottom: 5px !important;
     padding: 5px !important;
     bottom: 0% !important;
     background: rgba(0,0,0,0.5) !important;
+    backdrop-filter: blur(10px) !important;
 }
 .fullInnerCardFooter {
     bottom: 5% !important;
@@ -146,6 +147,7 @@
     margin: auto !important;
     border-radius: 100px !important;
     padding: 0px !important;
+    backdrop-filter: none !important;
 }
 .itemProgressBar {
     height: 10px !important;
@@ -366,7 +368,7 @@
 /* Add padding to list items */
 .layout-desktop .listItem,
 .layout-tv .listItem {
-    padding-left: 15px !important;
+    padding-inline: 15px !important;
 }
 /* Rounded dashboard cards */
 .cardBox {
@@ -429,9 +431,10 @@
 
 
 
-/* Remove show/movie image on details page */
-.layout-desktop .detailImageContainer {
-    display: none !important;
+/* Resize show/movie image on details page */
+.layout-desktop .detailImageContainer .card {
+    top: 9em !important;
+    width: 350px !important;
 }
 
 /* Re-position content on details page */
@@ -439,7 +442,7 @@
     margin-right: 0 !important;
 }
 .layout-desktop .detailPageContent {
-    padding-left: 4% !important;
+    padding-left: 3.3% !important;
 }
 
 /* Re-position logo */
@@ -529,9 +532,10 @@
 /* Re-position title */
 .layout-desktop .infoWrapper {
     margin-top: 245px !important;
+    margin-left: 390px !important;
 }
 .layout-desktop .detailPagePrimaryContainer {
-    padding-left: 4% !important;
+    padding-left: 3.3% !important;
 }
 .layout-desktop .nameContainer {
     position: absolute !important;
@@ -541,6 +545,15 @@
     position: absolute !important;
     margin-left: 21px !important;
     margin-top: 16px !important;
+}
+
+/* Move description box */
+.layout-desktop .detailPagePrimaryContent {
+    padding-left: 390px !important;
+    min-height: 550px !important;
+}
+.layout-desktop .detailPagePrimaryContent:has(.genresGroup.hide):has(.directorsGroup.hide):has(.writersGroup.hide) {
+    min-height: unset !important;
 }
 
 /* Move track selection box */
@@ -791,6 +804,9 @@
 
 
 /* Dialog box */
-.layout-desktop .dialog {
-    padding: 0px 10px 10px 10px !important;
+.dialog {
+    background-color: var(--secondary-background-color) !important;
+}
+.actionSheetTitle {
+    margin: 10px 20px !important;
 }
