@@ -2,7 +2,7 @@
 :root {
     --main-accent-color: #00a4dc;
     --secondary-accent-color: #00a4dc20;
-    --main-background-color: #0F0F0F;
+    --main-background-color: #101010;
     --secondary-background-color: #181818;
     --main-background-transparent: rgba(35,35,35,0.5);
     --secondary-background-transparent: rgba(0,0,0,0.6);
@@ -515,7 +515,7 @@
 /* Resize show/movie image on details page */
 .layout-desktop .detailImageContainer .card {
     top: 9em !important;
-    width: 350px !important;
+    width: 18.3vw !important;
 }
 
 /* Re-position content on details page */
@@ -531,7 +531,7 @@
 .layout-tv .detailLogo {
     right: 0 !important;
     left: 4% !important;
-    top: 14vh !important;
+    top: 10% !important;
 }
 
 /* Transparent ribbon bar */
@@ -613,7 +613,7 @@
 /* Re-position title */
 .layout-desktop .infoWrapper {
     margin-top: 245px !important;
-    margin-left: 390px !important;
+    margin-left: 20.4vw !important;
 }
 .layout-desktop .detailPagePrimaryContainer {
     padding-left: 3.3% !important;
@@ -630,8 +630,8 @@
 
 /* Move description box */
 .layout-desktop .detailPagePrimaryContent {
-    padding-left: 390px !important;
-    min-height: 550px !important;
+    padding-left: 20.4vw !important;
+    min-height: 29vw !important;
 }
 
 /* Move track selection box */
@@ -786,6 +786,17 @@
     }
     .layout-desktop .emby-button-foreground {
         top: -2px !important;
+    }
+}
+@media (max-width: 85em) {
+    .layout-desktop .detailLogo, .layout-tv .detailLogo {
+        top: 6% !important;
+    }
+}
+@media (max-width: 68.75em) {
+    .layout-desktop .mainDetailButtons {
+        position: absolute !important;
+        left: 140px !important;
     }
 }
 

@@ -2,7 +2,7 @@
 :root {
     --main-accent-color: #00a4dc;
     --secondary-accent-color: #00a4dc20;
-    --main-background-color: #0F0F0F;
+    --main-background-color: #101010;
     --secondary-background-color: #181818;
     --main-background-transparent: rgba(35,35,35,0.5);
     --secondary-background-transparent: rgba(0,0,0,0.6);
@@ -247,7 +247,8 @@
 }
 
 /* Modified background color */
-html {
+html,
+.backgroundContainer {
     background-color: var(--main-background-color) !important;
 }
 
@@ -518,7 +519,7 @@ html {
 /* Resize show/movie image on details page */
 .layout-desktop .detailImageContainer .card {
     top: 9em !important;
-    width: 350px !important;
+    width: 18.3vw !important;
 }
 
 /* Re-position content on details page */
@@ -534,7 +535,7 @@ html {
 .layout-tv .detailLogo {
     right: 0 !important;
     left: 4% !important;
-    top: 14vh !important;
+    top: 10% !important;
 }
 
 /* Transparent ribbon bar */
@@ -603,7 +604,7 @@ html {
 /* Re-position title */
 .layout-desktop .infoWrapper {
     margin-top: 245px !important;
-    margin-left: 390px !important;
+    margin-left: 20.4vw !important;
 }
 .layout-desktop .detailPagePrimaryContainer {
     padding-left: 3.3% !important;
@@ -620,8 +621,8 @@ html {
 
 /* Move description box */
 .layout-desktop .detailPagePrimaryContent {
-    padding-left: 390px !important;
-    min-height: 550px !important;
+    padding-left: 20.4vw !important;
+    min-height: 29vw !important;
 }
 
 /* Move track selection box */
