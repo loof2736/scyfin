@@ -12,24 +12,27 @@
 
 ### **Scyfin Complete Theme**
 
-<img src="./images/scyfin/scyfin1.png" alt="scyfin1" width="100%"/>
-<img src="./images/scyfin/scyfin2.png" alt="scyfin2" width="100%"/>
-<img src="./images/scyfin/scyfin3.jpg" alt="scyfin3" width="100%"/>
-<img src="./images/scyfin/scyfin4.png" alt="scyfin4" width="100%"/>
-<img src="./images/scyfin/scyfin5.png" alt="scyfin5" width="100%"/>
+<img src="./images/homepage.png" alt="homepage" width="100%"/>
+<img src="./images/details.png" alt="details" width="100%"/>
+<img src="./images/movies.png" alt="movies" width="100%"/>
+<img src="./images/dashboard.png" alt="dashboard" width="100%"/>
+<img src="./images/login.png" alt="login" width="100%"/>
 
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/scyfin-theme.css');`
+`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');`
 
 ### Options (Add these below the full theme)
 - Disable static left drawer 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/disable-static-drawer.css');`
+    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css');`
 - Themes:
     - Seafoam
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/theme-seafoam.css');`
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-seafoam.css');`
+        - <img src="./images/seafoam.png" alt="install2" width="40%"/>
     - Coral
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/theme-coral.css');`
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-coral.css');`
+        - <img src="./images/coral.png" alt="install2" width="40%"/>
     - Snow
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/theme-snow.css');`
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');`
+        - <img src="./images/snow.png" alt="install2" width="40%"/>
 
 ---
 
@@ -39,22 +42,24 @@
 * Only install ONE version of the theme, do not install both the normal version and the backdrops supported version
 * Backdrops need to be enabled in Jellyfin (Settings > Display > Backdrops) for backdrop supported version to display properly
 
-<img src="./images/scyfin/scyfin-backdrop1.jpg" alt="scyfin-backdrop1" width="100%"/>
-<img src="./images/scyfin/scyfin-backdrop2.png" alt="scyfin-backdrop2" width="100%"/>
-<img src="./images/scyfin/scyfin-backdrop3.jpg" alt="scyfin-backdrop3" width="100%"/>
+<img src="./images/homepage-backdrops.png" alt="homepage-backdrops" width="100%"/>
+<img src="./images/details-backdrops.png" alt="details-backdrops" width="100%"/>
 
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/scyfin-theme-backdrop.css');`
+`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme-backdrop.css');`
 
 ### Options (Add these below the full theme)
 - Disable static left drawer (BACKDROP VERSION) 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/disable-static-drawer-backdrop.css');`
+    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer-backdrop.css');`
 - Themes:
     - Seafoam
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/theme-seafoam.css');`
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-seafoam.css');`
+        - <img src="./images/seafoam.png" alt="install2" width="40%"/>
     - Coral
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/theme-coral.css');`
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-coral.css');`
+        - <img src="./images/coral.png" alt="install2" width="40%"/>
     - Snow
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/css-scyfin/theme-snow.css');`
+        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');`
+        - <img src="./images/snow.png" alt="install2" width="40%"/>
 
 ---
 
