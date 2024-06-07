@@ -1,7 +1,7 @@
 /* Variables */
 :root {
     --main-accent-color: #00a4dc;
-    --secondary-accent-color: rgba(0, 164, 220, 0.2);
+    --secondary-accent-color: #00a4dc20;
     --main-background-color: #0F0F0F;
     --secondary-background-color: #181818;
     --main-background-transparent: rgba(35,35,35,0.5);
@@ -12,6 +12,7 @@
 /* Setting accent color variable */
 .listItemIcon:not(.listItemIcon-transparent):not(.notification_important),
 .emby-checkbox:checked + span + .checkboxOutline,
+.selectionCommandsPanel,
 .countIndicator {
     background: var(--main-accent-color) !important;
 }
@@ -31,7 +32,8 @@
 .textareaLabelFocused,
 .inputLabelFocused,
 .emby-tab-button:hover,
-.metadataSidebarIcon {
+.metadataSidebarIcon,
+.upNextDialog-countdownText {
     color: var(--main-accent-color) !important;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -109,6 +111,17 @@
 .layout-desktop .collectionItems .collectionItemsContainer {
     padding-left: 0% !important;
 }
+/* Dynamic buttons */
+.layout-desktop .navMenuOption:hover:not(.navMenuOption-selected) {
+    transform: scale(1.05) !important;
+}
+.layout-desktop .listItem {
+    transition: .2s !important;
+    border-radius: var(--rounded-cards) !important;
+}
+.layout-desktop #myPreferencesMenuPage .listItem:hover {
+    transform: scale(1.015);
+}
 
 
 
@@ -149,7 +162,7 @@
     padding: 0px !important;
     backdrop-filter: none !important;
 }
-.itemProgressBar {
+.itemProgressBar:not(.playbackProgress):not(.transcodingProgress):not(.backgroundProgress) {
     height: 10px !important;
     background: var(--main-background-transparent) !important;
     backdrop-filter: blur(2px) !important;
@@ -160,9 +173,32 @@
 .innerCardFooter .cardText {
     padding: 0 0 0 10px !important
 }
+.itemProgressBarForeground:not(.playbackProgress .itemProgressBarForeground):not(.transcodingProgress .itemProgressBarForeground):not(.backgroundProgress .itemProgressBarForeground) {
+    background: var(--main-accent-color) !important;
+}
 .itemProgressBarForeground {
     border-radius: 100px !important;
-    background: var(--main-accent-color) !important;
+}
+.transcodingProgress > div {
+    background-color: hsla(0,0%,100%,.2) !important;
+}
+.activeSession .backgroundProgress,
+.activeSession .playbackProgress,
+.activeSession .transcodingProgress {
+    bottom: 10px !important;
+    border-radius: 100px !important;
+    width: 90% !important;
+    left: 5% !important;
+}
+.sessionNowPlayingInnerContent {
+    padding-bottom: 12px !important;
+    padding-inline: 17px !important;
+}
+.sessionAppInfo {
+    padding: .5em 0em !important;
+}
+.sessionNowPlayingInfo {
+    padding: .8em 0em !important;
 }
 
 
@@ -275,11 +311,12 @@
 
 /* Player modifications */
 .upNextContainer, .toastVisible {
-    backdrop-filter: blur(50px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 .upNextContainer {
     border-radius: var(--rounded-cards) !important;
-    background-color: rgba(0, 0, 0, 0.7) !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    margin: 4% !important;
 }
 .toastVisible {
     border-radius: 30px !important;
@@ -289,6 +326,11 @@
     border-radius: var(--rounded-cards) !important;
     background-color: var(--secondary-background-transparent) !important;
     backdrop-filter: blur(10px) !important;
+}
+.sliderBubble:not(.osdVolumeSliderContainer .sliderBubble):has(.chapterThumbContainer) {
+    background-color: #ffffff00 !important;
+    top: 25px !important;
+    backdrop-filter: unset !important;
 }
 .mdl-slider-background-flex {
     height: 10px !important;
@@ -300,24 +342,46 @@
     border-radius: 100px !important;
     background-color: var(--main-accent-color) !important;
 }
-.mdl-slider::-moz-range-thumb {
-    background: rgba(0,0,0,0) !important;
+.mdl-slider::-moz-range-thumb,
+.mdl-slider::-webkit-slider-thumb {
+    background: #ffffff00 !important;
+    height: 10px !important;
+    width: 8px !important;
+    border-radius: 2px !important;
+}
+.mdl-slider-hoverthumb:hover::-moz-range-thumb,
+.mdl-slider-hoverthumb:hover::-webkit-slider-thumb {
+    transform: scaleY(2);
+    background: #fff !important;
 }
 .mdl-slider-background-upper {
-    display: none !important;
+    border-top-right-radius: 100px !important;
+    border-bottom-right-radius: 100px !important;
+    background: hsla(0,0%,100%,.2) !important;
+    transform: translateX(-3px) !important;
 }
 .iconOsdProgressInner {
     background: var(--main-accent-color) !important;
+}
+
+/* Up next card */
+.upNextDialog-buttons .upNextDialog-button {
+    transition: .2s !important;
+}
+.upNextDialog-buttons .upNextDialog-button:hover {
+    transform: scale(1.1);
 }
 
 /* Support for Jellyscrub plugin */
 .chapterThumbContainer {
     background: none !important;
     border-radius: var(--rounded-cards) !important;
+    box-shadow: unset !important;
 }
 .chapterThumb {
     border-radius: var(--rounded-cards) !important;
-    margin-bottom: 40px !important;
+    margin-bottom: 47px !important;
+    box-shadow: 0 0 1.9vh #000 !important;
 }
 .chapterThumbTextContainer {
     background: none !important;
@@ -327,6 +391,23 @@
 }
 .chapterThumbText-dim {
     display: none !important;
+}
+
+/* Support for IntroSkipper plugin */
+.skipIntro {
+    transition: 0.2s;
+    border-radius: 100px !important;
+    padding: 5px 10px !important;
+    backdrop-filter: blur(10px) !important;
+    border: none !important;
+}
+.skipIntro:hover {
+    box-shadow: unset !important;
+    transition: .2s;
+    transform: scale(1.05);
+}
+.skipIntro .paper-icon-button-light:hover:not(:disabled) {
+    color: #FFF !important;
 }
 
 
@@ -551,9 +632,6 @@
 .layout-desktop .detailPagePrimaryContent {
     padding-left: 390px !important;
     min-height: 550px !important;
-}
-.layout-desktop .detailPagePrimaryContent:has(.genresGroup.hide):has(.directorsGroup.hide):has(.writersGroup.hide) {
-    min-height: unset !important;
 }
 
 /* Move track selection box */
