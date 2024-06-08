@@ -254,7 +254,7 @@
 
 /* Modified background color */
 html,
-.backgroundContainer:not(.withBackdrop),
+.backgroundContainer:not(.withBackdrop):not(.backgroundContainer-transparent),
 .noBackdropTransparency .detailPageSecondaryContainer {
     background-color: var(--primary-background-color) !important;
 }
