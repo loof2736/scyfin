@@ -581,12 +581,11 @@ html,
 
 
 /* Metadata editor fixes */
-.editPageSidebar {
-    margin-left: 250px !important;
-    width: 20% !important;
+.layout-desktop .editPageSidebar {
+    width: 25vw !important;
 }
-.layout-desktop #editItemMetadataPage {
-    margin-left: 215px !important;
+.layout-desktop .editPageInnerContent {
+    width: 74vw !important;
 }
 .jstree-default-large .jstree-node {
     line-height: 35px !important;
