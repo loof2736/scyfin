@@ -11,7 +11,7 @@
     /* Move drawer behind header */
     z-index: 1099 !important;
     /* Modified background color */
-    background-color: var(--main-background-transparent) !important;
+    background-color: var(--primary-background-transparent) !important;
     border-radius: var(--rounded-cards) !important;
     backdrop-filter: blur(50px) !important;
 }
@@ -74,7 +74,7 @@
 .layout-desktop .headerLeft:not(.libraryDocument:has(.videoPlayerContainer) .headerLeft) {
     padding: 2px 15px 2px 2px !important;
     top: -3px !important;
-    background-color: var(--main-background-transparent) !important;
+    background-color: var(--primary-background-transparent) !important;
     border-radius: 50px !important;
     backdrop-filter: blur(50px) !important;
 }
