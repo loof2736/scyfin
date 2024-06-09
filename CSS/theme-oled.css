@@ -1,0 +1,54 @@
+/* Variables */
+:root {
+    --primary-background-color: #000;
+    --secondary-background-color: #101010;
+    --tertiary-background-color: #181818;
+    --primary-background-transparent: rgba(35,35,35,0.5);
+    --secondary-background-transparent: rgba(0,0,0,0.6);
+}
+
+.fab,
+.raised,
+.collapseContent,
+.formDialogFooter:not(.formDialogFooter-clear),
+.formDialogHeader:not(.formDialogHeader-clear),
+.paperList,
+.visualCardBox {
+    background: var(--tertiary-background-color) !important;
+}
+
+.button-submit {
+    background: var(--secondary-accent-color) !important;
+    color: var(--primary-accent-color) !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+    background: var(--secondary-accent-color) !important;
+    border-color: var(--secondary-accent-color) !important;
+}
+.checkboxIcon {
+    color: var(--primary-accent-color)
+}
+
+.layout-desktop .detailSectionContent,
+.trackSelections,
+.layout-desktop .detailsGroupItem,
+.layout-desktop .localnav {
+    background: var(--primary-background-color) !important;
+    border: 2px solid var(--tertiary-background-color) !important;
+}
+
+.listItem:hover {
+    background: var(--secondary-background-color) !important;
+}
+
+select,
+textarea,
+input {
+    background: var(--primary-background-color) !important;
+    border: 2px solid var(--tertiary-background-color) !important;
+}
+
+.navMenuOption:hover:not(.navMenuOption-selected) {
+    background: var(--tertiary-background-color) !important;
+}
