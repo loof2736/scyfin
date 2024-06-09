@@ -487,7 +487,6 @@ html,
 }
 .layout-desktop a[data-role="button"] {
     background: none !important;
-
 }
 .layout-desktop div[data-role="controlgroup"] a.ui-btn-active {
     background: var(--primary-accent-color) !important;
@@ -550,6 +549,7 @@ html,
     border-radius: 100px !important;
     margin: 2px 15px !important;
     transition: .2s !important;
+    height: 45px !important
 }
 .MuiList-subheader .MuiListItemButton-root:not(.Mui-selected) {
     color: #D1D1D1
@@ -564,7 +564,8 @@ html,
 }
 .MuiDrawer-paper {
     border-right: none !important;
-    background: var(--secondary-background-color)
+    background: var(--secondary-background-color) !important;
+    width: 250px !important;
 }
 .MuiListItemIcon-root {
     color: inherit !important;
@@ -714,14 +715,19 @@ html,
 /* Move description box */
 .layout-desktop .detailPagePrimaryContent {
     padding-left: 20.4vw !important;
+}
+/* Padding for 2:3 posters */
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .cardPadder-backdrop) .detailPagePrimaryContent {
     min-height: 29vw !important;
 }
-.layout-desktop .detailPageSecondaryContainer:has(.moreFromSeasonSection:not(.hide)) .detailPagePrimaryContent {
-    min-height: 12vw !important;
-} 
-.layout-desktop .detailPageSecondaryContainer:has(#childrenCollapsible:not(.hide) div[data-type="Audio"]) .detailPagePrimaryContent {
+/* Padding for 1:1 posters */
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .cardPadder-square) .detailPagePrimaryContent {
     min-height: 20vw !important;
 } 
+/* Padding for 16:9 posters */
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .cardPadder-backdrop) .detailPagePrimaryContent {
+    min-height: 12vw !important;
+}
 
 /* Move track selection box */
 .detailSection {
