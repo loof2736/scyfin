@@ -7,6 +7,7 @@
     --primary-background-transparent: rgba(35,35,35,0.5);
     --secondary-background-transparent: rgba(0,0,0,0.6);
     --rounded-cards: 15px;
+    --blur: 10px;
 }
 
 /* Setting accent color variable */
@@ -158,7 +159,7 @@
     padding: 5px 15px 5px 5px !important;
     bottom: 0% !important;
     background: rgba(0,0,0,0.5) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
 .fullInnerCardFooter {
     bottom: 5% !important;
@@ -225,6 +226,8 @@
     margin: auto !important;
     text-align: center !important;
     height: 45px !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
 }
 .navMenuOption:hover:not(.navMenuOption-selected) {
     background-color: rgba(44, 44, 44, 0.7);
@@ -279,7 +282,7 @@ html,
 .headerRight {
     background-color: var(--primary-background-transparent) !important;
     border-radius: 50px !important;
-    backdrop-filter: blur(50px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
 .layout-desktop .headerTabs,
 .layout-desktop .headerRight,
@@ -325,7 +328,7 @@ html,
 
 /* Player modifications */
 .upNextContainer, .toastVisible {
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
 .upNextContainer {
     border-radius: var(--rounded-cards) !important;
@@ -339,7 +342,7 @@ html,
 .sliderBubble {
     border-radius: var(--rounded-cards) !important;
     background-color: var(--secondary-background-transparent) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
 .sliderBubble:not(.osdVolumeSliderContainer .sliderBubble):has(.chapterThumbContainer) {
     background-color: #ffffff00 !important;
@@ -412,7 +415,7 @@ html,
     transition: 0.2s;
     border-radius: 100px !important;
     padding: 5px 10px !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
     border: none !important;
 }
 .skipIntro:hover {
@@ -640,7 +643,7 @@ html,
 .mainDetailButtons {
     background: var(--primary-background-transparent) !important;
     border-radius: 100px !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
 
 /* Add card around groups section */
@@ -717,15 +720,15 @@ html,
     padding-left: 20.4vw !important;
 }
 /* Padding for 2:3 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .cardPadder-backdrop) .detailPagePrimaryContent {
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailPagePrimaryContent {
     min-height: 29vw !important;
 }
 /* Padding for 1:1 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .cardPadder-square) .detailPagePrimaryContent {
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .squareCard) .detailPagePrimaryContent {
     min-height: 20vw !important;
 } 
 /* Padding for 16:9 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .cardPadder-backdrop) .detailPagePrimaryContent {
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailPagePrimaryContent {
     min-height: 12vw !important;
 }
 
