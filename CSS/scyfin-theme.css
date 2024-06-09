@@ -14,11 +14,11 @@
 .emby-checkbox:checked + span + .checkboxOutline,
 .selectionCommandsPanel,
 .countIndicator,
-.MuiButton-root,
-.MuiChip-root:not(.MuiChip-colorError) {
+.MuiButton-root.MuiButton-containedSizeMedium,
+.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-root.MuiChip-colorError) {
     background: var(--primary-accent-color) !important;
 }
-.MuiAlert-root {
+.MuiAlert-root.MuiAlert-standardInfo {
     background: var(--secondary-accent-color) !important;
 }
 .emby-checkbox:checked + span + .checkboxOutline,
@@ -40,7 +40,7 @@
 .emby-tab-button:hover,
 .metadataSidebarIcon,
 .upNextDialog-countdownText,
-.MuiAlert-icon {
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit {
     color: var(--primary-accent-color) !important;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -62,7 +62,7 @@
     top: 0 !important;
     width: 250px !important;
     /* Modified background color */
-    background-color: var(--secondary-background-color) !important;
+    background: var(--secondary-background-color) !important;
     /* Move drawer behind header */
     z-index: 998 !important;
 }
@@ -260,9 +260,6 @@ html,
 .backgroundContainer:not(.withBackdrop):not(.backgroundContainer-transparent),
 .noBackdropTransparency .detailPageSecondaryContainer {
     background-color: var(--primary-background-color) !important;
-}
-.backgroundContainer.withBackdrop {
-    background: var(--secondary-background-transparent) !important;
 }
 
 
@@ -534,52 +531,75 @@ html,
 .MuiAlert-message {
     color: #fff !important;
 }
-.MuiDataGrid-root {
+.MuiDataGrid-root.MuiDataGrid-withBorderColor {
     border-radius: var(--rounded-cards) !important;
 }
-.infoBanner,
-.MuiPopover-paper {
+.infoBanner {
     border-radius: var(--rounded-cards) !important;
 }
-.MuiToggleButton-root {
+.MuiToggleButton-root.MuiToggleButtonGroup-groupedHorizontal {
     border-radius: var(--rounded-cards);
     padding-inline: 15px !important;
 }
-.MuiAppBar-root {
+.MuiAppBar-root.MuiAppBar-positionFixed {
     padding: 10px !important;
 }
-.MuiList-subheader .MuiListItemButton-root {
+.MuiAppBar-root.MuiAppBar-positionFixed.MuiAppBar-colorPrimary {
+    background: var(--primary-background-transparent) !important;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+.MuiList-root.MuiList-subheader {
+    padding-left: 10px !important;
+}
+.MuiList-subheader .MuiListItem-root.MuiListItem-gutters {
+    width: 85% !important;
+    margin-inline: auto !important;
+}
+.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters {
     border-radius: 100px !important;
-    margin: 2px 15px !important;
+    margin: 2px 0px !important;
     transition: .2s !important;
     height: 45px !important
 }
-.MuiList-subheader .MuiListItemButton-root:not(.Mui-selected) {
+.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:not(.Mui-selected) .MuiListItemIcon-root,
+.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:not(.Mui-selected) {
     color: #D1D1D1
 }
-.MuiList-subheader .MuiListItemButton-root:hover:not(.Mui-selected) {
+.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:hover:not(.Mui-selected) {
     transform: scale(1.05) !important;
     background: rgba(44, 44, 44, 0.7) !important;
 }
-.Mui-selected {
-    color: var(--primary-accent-color) !important;
+.MuiListItemButton-root.Mui-selected {
     background: var(--secondary-accent-color) !important;
 }
-.MuiDrawer-paper {
+.MuiListItemButton-root.Mui-selected .MuiListItemIcon-root,
+.MuiListItemButton-root.Mui-selected {
+    color: var(--primary-accent-color) !important;
+}
+.MuiPaper-root.MuiDrawer-paperAnchorDockedLeft {
     border-right: none !important;
     background: var(--secondary-background-color) !important;
     width: 250px !important;
 }
-.MuiListItemIcon-root {
+.MuiListItemIcon-root.MuiSvgIcon-fontSizeMedium {
     color: inherit !important;
 }
-.MuiPopover-paper {
+.MuiPaper-root.MuiPopover-paper {
     background: #252525 !important;
     color: #D1D1D1 !important;
+    border-radius: var(--rounded-cards) !important;
 }
 .listItemIcon:not(.listItemIcon-transparent):not(.notification_important) {
     background: var(--secondary-accent-color) !important;
     color: var(--primary-accent-color) !important;
+}
+.MuiList-root:not(.MuiList-subheader) .MuiListItemButton-root.MuiListItemButton-gutters {
+    padding: 20px 38px 10px 38px !important;
+}
+.MuiCollapse-root.MuiCollapse-vertical .MuiListItemButton-root.MuiListItemButton-gutters {
+    width: 85% !important;
+    margin-inline: auto !important;
+    padding: 8px 16px !important;
 }
 
 
@@ -973,4 +993,33 @@ html,
 }
 .actionSheetTitle {
     margin: 10px 20px !important;
+}
+
+
+
+/* Dynamic backdrop support */
+
+/* Translucent cards */
+.layout-desktop #itemDetailPage:not(.noBackdropTransparency) .detailsGroupItem,
+.layout-desktop #itemDetailPage:not(.noBackdropTransparency) .detailSectionContent,
+.layout-desktop #itemDetailPage:not(.noBackdropTransparency) .trackSelections {
+    background: var(--primary-background-transparent) !important;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+
+/* Transparent drawer */
+.layout-desktop:has(.backgroundContainer.withBackdrop) .mainDrawer {
+    background: linear-gradient(to right, #10101090, transparent) !important;
+}
+.layout-desktop:has(#itemDetailPage.noBackdropTransparency) .mainDrawer {
+    background: var(--secondary-background-color) !important;
+}
+
+/* Blur buttons */
+.layout-desktop:has(.backgroundContainer.withBackdrop) .navMenuOption-selected {
+    backdrop-filter: blur(var(--blur)) !important;
+}
+.layout-desktop:has(.backgroundContainer.withBackdrop) .navMenuOption:hover:not(.navMenuOption-selected) {
+    background: var(--primary-background-transparent) !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
