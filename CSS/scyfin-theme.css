@@ -739,22 +739,22 @@ html,
 .layout-desktop .detailPagePrimaryContent {
     padding-left: 20.4vw !important;
 }
-.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContent {
+/* Padding for 2:3 posters */
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailPagePrimaryContent {
     min-height: 29vw !important;
 }
-/* Check for :has support (screw JMP) */
-@supports selector(:has(*)) {
-    /* Padding for 2:3 posters */
-    .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailPagePrimaryContent {
+/* Padding for 1:1 posters */
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .squareCard) .detailPagePrimaryContent {
+    min-height: 20vw !important;
+} 
+/* Padding for 16:9 posters */
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailPagePrimaryContent {
+    min-height: 12vw !important;
+}
+/* Fix for JMP */
+@supports not selector(:has(*)) {
+    .layout-desktop .detailPageWrapperContainer .detailPagePrimaryContent {
         min-height: 29vw !important;
-    }
-    /* Padding for 1:1 posters */
-    .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .squareCard) .detailPagePrimaryContent {
-        min-height: 20vw !important;
-    } 
-    /* Padding for 16:9 posters */
-    .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailPagePrimaryContent {
-        min-height: 12vw !important;
     }
 }
 
@@ -1014,11 +1014,26 @@ html,
 }
 
 /* Transparent drawer */
-.layout-desktop:has(.backgroundContainer.withBackdrop) .mainDrawer {
+.layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer {
     background: linear-gradient(to right, #10101090, transparent) !important;
 }
 .layout-desktop:has(#itemDetailPage.noBackdropTransparency) .mainDrawer {
     background: var(--secondary-background-color) !important;
+}
+/* Fix for JMP */
+@supports not selector(:has(*)) {
+    .layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer {
+        background: transparent !important;
+    }
+    #itemDetailPage.noBackdropTransparency::after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background: var(--secondary-background-color);
+    }
 }
 
 /* Blur buttons */

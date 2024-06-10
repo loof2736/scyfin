@@ -4,21 +4,29 @@
     width: 100px !important;
     margin: 0 1em 0 .5em !important;
 }
+[dir="ltr"] .pageTitle {
+    margin: 0 1em 0 .5em !important;
+}
 
 /* Un-static left drawer */
 .layout-desktop .mainDrawer:not(.dashboardDocument) {
     left: -320px !important;
     z-index: 1099 !important;
-    border-radius: var(--rounded-cards) !important;
+    border-top-right-radius : var(--rounded-cards) !important;
+    border-bottom-right-radius : var(--rounded-cards) !important;
+    background: var(--secondary-background-color) !important;
+    backdrop-filter: none !important;
 }
 .layout-desktop:has(.backgroundContainer.withBackdrop) .mainDrawer:not(.dashboardDocument) {
     width: 275px !important;
     background-color: var(--primary-background-transparent) !important;
     backdrop-filter: blur(var(--blur)) !important;
 }
-.layout-desktop:has(#itemDetailPage.noBackdropTransparency) .mainDrawer:not(.dashboardDocument) {
-    background: var(--secondary-background-color) !important;
-    backdrop-filter: none !important;
+@supports not selector(:has(*)) {
+    .layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer {
+        background: var(--secondary-background-color) !important;
+        backdrop-filter: none !important;
+    }
 }
 
 /* Lower drawer buttons */
@@ -80,7 +88,17 @@
     top: -3px !important;
     background-color: var(--primary-background-transparent) !important;
     border-radius: 50px !important;
-    backdrop-filter: blur(50px) !important;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+/* Fix for JMP */
+@supports not selector(:has(*)) {
+    .layout-desktop .headerLeft {
+        padding: 2px !important;
+        top: -3px !important;
+        background-color: var(--primary-background-transparent) !important;
+        border-radius: 50px !important;
+        backdrop-filter: blur(var(--blur)) !important;
+    }
 }
 .headerLeft {
     flex-grow: 0 !important;
