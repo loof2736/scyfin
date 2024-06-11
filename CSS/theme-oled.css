@@ -54,7 +54,7 @@
 
 select,
 textarea,
-input {
+input:not(.mdl-slider) {
     background: var(--primary-background-color) !important;
     border: 2px solid var(--outline-color) !important;
 }
