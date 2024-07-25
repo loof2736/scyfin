@@ -56,6 +56,11 @@
     height: 40px !important;
 }
 
+/* Fix for empty header with padding */
+[dir="ltr"] .pageTitle:not(.pageTitleWithLogo):empty {
+    margin: 0 !important;
+}
+
 /* Static left drawer */
 .layout-desktop .mainDrawer {
     left: 0 !important;
@@ -282,13 +287,12 @@ html,
     backdrop-filter: blur(var(--blur)) !important;
 }
 .layout-desktop .headerTabs,
-.layout-desktop .headerRight,
-.layout-tv .headerTabs,
-.layout-tv .headerRight {
+.layout-tv .headerTabs {
     margin-bottom: 10px !important;
 }
 .layout-desktop .headerTabs {
     margin-left: 160px !important;
+    margin-top: -58px !important;
 }
 /* Button height */
 .headerRight,
@@ -319,6 +323,34 @@ html,
 }
 .layout-mobile .emby-button-foreground {
     top: -2px !important;
+}
+.layout-mobile .skinHeader {
+    transition: .1s !important;
+}
+.layout-mobile .mainDrawer {
+    background: var(--secondary-background-color) !important;
+}
+.layout-mobile .headroom--unpinned {
+    transform: none;
+}
+.layout-mobile .headroom--unpinned:has(.headerTabs.sectionTabs:not(.hide))  {
+    transform: translateY(-50%);
+}
+.layout-mobile .headroom--not-top {
+    background: var(--primary-background-transparent) !important;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+.layout-mobile .headroom--not-top .headerRight {
+    background: none !important;
+}
+.layout-mobile .headroom--top,
+.layout-mobile .headroom--not-top:has(.headerTabs.sectionTabs:not(.hide)) {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+.layout-mobile .headroom--top .headerRight ,
+.layout-mobile .headroom--not-top:has(.headerTabs.sectionTabs:not(.hide)) .headerRight {
+    background: var(--primary-background-transparent) !important;
 }
 
 
@@ -408,19 +440,23 @@ html,
 }
 
 /* Support for IntroSkipper plugin */
-.skipIntro {
+#skipIntro {
     transition: 0.2s;
-    border-radius: 100px !important;
-    padding: 5px 10px !important;
+    border-radius: var(--rounded-cards) !important;
     backdrop-filter: blur(var(--blur)) !important;
     border: none !important;
 }
-.skipIntro:hover {
+#skipIntro:hover {
     box-shadow: unset !important;
     transition: .2s;
     transform: scale(1.05);
+    background: var(--primary-accent-color) !important;
 }
-.skipIntro .paper-icon-button-light:hover:not(:disabled) {
+#skipIntro .btnSkipIntro {
+    background:rgba(0, 0, 0, 0) !important;
+    padding: 10px 15px !important;
+}
+#skipIntro .paper-icon-button-light:hover:not(:disabled) {
     color: #FFF !important;
 }
 .sliderMarker {
@@ -1025,7 +1061,7 @@ html,
     .layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer {
         background: transparent !important;
     }
-    #itemDetailPage.noBackdropTransparency::after {
+    .layout-desktop #itemDetailPage.noBackdropTransparency::after {
         position: fixed;
         content: "";
         top: 0;
