@@ -20,6 +20,7 @@
 <img src="./images/dashboard.png" alt="dashboard" width="100%"/>
 <img src="./images/login.png" alt="login" width="100%"/>
 
+### Base Theme
 `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');`
 
 ### Options (Add these below the base theme)
