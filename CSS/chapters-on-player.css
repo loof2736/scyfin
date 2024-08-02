@@ -12,10 +12,12 @@
 
 .sliderMarker.watched {
     background-color: transparent !important; /* Initially invisible */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease !important; /* Smooth transition */
+    z-index: 10 !important; /* Higher z-index to be on top */
 }
 
 .sliderMarker.watched:hover {
     background-color: #00a4dc !important; /* Visible on hover */
-    transform: scale(2.05);
+    transform: scale(2.05) !important;
+    z-index: 11 !important; /* Ensure it stays on top when hovered */
 }
