@@ -1,0 +1,34 @@
+/* Display chapters on time bar */
+.sliderMarker {
+    position: absolute !important;
+    width: 2px !important;
+    height: 9.5px !important;
+    transform: translate3d(0, 50%, 0) !important;
+    display: block !important;
+}
+
+.sliderMarker.unwatched {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.sliderMarker.watched {
+    background-color: #007da7 !important;
+    z-index: 1 !important;
+}
+
+/* Remove first and last chapters */
+.sliderMarker:first-of-type.unwatched {
+    background-color: transparent !important; 
+}
+
+.sliderMarker:last-of-type.unwatched {
+    background-color: transparent !important; 
+}
+
+.sliderMarker:first-of-type.watched {
+    background-color: transparent !important; 
+}
+
+.sliderMarker:last-of-type.watched {
+    background-color: transparent !important; 
+}
