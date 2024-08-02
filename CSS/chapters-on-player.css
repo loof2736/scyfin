@@ -12,7 +12,7 @@
 
 .sliderMarker.watched {
     background-color: red !important; /* Initially invisible */
-    /* transition: background-color 0.3s ease !important; Smooth transition */
+    transition: background-color 0.3s ease !important;
     z-index: 10 !important; /* Higher z-index to be on top */
 }
 
