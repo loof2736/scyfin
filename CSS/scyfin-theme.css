@@ -178,6 +178,7 @@
     height: 10px !important;
     background: var(--primary-background-transparent) !important;
     backdrop-filter: blur(2px) !important;
+    border-radius: 6px;
 }
 .innerCardFooterClear {
     background-color: none !important;
