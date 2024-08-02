@@ -1,9 +1,9 @@
-/* Display Chapters on time bar */
+/* Display chapters on time bar */
 .sliderMarker {
     position: absolute !important;
     width: 2px !important;
-    height: 12px !important;
-    transform: translate3d(0, 25%, 0) !important;
+    height: 10px !important;
+    transform: translate3d(0, 40%, 0) !important;
 }
 
 .sliderMarker.unwatched {
@@ -11,30 +11,23 @@
 }
 
 .sliderMarker.watched {
-    background-color: red !important;
-    transition: background-color 0.3s ease !important;
-    z-index: 10 !important;
-}
-
-.sliderMarker.watched:hover {
-    background-color: #00a4dc !important; 
-    transform: scale(2.05) !important;
-    z-index: 11 !important; 
+    background-color: #007da7 !important;
+    z-index: 1 !important;
 }
 
 /* Remove first and last chapters */
 .sliderMarker:first-of-type.unwatched {
-    background-color: transparent !important; /* Example color for the first unwatched */
+    background-color: transparent !important; 
 }
 
 .sliderMarker:last-of-type.unwatched {
-    background-color: transparent !important; /* Example color for the last unwatched */
+    background-color: transparent !important; 
 }
 
 .sliderMarker:first-of-type.watched {
-    background-color: transparent !important; /* Example color for the first watched */
+    background-color: transparent !important; 
 }
 
 .sliderMarker:last-of-type.watched {
-    background-color: transparent !important; /* Example color for the last watched */
+    background-color: transparent !important; 
 }
