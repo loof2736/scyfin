@@ -2,8 +2,8 @@
 .sliderMarker {
     position: absolute !important;
     width: 2px !important;
-    height: 10px !important;
-    transform: translate3d(0, 40%, 0) !important;
+    height: 9.5px !important;
+    transform: translate3d(0, 50%, 0) !important;
     display: block !important;
 }
 
