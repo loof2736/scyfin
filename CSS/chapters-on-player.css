@@ -4,6 +4,7 @@
     width: 2px !important;
     height: 10px !important;
     transform: translate3d(0, 40%, 0) !important;
+    display: block !important;
 }
 
 .sliderMarker.unwatched {
