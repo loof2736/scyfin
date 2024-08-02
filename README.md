@@ -40,7 +40,9 @@
         - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-oled.css');`
         - <img src="./images/homepage-oled.png" alt="homepage-oled" width="100%"/>
         - <img src="./images/details-oled.png" alt="details-oled" width="100%"/>
-
+    - Player Chapters  
+        -  `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/chapters-on-player.css');`  
+        - <img src="./images/chapters.png" alt="chapters-on-player"/>
 ---
 
 ### **Installation:**
