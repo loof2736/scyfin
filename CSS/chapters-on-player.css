@@ -11,13 +11,30 @@
 }
 
 .sliderMarker.watched {
-    background-color: red !important; /* Initially invisible */
+    background-color: red !important;
     transition: background-color 0.3s ease !important;
-    /* z-index: 10 !important; */
+    z-index: 10 !important;
 }
 
 .sliderMarker.watched:hover {
-    background-color: #00a4dc !important; /* Visible on hover */
+    background-color: #00a4dc !important; 
     transform: scale(2.05) !important;
-    /* z-index: 11 !important;  */
+    z-index: 11 !important; 
+}
+
+/* Remove first and last chapters */
+.sliderMarker:first-of-type.unwatched {
+    background-color: transparent !important; /* Example color for the first unwatched */
+}
+
+.sliderMarker:last-of-type.unwatched {
+    background-color: transparent !important; /* Example color for the last unwatched */
+}
+
+.sliderMarker:first-of-type.watched {
+    background-color: transparent !important; /* Example color for the first watched */
+}
+
+.sliderMarker:last-of-type.watched {
+    background-color: transparent !important; /* Example color for the last watched */
 }
