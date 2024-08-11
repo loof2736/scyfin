@@ -460,8 +460,11 @@ html,
 #skipIntro .paper-icon-button-light:hover:not(:disabled) {
     color: #FFF !important;
 }
-.sliderMarker {
-    display: none !important;
+.sliderMarker.watched {
+    background-color: var(--primary-accent-color) !important;
+}
+.sliderMarker.unwatched {
+    background-color: #ffffff25 !important;
 }
 
 
