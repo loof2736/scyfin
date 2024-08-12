@@ -473,6 +473,7 @@ html,
 }
 .sliderMarker.watched {
     background-color: #FFFFFF90 !important;
+    z-index: 10 !important;
 }
 
 
