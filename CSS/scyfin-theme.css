@@ -460,11 +460,19 @@ html,
 #skipIntro .paper-icon-button-light:hover:not(:disabled) {
     color: #FFF !important;
 }
-.sliderMarker.watched {
-    background-color: var(--primary-accent-color) !important;
+.sliderContainer:has(.mdl-slider-hoverthumb:not(:hover)) .sliderMarker {
+    opacity: 0 !important;
+    transition: 0.2s !important;
 }
-.sliderMarker.unwatched {
-    background-color: #ffffff25 !important;
+.sliderContainer:has(.mdl-slider-hoverthumb:hover) .sliderMarker {
+    opacity: 1 !important;
+    transition: 0.2s !important;
+    height: 10px !important;
+    transform: translate3d(0,40%,0) !important;
+    -webkit-transform: translate3d(0,40%,0) !important;
+}
+.sliderMarker.watched {
+    background-color: #FFFFFF90 !important;
 }
 
 
