@@ -719,7 +719,7 @@ html,
 .layout-desktop .detailsGroupItem {
     background: var(--secondary-background-color) !important;
     padding: 10px 20px !important;
-    border-radius: 100px !important;
+    border-radius: 20px !important;
     width: fit-content !important;
     max-width: max-content !important;
     display: flex;
