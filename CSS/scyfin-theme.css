@@ -15,7 +15,10 @@
 .selectionCommandsPanel,
 .countIndicator,
 .MuiButton-root.MuiButton-containedSizeMedium,
-.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-root.MuiChip-colorError) {
+.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-root.MuiChip-colorError),
+progress::-moz-progress-bar,
+progress::-webkit-progress-value,
+progress[aria-valuenow]:before {
     background: var(--primary-accent-color) !important;
 }
 .MuiAlert-root.MuiAlert-standardInfo {
@@ -40,7 +43,10 @@
 .emby-tab-button:hover,
 .metadataSidebarIcon,
 .upNextDialog-countdownText,
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit {
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit,
+.listItemImageButton:hover,
+.button-flat:hover,
+#divRunningTasks span {
     color: var(--primary-accent-color) !important;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -649,6 +655,22 @@ html,
     width: 85% !important;
     margin-inline: auto !important;
     padding: 8px 16px !important;
+}
+/* Dynamic colors for "Active Devices" section to respect theme */
+.defaultCardBackground1 {
+    background-color: var(--primary-lighter) !important;
+}
+.defaultCardBackground2 {
+    background-color: var(--primary-light) !important;
+}
+.defaultCardBackground3 {
+    background-color: var(--primary-accent-color) !important;
+}
+.defaultCardBackground4 {
+    background-color: var(--primary-dark) !important;
+}
+.defaultCardBackground5 {
+    background-color: var(--primary-darker) !important;
 }
 
 
