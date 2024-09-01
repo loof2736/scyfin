@@ -1,6 +1,9 @@
 /* Variables */
 :root {
-    --primary-accent-color: #00a4dc;
+    --primary-r: 0;
+    --primary-g: 164;
+    --primary-b: 220;
+    --primary-accent-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 1.0);
     --secondary-accent-color: #00a4dc20;
     --primary-background-color: #101010;
     --secondary-background-color: #181818;
@@ -8,6 +11,13 @@
     --secondary-background-transparent: rgba(0,0,0,0.6);
     --rounded-cards: 15px;
     --blur: 10px;
+
+    /* Alternate accents*/
+    --primary-alt1: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 1);
+    --primary-alt2: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.85);
+    --primary-alt3: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
+    --primary-alt4: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
+    --primary-alt5: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
 }
 
 /* Setting accent color variable */
@@ -658,19 +668,19 @@ html,
 }
 /* Dynamic colors for "Active Devices" section to respect theme */
 .defaultCardBackground1 {
-    background-color: var(--primary-lighter) !important;
+    background-color: var(--primary-alt1) !important;
 }
 .defaultCardBackground2 {
-    background-color: var(--primary-light) !important;
+    background-color: var(--primary-alt2) !important;
 }
 .defaultCardBackground3 {
-    background-color: var(--primary-accent-color) !important;
+    background-color: var(--primary-alt3) !important;
 }
 .defaultCardBackground4 {
-    background-color: var(--primary-dark) !important;
+    background-color: var(--primary-alt4) !important;
 }
 .defaultCardBackground5 {
-    background-color: var(--primary-darker) !important;
+    background-color: var(--primary-alt5) !important;
 }
 
 
