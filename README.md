@@ -70,5 +70,3 @@
     * Example:
     * <img src="./images/install-client-options.png" alt="install-client-options" width="80%"/>
 * Click "Save"
-
----
