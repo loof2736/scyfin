@@ -796,6 +796,7 @@ html,
 /* Fix for track select dropdowns */
 .trackSelections .selectContainer .detailTrackSelect {
     padding: 0 10px;
+    margin-left: 10px !important;
 }
 
 /* Re-position title */
