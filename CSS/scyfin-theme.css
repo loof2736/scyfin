@@ -801,7 +801,7 @@ html,
 /* Re-position title */
 .layout-desktop .infoWrapper {
     margin-top: 245px !important;
-    margin-left: 20.4vw !important;
+    margin-left: 20.8vw !important;
 }
 .layout-desktop .detailPagePrimaryContainer {
     padding-left: 3.3% !important;
@@ -812,7 +812,7 @@ html,
 }
 .layout-desktop .itemMiscInfo {
     position: absolute !important;
-    margin-left: 21px !important;
+    margin-left: 12px !important;
     margin-top: 16px !important;
 }
 
