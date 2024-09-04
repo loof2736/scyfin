@@ -809,7 +809,7 @@ html,
 }
 .layout-desktop .nameContainer {
     position: absolute !important;
-    margin-top: -55px !important;
+    margin-top: -48px !important;
 }
 .layout-desktop .itemMiscInfo {
     position: absolute !important;
@@ -887,7 +887,10 @@ html,
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
-    margin: 0.45em 0 0 0 !important;
+}
+/* Modify original title position */
+.layout-desktop .itemName.originalTitle {
+    margin: .5em 20px !important
 }
 /* Modify play button */
 .layout-desktop .mainDetailButtons .btnPlay::after {
