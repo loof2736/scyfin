@@ -491,6 +491,25 @@ html,
     background-color: #FFFFFF90 !important;
     z-index: 10 !important;
 }
+/* Support for InPlayerEpisodePreview plugin */
+.layout-desktop #popupFocusContainer {
+    padding: 10px !important;
+}
+.layout-desktop #popupTitleContainer {
+    margin: 0px !important;
+    padding: 10px 0px 10px 0px !important;
+}
+.layout-desktop #popupContentContainer .previewEpisodeDetails {
+    position: unset !important;
+    margin: 0px 0px 6px 10px !important;
+    font-size: 13.5px !important;
+}
+.layout-desktop #popupContentContainer .previewEpisodeTitle {
+    font-size: 16.5px !important;
+}
+.layout-desktop #popupContentContainer .listItem {
+    padding: .25em .25em .25em .5em !important;
+}
 
 
 
@@ -888,9 +907,13 @@ html,
     -moz-box-ordinal-group: 2;
     box-ordinal-group: 2;
 }
-/* Modify original title position */
-.layout-desktop .itemName.originalTitle {
-    margin: .5em 20px !important
+/* Modify original title / episode name position */
+.layout-desktop .nameContainer .itemName.originalTitle {
+    margin: .5em 20px !important;
+}
+.layout-desktop .nameContainer .itemName.infoText.subtitle {
+    margin: .5em 20px !important;
+    padding: 0px !important;
 }
 /* Modify play button */
 .layout-desktop .mainDetailButtons .btnPlay::after {
