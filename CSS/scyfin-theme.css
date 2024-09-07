@@ -373,12 +373,14 @@ html,
 
 
 /* Player modifications */
-.upNextContainer, .toastVisible {
+.upNextContainer:not(#skipIntro), .toastVisible {
     backdrop-filter: blur(var(--blur)) !important;
 }
-.upNextContainer {
+.upNextContainer:not(#skipIntro) {
     border-radius: var(--rounded-cards) !important;
     background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.upNextContainer {
     margin: 4% !important;
 }
 .toastVisible {
@@ -457,21 +459,15 @@ html,
 }
 
 /* Support for IntroSkipper plugin */
-#skipIntro {
+#skipIntro .btnSkipIntro {
     transition: 0.2s;
     border-radius: var(--rounded-cards) !important;
     backdrop-filter: blur(var(--blur)) !important;
-    border: none !important;
 }
-#skipIntro:hover {
-    box-shadow: unset !important;
+#skipIntro .btnSkipIntro:hover {
     transition: .2s;
     transform: scale(1.05);
     background: var(--primary-accent-color) !important;
-}
-#skipIntro .btnSkipIntro {
-    background:rgba(0, 0, 0, 0) !important;
-    padding: 10px 15px !important;
 }
 #skipIntro .paper-icon-button-light:hover:not(:disabled) {
     color: #FFF !important;
@@ -490,6 +486,9 @@ html,
 .sliderMarker.watched {
     background-color: #FFFFFF90 !important;
     z-index: 10 !important;
+}
+#skipIntro .upNextContainer {
+    padding: 0px !important;
 }
 /* Support for InPlayerEpisodePreview plugin */
 .layout-desktop #popupFocusContainer {
