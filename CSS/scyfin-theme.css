@@ -26,9 +26,13 @@
 .countIndicator,
 .MuiButton-root.MuiButton-containedSizeMedium,
 .MuiChip-root.MuiChip-colorInfo:not(.MuiChip-root.MuiChip-colorError),
-progress::-moz-progress-bar,
-progress::-webkit-progress-value,
 progress[aria-valuenow]:before {
+    background: var(--primary-accent-color) !important;
+}
+progress::-moz-progress-bar {
+    background: var(--primary-accent-color) !important;
+}
+progress::-webkit-progress-value {
     background: var(--primary-accent-color) !important;
 }
 .MuiAlert-root.MuiAlert-standardInfo {
@@ -407,18 +411,29 @@ html,
     border-radius: 100px !important;
     background-color: var(--primary-accent-color) !important;
 }
-.mdl-slider::-moz-range-thumb,
+/* Moz */
+.mdl-slider::-moz-range-thumb {
+    background: #ffffff00 !important;
+    height: 10px !important;
+    width: 8px !important;
+    border-radius: 2px !important;
+}
+.mdl-slider-hoverthumb:hover::-moz-range-thumb {
+    transform: scaleY(2);
+    background: #fff !important;
+}
+/* Webkit */
 .mdl-slider::-webkit-slider-thumb {
     background: #ffffff00 !important;
     height: 10px !important;
     width: 8px !important;
     border-radius: 2px !important;
 }
-.mdl-slider-hoverthumb:hover::-moz-range-thumb,
 .mdl-slider-hoverthumb:hover::-webkit-slider-thumb {
     transform: scaleY(2);
     background: #fff !important;
 }
+
 .mdl-slider-background-upper {
     border-top-right-radius: 100px !important;
     border-bottom-right-radius: 100px !important;
@@ -461,7 +476,7 @@ html,
 /* Support for IntroSkipper plugin */
 #skipIntro .btnSkipIntro {
     transition: 0.2s;
-    border-radius: var(--rounded-cards) !important;
+    border-radius: 100px !important;
     backdrop-filter: blur(var(--blur)) !important;
 }
 #skipIntro .btnSkipIntro:hover {
@@ -489,6 +504,16 @@ html,
 }
 #skipIntro .upNextContainer {
     padding: 0px !important;
+}
+#skipIntro .emby-button {
+    background: rgba(30, 30, 30, 0.7) !important;
+}
+#skipIntro .emby-button:hover {
+    box-shadow: 0 0 8px rgba(var(--primary-accent-color), 0.6) !important;
+}
+#skipIntro .emby-button:focus {
+    background: rgba(30, 30, 30, 0.7) !important;
+    box-shadow: unset !important;
 }
 /* Support for InPlayerEpisodePreview plugin */
 .layout-desktop #popupFocusContainer {
