@@ -535,6 +535,17 @@ html,
     padding: .25em .25em .25em .5em !important;
 }
 
+/* Modify player buttons */
+.material-icons.fast_rewind::before {
+    content: "\e059";
+}
+.material-icons.fast_forward::before {
+    content: "\e057";
+}
+.material-icons.audiotrack::before {
+    content: "\e91f";
+}
+
 
 
 /* Settings and dashboard modifications */
