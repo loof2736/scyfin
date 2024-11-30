@@ -992,6 +992,11 @@ html,
     -webkit-flex-direction: row !important;
     flex-direction: row !important;
 }
+/* Change crop for list item images */
+.listItemImage {
+    background-size: contain !important;
+    border-radius: var(--rounded-cards);
+}
 
 
 
