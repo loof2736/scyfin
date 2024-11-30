@@ -341,6 +341,7 @@ html,
     margin-left: auto !important;
     margin-right: auto !important;
     width: auto !important;
+    max-width: 100% !important;
 }
 .layout-mobile .emby-button-foreground {
     top: -2px !important;
@@ -372,6 +373,30 @@ html,
 .layout-mobile .headroom--top .headerRight ,
 .layout-mobile .headroom--not-top:has(.headerTabs.sectionTabs:not(.hide)) .headerRight {
     background: var(--primary-background-transparent) !important;
+}
+@media (max-width: 380px) {
+    .layout-mobile .pageTitle:not(.pageTitleWithLogo):not(:empty) {
+        position: absolute !important;
+        margin-left: 50% !important;
+        transform: translate(-50%, 0) !important;
+        top: 60px !important;
+    }
+    .layout-mobile .headerTop:has(.pageTitle:not(.pageTitleWithLogo):not(:empty)) {
+        -webkit-align-items: start !important;
+        align-items: start !important;
+    }
+    .layout-mobile .skinHeader:has(.pageTitle:not(.pageTitleWithLogo):not(:empty)) {
+        height: 110px !important;
+    }
+    .layout-mobile .skinHeader:has(.pageTitle:not(.pageTitleWithLogo):not(:empty)):has(.sectionTabs:not(.hide)) {
+        height: 140px !important;
+    }
+    .layout-mobile .libraryPage:not(.noSecondaryNavPage) {
+        padding-top: 9.5em !important;
+    }
+    .layout-mobile .headroom--unpinned:has(.headerTabs.sectionTabs:not(.hide)):has(.pageTitle:not(.pageTitleWithLogo):not(:empty)) {
+        transform: translateY(-60%);
+    }
 }
 
 
