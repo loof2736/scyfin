@@ -699,6 +699,11 @@ html,
     width: 85% !important;
     margin-inline: auto !important;
 }
+/* Fix for plugins section of dashboard */
+[aria-labelledby="plugins-subheader"].MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters {
+    width: 85% !important;
+    margin-inline: auto !important;
+}
 .MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters {
     border-radius: 100px !important;
     margin: 2px 0px !important;
