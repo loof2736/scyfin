@@ -143,6 +143,9 @@ progress::-webkit-progress-value {
 .layout-desktop .collectionItems .collectionItemsContainer {
     padding-left: 0% !important;
 }
+.layout-desktop .collectionItems .sectionTitleContainer {
+    padding-left: 0% !important;
+}
 /* Dynamic buttons */
 .layout-desktop .navMenuOption:hover:not(.navMenuOption-selected) {
     transform: scale(1.05) !important;
