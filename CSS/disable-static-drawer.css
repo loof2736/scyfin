@@ -27,6 +27,9 @@
         background: var(--secondary-background-color) !important;
         backdrop-filter: none !important;
     }
+    .layout-desktop #itemDetailPage.noBackdropTransparency::after {
+        display: none !important;
+    }
 }
 
 /* Lower drawer buttons */
