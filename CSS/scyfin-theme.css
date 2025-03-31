@@ -25,7 +25,7 @@
 .selectionCommandsPanel,
 .countIndicator,
 .MuiButton-root.MuiButton-containedSizeMedium,
-.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-root.MuiChip-colorError),
+.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-colorError),
 progress[aria-valuenow]:before {
     background: var(--primary-accent-color) !important;
 }
@@ -50,7 +50,7 @@ progress::-webkit-progress-value {
 .progressring-spiner {
     border-color: var(--primary-accent-color) !important;
 }
-.button-link:not(.itemDetailPage .button-link),
+.button-link,
 .selectLabelFocused,
 .textareaLabelFocused,
 .inputLabelFocused,
@@ -62,6 +62,10 @@ progress::-webkit-progress-value {
 .button-flat:hover,
 #divRunningTasks span {
     color: var(--primary-accent-color) !important;
+}
+/* Reset text color on detail page; Can't use complex :not selectors above because JMP uses an ancient version of Chrome */
+.itemDetailPage .button-link {
+    color: initial !important;
 }
 @media (hover: hover) and (pointer: fine) {
     .paper-icon-button-light:hover:not(:disabled) {
