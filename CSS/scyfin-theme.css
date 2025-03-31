@@ -206,7 +206,7 @@ progress::-webkit-progress-value {
 .innerCardFooter .cardText {
     padding: 0 0 0 10px !important
 }
-.itemProgressBarForeground:not(.playbackProgress .itemProgressBarForeground):not(.transcodingProgress .itemProgressBarForeground):not(.backgroundProgress .itemProgressBarForeground) {
+.cardImageContainer .innerCardFooter .itemProgressBar .itemProgressBarForeground {
     background: var(--primary-accent-color) !important;
 }
 .itemProgressBarForeground {
