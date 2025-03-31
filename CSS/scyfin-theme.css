@@ -50,7 +50,7 @@ progress::-webkit-progress-value {
 .progressring-spiner {
     border-color: var(--primary-accent-color) !important;
 }
-.button-link,
+.page:not(.itemDetailPage) .button-link,
 .selectLabelFocused,
 .textareaLabelFocused,
 .inputLabelFocused,
@@ -62,10 +62,6 @@ progress::-webkit-progress-value {
 .button-flat:hover,
 #divRunningTasks span {
     color: var(--primary-accent-color) !important;
-}
-/* Reset text color on detail page; Can't use complex :not selectors above because JMP uses an ancient version of Chrome */
-.itemDetailPage .button-link {
-    color: initial !important;
 }
 @media (hover: hover) and (pointer: fine) {
     .paper-icon-button-light:hover:not(:disabled) {
