@@ -1103,6 +1103,11 @@ html,
     border-radius: 25px !important;
     padding: 50px !important;
 }
+/* Fix padding if login disclaimer is not present */
+.layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y:not(:has(.loginDisclaimer p)) {
+    padding-bottom: 100px !important;
+}
+
 .layout-desktop #loginPage .manualLoginForm .btnCancel {
     position: absolute !important;
     background: none !important;
