@@ -869,6 +869,9 @@ html,
     padding: 15px 20px 5px 20px !important;
     border-radius: var(--rounded-cards) !important;
 }
+.layout-mobile .detailPageContent {
+    padding-right: 0 !important;
+}
 
 /* Add card around description */
 .layout-desktop .detailSectionContent {
@@ -918,6 +921,9 @@ html,
 /* Move description box */
 .layout-desktop .detailPagePrimaryContent {
     padding-left: 20.4vw !important;
+}
+.layout-mobile .detailPagePrimaryContent {
+    padding-right: 5% !important;
 }
 /* Padding for 2:3 posters */
 .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailPagePrimaryContent {
