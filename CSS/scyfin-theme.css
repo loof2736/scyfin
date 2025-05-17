@@ -429,11 +429,21 @@ html,
     top: 25px !important;
     backdrop-filter: unset !important;
 }
-.mdl-slider-background-flex {
-    height: 10px !important;
-    margin-top: -5px !important;
-    border-radius: 100px !important;
-    background: hsla(0,0%,100%,.2) !important;
+@supports selector(div:not(.parent .child)) {
+    .mdl-slider-background-flex:not(.layout-mobile .nowPlayingBar .mdl-slider-background-flex) {
+        height: 10px !important;
+        margin-top: -5px !important;
+        border-radius: 100px !important;
+        background: hsla(0,0%,100%,.2) !important;
+    }
+}
+@supports not selector(div:not(.parent .child)) {
+    .mdl-slider-background-flex {
+        height: 10px !important;
+        margin-top: -5px !important;
+        border-radius: 100px !important;
+        background: hsla(0,0%,100%,.2) !important;
+    }
 }
 .mdl-slider-background-lower {
     border-radius: 100px !important;
@@ -1005,7 +1015,13 @@ html,
     background-size: contain !important;
     border-radius: var(--rounded-cards);
 }
-
+/* Move up content if no backdrop image is present
+@supports selector(:has(*)) {
+    .layout-desktop:not(:has(.backdropContainer .backdropImage)) #itemBackdrop {
+        height: 20vh !important;
+    }
+}
+*/
 
 
 /* Live TV */
