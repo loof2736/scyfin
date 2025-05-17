@@ -166,7 +166,8 @@ progress::-webkit-progress-value {
 .cardOverlayContainer,
 .blurhash-canvas,
 .dialog,
-.itemSelectionPanel {
+.itemSelectionPanel,
+.nowPlayingPageImage {
     border-radius: var(--rounded-cards) !important;
 }
 /* Rounded selection menu */
