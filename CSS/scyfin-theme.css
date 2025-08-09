@@ -784,6 +784,34 @@ html,
 textarea {
     padding-bottom: 10px !important;
 }
+/* Background behind dashboard dropdown navigation buttons */
+@supports selector(:has(*)) {
+    .MuiListItem-root:has(.MuiSvgIcon-root[data-testid^="Expand"])::before {
+        content: '';
+        position: absolute;
+        background: var(--primary-background-color);
+        inset: 1px -5px 0px -5px;
+        border-radius: 25px;
+        opacity: 0;
+        transition: inset 0.25s ease-out, opacity 0.01s 0.25s;
+    }
+    .MuiListItem-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"])::before {
+        inset: 1px -5px -189px -5px;
+        opacity: 1;
+        transition: inset 0.25s ease-out, opacity 0.01s;
+    }
+    .MuiListItemButton-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"]) {
+        color: var(--primary-accent-color) !important;
+        background: var(--secondary-accent-color) !important;
+        transform: scale(1.05) !important;
+    }
+    .MuiListItemButton-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"]) .MuiListItemIcon-root {
+        color: var(--primary-accent-color) !important;
+    }
+    .MuiCollapse-root.MuiCollapse-vertical.MuiCollapse-entered {
+        padding-bottom: 5px !important;
+    }
+}
 
 
 
@@ -1026,7 +1054,7 @@ textarea {
     background-size: contain !important;
     border-radius: var(--rounded-cards);
 }
-/* Move up content if no backdrop image is present
+/* Move up content if no backdrop image is present - I might make this work at some point, right now it causes the page to jump around when it is loading
 @supports selector(:has(*)) {
     .layout-desktop:not(:has(.backdropContainer .backdropImage)) #itemBackdrop {
         height: 20vh !important;
