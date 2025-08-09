@@ -7,6 +7,7 @@
 ---
 
 ### **Scyfin Base Theme**
+`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');`
 
 <img src="./images/homepage.png" alt="homepage" width="100%"/>
 <img src="./images/homepage-backdrops.png" alt="homepage-backdrops" width="100%"/>
@@ -15,9 +16,6 @@
 <img src="./images/movies.png" alt="movies" width="100%"/>
 <img src="./images/dashboard.png" alt="dashboard" width="100%"/>
 <img src="./images/login.png" alt="login" width="100%"/>
-
-### Base Theme
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');`
 
 ### Options (Add these below the base theme)
 - Disable static left drawer 
