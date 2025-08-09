@@ -780,6 +780,10 @@ html,
 .defaultCardBackground5 {
     background-color: var(--primary-alt5) !important;
 }
+/* Modify padding for textarea items so the bottom isn't cut off */
+textarea {
+    padding-bottom: 10px !important;
+}
 
 
 
