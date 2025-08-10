@@ -135,10 +135,6 @@ progress::-webkit-progress-value {
 .layout-desktop .hideMainDrawer .mainDrawer {
     left: -320px !important;
 }
-/* Fix for scroll menus on home page */
-.emby-scroller {
-    margin-right: -2% !important;
-}
 /* Fix for collection items misalignment */
 .layout-desktop .collectionItems .collectionItemsContainer {
     padding-left: 0% !important;
@@ -855,6 +851,7 @@ textarea {
 }
 .layout-desktop .detailPageContent {
     padding-left: 3.3% !important;
+    padding-right: 0 !important;
 }
 
 /* Re-position logo */
