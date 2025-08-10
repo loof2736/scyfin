@@ -785,24 +785,19 @@ textarea {
     .MuiListItem-root:has(.MuiSvgIcon-root[data-testid^="Expand"])::before {
         content: '';
         position: absolute;
-        background: var(--primary-background-color);
+        background: #121212;
         inset: 1px -5px 0px -5px;
         border-radius: 25px;
         opacity: 0;
         transition: inset 0.25s ease-out, opacity 0.01s 0.25s;
     }
     .MuiListItem-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"])::before {
-        inset: 1px -5px -189px -5px;
+        inset: 0px -5px -190px -5px;
         opacity: 1;
         transition: inset 0.25s ease-out, opacity 0.01s;
     }
     .MuiListItemButton-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"]) {
-        color: var(--primary-accent-color) !important;
-        background: var(--secondary-accent-color) !important;
         transform: scale(1.05) !important;
-    }
-    .MuiListItemButton-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"]) .MuiListItemIcon-root {
-        color: var(--primary-accent-color) !important;
     }
     .MuiCollapse-root.MuiCollapse-vertical.MuiCollapse-entered {
         padding-bottom: 5px !important;
