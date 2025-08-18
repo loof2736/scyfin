@@ -904,6 +904,11 @@ textarea {
     padding: 40px 20px 10px 20px !important;
     margin-top: 50px !important;
 }
+@supports selector(:has(*)) {
+    .layout-desktop .detailPageWrapperContainer:not(:has(.itemMiscInfo-primary .mediaInfoItem)) .detailSectionContent {
+        padding: 0px 20px 10px 20px !important;
+    }
+}
 .layout-mobile .detailSectionContent {
     background: var(--secondary-background-color) !important;
     border-radius: var(--rounded-cards) !important;
