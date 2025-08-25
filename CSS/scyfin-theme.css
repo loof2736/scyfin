@@ -1162,7 +1162,7 @@ textarea {
 .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y:not(:has(.loginDisclaimer p)) {
     padding-bottom: 100px !important;
 }
-
+/* Move cancel button */
 .layout-desktop #loginPage .manualLoginForm .btnCancel {
     position: absolute !important;
     background: none !important;
@@ -1170,6 +1170,12 @@ textarea {
     margin-left: -10px !important;
     margin-top: 70px !important;
     text-align: left !important;
+}
+/* Shift cancel button on JMP */
+@supports not selector(:has(*)) {
+    .layout-desktop #loginPage .manualLoginForm .btnCancel {
+        margin-top: 115px !important;
+    }
 }
 .layout-desktop #loginPage .visualLoginForm {
     position: relative !important;
