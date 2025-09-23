@@ -1,39 +1,34 @@
 <img src="./images/scyfin-full.png" alt="scyfin logo" width="200"/>
 
-### **Modern CSS theme for Jellyfin with support for backdrops and custom accent colors**
+### **A modern CSS theme for Jellyfin, featuring backdrops and customizable accent colors. Enhanced for a more elegant appearance.**
 
 [Go to installation](#installation)
 
 ---
 
-### **Scyfin Base Theme**
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');`
+### **Scyfin Elegance Theme**
+```css
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css'); /* Base theme */
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css'); /* Disable static left drawer */
 
-<img src="./images/homepage.png" alt="homepage" width="100%"/>
-<img src="./images/homepage-backdrops.png" alt="homepage-backdrops" width="100%"/>
-<img src="./images/details.png" alt="details" width="100%"/>
-<img src="./images/details-backdrops.png" alt="details-backdrops" width="100%"/>
-<img src="./images/movies.png" alt="movies" width="100%"/>
-<img src="./images/dashboard.png" alt="dashboard" width="100%"/>
-<img src="./images/login.png" alt="login" width="100%"/>
+/* Elegance theme */
+:root {
+    --primary-background-color: rgba(0,0,0,0.9);
+    --secondary-background-color: rgba(2,2,2,0.9);
+    --primary-background-transparent: rgba(2,2,2,0.2);
+}
 
-### Options (Add these below the base theme)
-- Disable static left drawer 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css');`
-- Themes:
-    - Seafoam
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-seafoam.css');`
-        - <img src="./images/seafoam.png" alt="seafoam-theme" width="40%"/>
-    - Coral
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-coral.css');`
-        - <img src="./images/coral.png" alt="coral-theme" width="40%"/>
-    - Snow
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');`
-        - <img src="./images/snow.png" alt="snow-theme" width="40%"/>
-    - OLED
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-oled.css');`
-        - <img src="./images/homepage-oled.png" alt="homepage-oled" width="100%"/>
-        - <img src="./images/details-oled.png" alt="details-oled" width="100%"/>
+/* Increase backdrop image brightness and add some blur */
+.backgroundContainer.withBackdrop {
+  background-color: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+```
+
+<img width="3840" height="2071" alt="492565878-c1894478-9b1e-40d9-aad8-bc6bf96a30f6" src="https://github.com/user-attachments/assets/d8f12354-5a20-4ad5-a88b-61a3611f6013" />
+<img width="3840" height="2071" alt="492565951-22b1a228-3012-4633-8236-65bce2397407" src="https://github.com/user-attachments/assets/592b5697-c4c3-4d8c-96f0-9ad8e89feb0c" />
+<img width="3840" height="2071" alt="492566281-2c14d90e-36e2-43b8-a1fe-49e16192a474" src="https://github.com/user-attachments/assets/f1a22a6e-f10a-422d-83eb-fdfa150ddf49" />
+
 
 ---
 
