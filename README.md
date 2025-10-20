@@ -14,7 +14,6 @@
 <img src="./images/details.png" alt="details" width="100%"/>
 <img src="./images/details-backdrops.png" alt="details-backdrops" width="100%"/>
 <img src="./images/movies.png" alt="movies" width="100%"/>
-<img src="./images/dashboard.png" alt="dashboard" width="100%"/>
 <img src="./images/login.png" alt="login" width="100%"/>
 
 ### Options (Add these below the base theme)
