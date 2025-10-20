@@ -836,8 +836,13 @@ textarea {
 
 /* Resize show/movie image on details page */
 .layout-desktop .detailImageContainer .card {
-    top: 9em !important;
+    top: 1.8em !important;
     width: 18.3vw !important;
+    position: absolute !important;
+}
+/* Legacy style to not break pre-10.11.X */
+.layout-desktop .infoWrapper .detailImageContainer .card {
+    top: 9em !important;
 }
 
 /* Re-position content on details page */
@@ -936,6 +941,10 @@ textarea {
 }
 .layout-desktop .detailPagePrimaryContainer {
     padding-left: 3.3% !important;
+}
+/* Fix for title position on 10.11.X */
+.layout-desktop [dir="ltr"] .detailPagePrimaryContainer:not(.detailRibbon) .detailRibbon {
+    padding-left: unset !important;
 }
 .layout-desktop .nameContainer {
     position: absolute !important;
@@ -1058,6 +1067,7 @@ textarea {
     }
 }
 */
+
 
 
 /* Live TV */
