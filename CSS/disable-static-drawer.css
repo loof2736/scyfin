@@ -73,7 +73,7 @@
 }
 
 /* Re-enable home button */
-.layout-desktop body:not(.hideMainDrawer) .headerHomeButton {
+.layout-desktop body:not(.hideMainDrawer) .skinHeader:not(.noHomeButtonHeader) .headerHomeButton {
     display: block !important;
 }
 .layout-desktop body:not(.hideMainDrawer) .dashboardDocument .headerHomeButton {
