@@ -33,26 +33,26 @@
 ```
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-seafoam.css');
 ```
-<img src="./images/seafoam.png" alt="seafoam-theme" width="30%"/>
+<img src="./images/seafoam.png" alt="seafoam-theme" width="40%"/>
 
 ### Coral
 ```
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-coral.css');
 ```
-<img src="./images/coral.png" alt="coral-theme" width="30%"/>
+<img src="./images/coral.png" alt="coral-theme" width="40%"/>
 
 ### Snow
 ```
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');
 ```
-<img src="./images/snow.png" alt="snow-theme" width="30%"/>
+<img src="./images/snow.png" alt="snow-theme" width="40%"/>
 
 ### OLED
 ```
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-oled.css');
 ```
-<img src="./images/homepage-oled.png" alt="homepage-oled" width="80%"/>
-<img src="./images/details-oled.png" alt="details-oled" width="80%"/>
+<img src="./images/homepage-oled.png" alt="homepage-oled" width="90%"/>
+<img src="./images/details-oled.png" alt="details-oled" width="90%"/>
 
 ---
 
