@@ -7,7 +7,9 @@
 ---
 
 ### **Scyfin Base Theme**
-`@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');`
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');
+```
 
 <img src="./images/homepage.png" alt="homepage" width="100%"/>
 <img src="./images/homepage-backdrops.png" alt="homepage-backdrops" width="100%"/>
@@ -16,23 +18,41 @@
 <img src="./images/movies.png" alt="movies" width="100%"/>
 <img src="./images/login.png" alt="login" width="100%"/>
 
-### Options (Add these below the base theme)
-- Disable static left drawer 
-    - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css');`
-- Themes:
-    - Seafoam
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-seafoam.css');`
-        - <img src="./images/seafoam.png" alt="seafoam-theme" width="40%"/>
-    - Coral
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-coral.css');`
-        - <img src="./images/coral.png" alt="coral-theme" width="40%"/>
-    - Snow
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');`
-        - <img src="./images/snow.png" alt="snow-theme" width="40%"/>
-    - OLED
-        - `@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-oled.css');`
-        - <img src="./images/homepage-oled.png" alt="homepage-oled" width="100%"/>
-        - <img src="./images/details-oled.png" alt="details-oled" width="100%"/>
+---
+
+### **Options (Add these below the base theme)**
+### Disable static left drawer 
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css');
+```
+
+---
+
+### **Themes:**
+### Seafoam
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-seafoam.css');
+```
+<img src="./images/seafoam.png" alt="seafoam-theme" width="30%"/>
+
+### Coral
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-coral.css');
+```
+<img src="./images/coral.png" alt="coral-theme" width="30%"/>
+
+### Snow
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');
+```
+<img src="./images/snow.png" alt="snow-theme" width="30%"/>
+
+### OLED
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-oled.css');
+```
+<img src="./images/homepage-oled.png" alt="homepage-oled" width="80%"/>
+<img src="./images/details-oled.png" alt="details-oled" width="80%"/>
 
 ---
 
@@ -43,7 +63,7 @@
 **Server-wide install:**
 * Click the hamburger icon (Top left)
 * Navigate to "Dashboard" (If you don't see this, make sure you are signed in to your admin account)
-* Navigate to "General"
+* Navigate to "Branding"
 * Near the bottom, under "Custom CSS code", paste the `@import url` for the base Scyfin theme
     * Example:
     * <img src="./images/install-server-base.png" alt="install-server-base" width="80%"/>
