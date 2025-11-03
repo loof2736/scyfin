@@ -9,6 +9,7 @@
     --secondary-background-color: #181818;
     --primary-background-transparent: rgba(35,35,35,0.5);
     --secondary-background-transparent: rgba(0,0,0,0.6);
+    --tertiary-background-transparent: rgba(35,35,35,0.85); 
     --rounded-cards: 15px;
     --blur: 10px;
 }
@@ -813,8 +814,12 @@ html,
 
 
 /* Music Player */
-.layout-desktop .appfooter {
-    margin-left: 250px !important;
+.layout-desktop .appfooter:not(:empty) {
+    border-radius: var(--rounded-cards);
+    margin: 15px 15px 10px 265px;
+    padding: 5px;
+    background: var(--tertiary-background-transparent);
+    backdrop-filter: blur(var(--blur));
 }
 .layout-desktop .appfooter .nowPlayingBarInfoContainer {
     margin-left: 10px !important;
