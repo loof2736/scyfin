@@ -9,7 +9,7 @@
     --secondary-background-color: #181818;
     --primary-background-transparent: rgba(35,35,35,0.5);
     --secondary-background-transparent: rgba(0,0,0,0.6);
-    --tertiary-background-transparent: rgba(35,35,35,0.85); 
+    --tertiary-background-transparent: rgba(35,35,35,0.85);
     --rounded-cards: 15px;
     --blur: 10px;
 }
@@ -563,6 +563,10 @@ html,
 .layout-desktop .listItem,
 .layout-tv .listItem {
     padding-inline: 15px !important;
+}
+/* Center the Quick Connect page */
+.layout-desktop #quickConnectPreferencesPage form {
+    margin: auto;
 }
 
 
