@@ -11,21 +11,12 @@
     --secondary-background-transparent: rgba(0,0,0,0.6);
     --rounded-cards: 15px;
     --blur: 10px;
-
-    /* Alternate accents*/
-    --primary-alt1: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 1);
-    --primary-alt2: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.85);
-    --primary-alt3: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
-    --primary-alt4: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
-    --primary-alt5: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
 }
 
 /* Setting accent color variable */
 .emby-checkbox:checked + span + .checkboxOutline,
 .selectionCommandsPanel,
 .countIndicator,
-.MuiButton-root.MuiButton-containedSizeMedium,
-.MuiChip-root.MuiChip-colorInfo:not(.MuiChip-colorError),
 progress[aria-valuenow]:before {
     background: var(--primary-accent-color) !important;
 }
@@ -34,9 +25,6 @@ progress::-moz-progress-bar {
 }
 progress::-webkit-progress-value {
     background: var(--primary-accent-color) !important;
-}
-.MuiAlert-root.MuiAlert-standardInfo {
-    background: var(--secondary-accent-color) !important;
 }
 .emby-checkbox:checked + span + .checkboxOutline,
 .emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
@@ -57,7 +45,6 @@ progress::-webkit-progress-value {
 .emby-tab-button:hover,
 .metadataSidebarIcon,
 .upNextDialog-countdownText,
-.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit,
 .listItemImageButton:hover,
 .button-flat:hover,
 #divRunningTasks span {
@@ -115,20 +102,9 @@ progress::-webkit-progress-value {
 .layout-desktop .mainDrawerButton {
     display: none !important;
 }
-/* Fix for dashboard leaking out of the sections */
-.dashboardColumn {
-    flex-shrink: inherit;
-}
-/* Fix for dashboard drawer button height */
-.layout-desktop .dashboardDocument .mainDrawer-scrollContainer {
-    padding-top: 0 !important;
-}
 /* Hide home button */
 .layout-desktop .headerHomeButton {
     display: none !important;
-}
-.layout-desktop .dashboardDocument .headerHomeButton {
-    display: block !important;
 }
 /* Fix for video player and login page */
 .layout-desktop .hide-scroll .mainDrawer,
@@ -205,33 +181,6 @@ progress::-webkit-progress-value {
 }
 .innerCardFooter .cardText {
     padding: 0 0 0 10px !important
-}
-.cardImageContainer .innerCardFooter .itemProgressBar .itemProgressBarForeground {
-    background: var(--primary-accent-color) !important;
-}
-.itemProgressBarForeground {
-    border-radius: 100px !important;
-}
-.transcodingProgress > div {
-    background-color: hsla(0,0%,100%,.2) !important;
-}
-.activeSession .backgroundProgress,
-.activeSession .playbackProgress,
-.activeSession .transcodingProgress {
-    bottom: 10px !important;
-    border-radius: 100px !important;
-    width: 90% !important;
-    left: 5% !important;
-}
-.sessionNowPlayingInnerContent {
-    padding-bottom: 12px !important;
-    padding-inline: 17px !important;
-}
-.sessionAppInfo {
-    padding: .5em 0em !important;
-}
-.sessionNowPlayingInfo {
-    padding: .8em 0em !important;
 }
 
 
@@ -583,20 +532,16 @@ html,
 
 
 
-/* Settings and dashboard modifications */
+/* Settings modifications */
 .emby-input,
 .emby-textarea,
-.paperList,
 .listItem:hover,
 .subtitleappearance-preview {
     border-radius: var(--rounded-cards) !important;
 }
 .button-submit,
 .emby-select,
-.checkboxOutline,
-.btnRefresh,
-#btnShutdown,
-.raised {
+.checkboxOutline {
     border-radius: 100px !important;
 }
 .button-submit {
@@ -609,10 +554,6 @@ html,
 .layout-desktop .username {
     margin: 0px 0px 10px 10px !important;
 }
-/* Red shutdown button */
-#btnShutdown {
-    background: #AE3739 !important;
-}
 /* Remove border under certain dashboard items */
 .listItem-border {
     border: 0 !important;
@@ -622,215 +563,6 @@ html,
 .layout-tv .listItem {
     padding-inline: 15px !important;
 }
-/* Rounded dashboard cards */
-.cardBox {
-    border-radius: var(--rounded-cards) !important;
-}
-/* Removed ugliness of border-card styling */
-.layout-desktop fieldset.verticalSection-extrabottompadding,
-.layout-tv fieldset.verticalSection-extrabottompadding {
-    border-radius: var(--rounded-cards) !important;
-    border-color: #3B3B3B !important;
-    padding: 10px 35px !important;
-}
-/* Rounded tab selections in dashboard */
-.layout-desktop .localnav {
-    border-radius: 100px !important;
-    background: #202020 !important;
-    width: fit-content !important;
-}
-.layout-desktop a[data-role="button"] {
-    background: none !important;
-}
-.layout-desktop div[data-role="controlgroup"] a.ui-btn-active {
-    background: var(--primary-accent-color) !important;
-    border-radius: 100px !important;
-}
-.layout-desktop .dashboardDocument .mainAnimatedPage {
-    left: 260px !important;
-}
-#libraryDisplayPage,
-#metadataImagesConfigurationPage,
-#metadataNfoPage {
-    margin-top: 40px !important;
-}
-#mediaLibraryPage {
-    margin-top: 10px !important;
-}
-/* Re-align active devices in dashboard */
-.activeDevices.itemsContainer {
-    margin: 0px !important;
-}
-.playbackProgress > div {
-    background: var(--primary-accent-color) !important;
-}
-/* IntroSkipper settings */
-.layout-desktop summary {
-    border-radius: 100px !important;
-}
-.layout-desktop fieldset.verticalSection-extrabottompadding,
-.layout-tv fieldset.verticalSection-extrabottompadding {
-    padding: 10px 35px 20px 35px !important;
-}
-#intro_reqs,
-#edl,
-#silence,
-#support {
-    padding-bottom: 10px !important;
-}
-/* Dashboard fixes for 10.9.x */
-.layout-desktop #userProfilesPage {
-    left: 260px !important;
-}
-.MuiAlert-message {
-    color: #fff !important;
-}
-.MuiDataGrid-root.MuiDataGrid-withBorderColor {
-    border-radius: var(--rounded-cards) !important;
-}
-.infoBanner {
-    border-radius: var(--rounded-cards) !important;
-}
-.MuiToggleButton-root.MuiToggleButtonGroup-groupedHorizontal {
-    border-radius: var(--rounded-cards);
-    padding-inline: 15px !important;
-}
-.MuiAppBar-root.MuiAppBar-positionFixed {
-    padding: 10px !important;
-}
-.MuiAppBar-root.MuiAppBar-positionFixed.MuiAppBar-colorPrimary {
-    background: var(--primary-background-transparent) !important;
-    backdrop-filter: blur(var(--blur)) !important;
-}
-.MuiList-root.MuiList-subheader {
-    padding-left: 10px !important;
-}
-.MuiList-subheader .MuiListItem-root.MuiListItem-gutters {
-    width: 85% !important;
-    margin-inline: auto !important;
-}
-/* Fix for plugins section of dashboard */
-[aria-labelledby="plugins-subheader"].MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters {
-    width: 85% !important;
-    margin-inline: auto !important;
-}
-.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters {
-    border-radius: 100px !important;
-    margin: 2px 0px !important;
-    transition: .2s !important;
-    height: 45px !important
-}
-.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:not(.Mui-selected) .MuiListItemIcon-root,
-.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:not(.Mui-selected) {
-    color: #D1D1D1
-}
-.MuiList-subheader .MuiListItemButton-root.MuiListItemButton-gutters:hover:not(.Mui-selected) {
-    transform: scale(1.05) !important;
-    background: rgba(44, 44, 44, 0.7) !important;
-}
-.MuiListItemButton-root.Mui-selected {
-    background: var(--secondary-accent-color) !important;
-}
-.MuiListItemButton-root.Mui-selected .MuiListItemIcon-root,
-.MuiListItemButton-root.Mui-selected {
-    color: var(--primary-accent-color) !important;
-}
-.MuiPaper-root.MuiDrawer-paperAnchorDockedLeft {
-    border-right: none !important;
-    background: var(--secondary-background-color) !important;
-    width: 250px !important;
-}
-.MuiListItemIcon-root.MuiSvgIcon-fontSizeMedium {
-    color: inherit !important;
-}
-.MuiPaper-root.MuiPopover-paper {
-    background: #252525 !important;
-    color: #D1D1D1 !important;
-    border-radius: var(--rounded-cards) !important;
-}
-.listItemIcon:not(.listItemIcon-transparent):not(.notification_important) {
-    background: var(--secondary-accent-color) !important;
-    color: var(--primary-accent-color) !important;
-}
-.MuiList-root:not(.MuiList-subheader) .MuiListItemButton-root.MuiListItemButton-gutters {
-    padding: 20px 38px 10px 38px !important;
-}
-.MuiCollapse-root.MuiCollapse-vertical .MuiListItemButton-root.MuiListItemButton-gutters {
-    width: 85% !important;
-    margin-inline: auto !important;
-    padding: 8px 16px !important;
-}
-/* Dynamic colors for "Active Devices" section to respect theme */
-.defaultCardBackground1 {
-    background-color: var(--primary-alt1) !important;
-}
-.defaultCardBackground2 {
-    background-color: var(--primary-alt2) !important;
-}
-.defaultCardBackground3 {
-    background-color: var(--primary-alt3) !important;
-}
-.defaultCardBackground4 {
-    background-color: var(--primary-alt4) !important;
-}
-.defaultCardBackground5 {
-    background-color: var(--primary-alt5) !important;
-}
-/* Modify padding for textarea items so the bottom isn't cut off */
-textarea {
-    padding-bottom: 10px !important;
-}
-/* Background behind dashboard dropdown navigation buttons */
-@supports selector(:has(*)) {
-    .MuiListItem-root:has(.MuiSvgIcon-root[data-testid^="Expand"])::before {
-        content: '';
-        position: absolute;
-        background: #121212;
-        inset: 1px -5px 0px -5px;
-        border-radius: 25px;
-        opacity: 0;
-        transition: inset 0.25s ease-out, opacity 0.01s 0.25s;
-    }
-    .MuiListItem-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"])::before {
-        inset: 0px -5px -190px -5px;
-        opacity: 1;
-        transition: inset 0.25s ease-out, opacity 0.01s;
-    }
-    .MuiListItemButton-root:has(.MuiSvgIcon-root[data-testid="ExpandLessIcon"]) {
-        transform: scale(1.05) !important;
-    }
-    .MuiCollapse-root.MuiCollapse-vertical.MuiCollapse-entered {
-        padding-bottom: 5px !important;
-    }
-}
-
-
-
-/* Metadata editor fixes */
-.layout-desktop .editPageSidebar {
-    width: 25vw !important;
-}
-.layout-desktop .editPageInnerContent {
-    width: 74vw !important;
-}
-.jstree-default-large .jstree-node {
-    line-height: 35px !important;
-}
-.jstree-default .jstree-wholerow-clicked {
-    background: var(--secondary-accent-color) !important;
-}
-.jstree-wholerow-hovered {
-    background: var(--primary-background-transparent) !important;
-}
-.jstree-children {
-    margin-left: -10px !important;
-}
-#editItemMetadataPage .btnHeaderSave {
-    background: var(--primary-accent-color) !important;
-    border-radius: 100px !important;
-    height: 40px !important;
-    color: white !important;
-}
 
 
 
@@ -839,10 +571,6 @@ textarea {
     top: 1.8em !important;
     width: 18.3vw !important;
     position: absolute !important;
-}
-/* Legacy style to not break pre-10.11.X */
-.layout-desktop .infoWrapper .detailImageContainer .card {
-    top: 9em !important;
 }
 
 /* Re-position content on details page */
@@ -970,7 +698,7 @@ textarea {
 /* Padding for 1:1 posters */
 .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .squareCard) .detailPagePrimaryContent {
     min-height: 20vw !important;
-} 
+}
 /* Padding for 16:9 posters */
 .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailPagePrimaryContent {
     min-height: 12vw !important;
@@ -984,51 +712,43 @@ textarea {
 
 /* Move track selection box */
 .detailSection {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
+    display: flex;
+    flex-direction: column;
+    min-height: 64.5vw;
 }
 .detailSection .detailSectionContent {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    box-ordinal-group: 1;
+    order: 1;
 }
 .detailSection .recordingFields {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    box-ordinal-group: 2;
+    order: 2;
 }
 .detailSection .trackSelections {
-    -webkit-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    box-ordinal-group: 3;
+    order: 3;
 }
 .detailSection .itemDetailsGroup {
-    -webkit-box-ordinal-group: 4;
-    -moz-box-ordinal-group: 4;
-    box-ordinal-group: 4;
+    order: 4;
+}
+.detailSection .nextUpSection {
+    margin-top: auto;
+    order: 5;
+}
+.detailSection #listChildrenCollapsible {
+    order: 6;
+}
+.detailSection .nextUpSection,
+.detailSection #listChildrenCollapsible {
+    margin-left: -20.4vw !important;
 }
 /* Move episode title */
 .layout-desktop .nameContainer {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
+    display: flex;
+    flex-direction: row;
 }
 .layout-desktop .nameContainer .parentName {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    box-ordinal-group: 1;
+    order: 1;
 }
 .layout-desktop .nameContainer .itemName {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    box-ordinal-group: 2;
+    order: 2;
 }
 /* Modify original title / episode name position */
 .layout-desktop .nameContainer .itemName.originalTitle {
@@ -1116,7 +836,7 @@ textarea {
 
 
 
-/* Fix for scaling issues */
+/* Display size scaling */
 @media (width: 1600px) {
     .layout-desktop .headerRight {
         margin-bottom: 0 !important;
