@@ -9,7 +9,7 @@
 }
 
 /* Un-static left drawer */
-.layout-desktop .mainDrawer:not(.dashboardDocument) {
+.layout-desktop .mainDrawer {
     left: -320px !important;
     z-index: 1099 !important;
     border-top-right-radius : var(--rounded-cards) !important;
@@ -17,7 +17,7 @@
     background: var(--secondary-background-color) !important;
     backdrop-filter: none !important;
 }
-.layout-desktop:has(.backgroundContainer.withBackdrop) .mainDrawer:not(.dashboardDocument) {
+.layout-desktop:has(.backgroundContainer.withBackdrop) .mainDrawer {
     width: 275px !important;
     background-color: var(--primary-background-transparent) !important;
     backdrop-filter: blur(var(--blur)) !important;
@@ -52,19 +52,8 @@
 }
 
 /* Show hamburger button */
-.layout-desktop body:not(.hideMainDrawer) .mainDrawerButton:not(.dashboardDocument) {
+.layout-desktop body:not(.hideMainDrawer) .mainDrawerButton {
     display: inline-flex !important;
-}
-
-/* Fix for dashboard */
-.layout-desktop .dashboardDocument .mainDrawer {
-    top: 0px !important;
-    left: 0px !important;
-    width: 300px !important;
-    z-index: 998 !important;
-}
-.layout-desktop .dashboardDocument .mainDrawer-scrollContainer {
-    padding-top: 75px !important;
 }
 
 /* Re-center header buttons */
@@ -74,9 +63,6 @@
 
 /* Re-enable home button */
 .layout-desktop body:not(.hideMainDrawer) .skinHeader:not(.noHomeButtonHeader) .headerHomeButton {
-    display: block !important;
-}
-.layout-desktop body:not(.hideMainDrawer) .dashboardDocument .headerHomeButton {
     display: block !important;
 }
 
