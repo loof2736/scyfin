@@ -116,3 +116,12 @@
 .layout-desktop .appfooter {
     margin-left: 0px !important;
 }
+
+
+
+/* Plugin support */
+
+/* Media Bar */
+.layout-desktop #slides-container {
+    margin: 125px 50px 0 50px !important;
+}
