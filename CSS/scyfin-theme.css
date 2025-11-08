@@ -1027,3 +1027,46 @@ html,
     background: var(--primary-background-transparent) !important;
     backdrop-filter: blur(var(--blur)) !important;
 }
+
+
+
+/* Plugin support */
+
+/* Media Bar */
+.layout-desktop #slides-container {
+    margin: 125px 50px 0 300px !important;
+    width: auto !important;
+    border-radius: var(--rounded-cards) !important;
+    height: 58% !important;
+}
+.layout-desktop #slides-container .backdrop-container,
+.layout-desktop #slides-container .gradient-overlay,
+.layout-desktop #slides-container .backdrop-overlay,
+.layout-desktop #slides-container .backdrop {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+.layout-desktop #slides-container .pause-button {
+    top: 1rem !important;
+}
+.layout-desktop #slides-container .logo-container {
+    top: 8vh !important;
+}
+/* Scaling */
+@media only screen and (max-height: 767px) and (orientation: landscape) {
+    .layout-desktop #slides-container {
+        height: 50% !important;
+    }
+    .layout-desktop #slides-container .logo-container {
+        top: 10% !important;
+    }
+    .layout-desktop #slides-container .info-container {
+        top: calc(50% + -4vh) !important;
+    }
+    .layout-desktop #slides-container .genre {
+        top: calc(50% + 1vh) !important;
+    }
+    .layout-desktop #slides-container .button-container {
+        top: calc(50% + 15vh) !important;
+    }
+}
