@@ -38,7 +38,7 @@
 }
 
 /* Shift content back to the left */
-.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+.layout-desktop .libraryPage {
     margin-left: 0px !important;
 }
 /* Fix for Jellyfin Media Player */
