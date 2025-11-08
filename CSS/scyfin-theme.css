@@ -88,7 +88,7 @@ progress::-webkit-progress-value {
     margin-top: 15px !important;
 }
 /* Shift content to the right */
-.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+.layout-desktop .libraryPage {
     margin-left: 250px !important;
 }
 /* Fix for Jellyfin Media Player */
@@ -542,7 +542,8 @@ html,
 }
 .button-submit,
 .emby-select,
-.checkboxOutline {
+.checkboxOutline,
+.emby-button.raised {
     border-radius: 100px !important;
 }
 .button-submit {
@@ -575,7 +576,8 @@ html,
 .layout-desktop .detailImageContainer .card {
     top: 1.8em !important;
     width: 18.3vw !important;
-    position: absolute !important;
+    position: static !important;
+    margin-bottom: 0 !important;
 }
 
 /* Re-position content on details page */
@@ -640,7 +642,7 @@ html,
     background: var(--secondary-background-color) !important;
     border-radius: var(--rounded-cards) !important;
     padding: 40px 20px 10px 20px !important;
-    margin-top: 50px !important;
+    margin-top: 44px !important;
 }
 @supports selector(:has(*)) {
     .layout-desktop .detailPageWrapperContainer:not(:has(.itemMiscInfo-primary .mediaInfoItem)) .detailSectionContent {
@@ -698,7 +700,7 @@ html,
 }
 /* Padding for 2:3 posters */
 .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailSection {
-    min-height: 64.5vw !important;
+    min-height: 29vw !important;
 }
 /* Padding for 16:9 posters */
 .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailSection {
@@ -711,33 +713,73 @@ html,
     }
 }
 
-/* Move track selection box */
-.detailSection {
-    display: flex;
-    flex-direction: column;
+
+
+/* Media detail page */
+/* Change page layout to grid */
+.detailPageWrapperContainer .detailPagePrimaryContainer {
+    display: grid;
+    grid-template-areas:
+        "ribbon   ribbon"
+        "image    scontent"
+        "image    tselection"
+        "image    igroup"
+        "nextup   nextup"
+        "children children"
+        "citems   citems"
+        "pguide   pguide";
+
+    grid-template-rows:
+        auto
+        max-content
+        auto
+        1fr
+        auto
+        auto
+        auto
+        auto;
+
+    grid-template-columns: minmax(auto, 18.3vw) 1fr;
 }
-.detailSection .detailSectionContent {
-    order: 1;
+.detailPageWrapperContainer .detailPagePrimaryContent,
+.detailPageWrapperContainer .detailSection {
+    display: contents;
 }
-.detailSection .recordingFields {
-    order: 2;
+.detailPageWrapperContainer .detailRibbon {
+    grid-area: ribbon;
+    margin-bottom: 25px !important;
 }
-.detailSection .trackSelections {
-    order: 3;
+.detailPageWrapperContainer .detailImageContainer {
+    grid-area: image;
+    margin-bottom: 1.3vw !important;
 }
-.detailSection .itemDetailsGroup {
-    order: 4;
+.detailPageWrapperContainer .detailSectionContent {
+    grid-area: scontent;
+    margin-right: max(env(safe-area-inset-right),3.3%) !important;
 }
-.detailSection .nextUpSection {
-    margin-top: auto;
-    order: 5;
+.detailPageWrapperContainer .trackSelections {
+    grid-area: tselection;
 }
-.detailSection #listChildrenCollapsible {
-    order: 6;
+.detailPageWrapperContainer .itemDetailsGroup {
+    grid-area: igroup;
 }
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .card:not(.squareCard)) .detailSection .nextUpSection,
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .card:not(.squareCard)) .detailSection #listChildrenCollapsible {
-    margin-left: -20.4vw !important;
+.detailPageWrapperContainer .detailSectionContent,
+.detailPageWrapperContainer .trackSelections,
+.detailPageWrapperContainer .itemDetailsGroup {
+    margin-left: 2.1vw !important;
+    align-self: start;
+}
+.detailPageWrapperContainer .nextUpSection {
+    grid-area: nextup;
+}
+.detailPageWrapperContainer #listChildrenCollapsible {
+    grid-area: children;
+}
+.detailPageWrapperContainer .collectionItems {
+    grid-area: citems;
+}
+.detailPageWrapperContainer .programGuideSection {
+    grid-area: pguide;
 }
 /* Move episode title */
 .layout-desktop .nameContainer {
