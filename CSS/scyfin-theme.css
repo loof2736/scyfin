@@ -697,15 +697,11 @@ html,
     padding-right: 5% !important;
 }
 /* Padding for 2:3 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailPagePrimaryContent {
-    min-height: 29vw !important;
-}
-/* Padding for 1:1 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .squareCard) .detailPagePrimaryContent {
-    min-height: 20vw !important;
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailSection {
+    min-height: 64.5vw !important;
 }
 /* Padding for 16:9 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailPagePrimaryContent {
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailSection {
     min-height: 12vw !important;
 }
 /* Fix for JMP */
@@ -719,7 +715,6 @@ html,
 .detailSection {
     display: flex;
     flex-direction: column;
-    min-height: 64.5vw;
 }
 .detailSection .detailSectionContent {
     order: 1;
@@ -740,8 +735,8 @@ html,
 .detailSection #listChildrenCollapsible {
     order: 6;
 }
-.detailSection .nextUpSection,
-.detailSection #listChildrenCollapsible {
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .card:not(.squareCard)) .detailSection .nextUpSection,
+.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .card:not(.squareCard)) .detailSection #listChildrenCollapsible {
     margin-left: -20.4vw !important;
 }
 /* Move episode title */
