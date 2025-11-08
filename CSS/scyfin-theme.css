@@ -818,7 +818,7 @@ html,
 
 
 /* Music Player */
-.layout-desktop .appfooter:not(:empty) {
+.layout-desktop .appfooter:has(.nowPlayingBar:not(.hide)) {
     border-radius: var(--rounded-cards);
     margin: 15px 15px 10px 265px;
     padding: 5px;
@@ -841,6 +841,13 @@ html,
 }
 .layout-desktop .appfooter .nowPlayingBar .nowPlayingBarPositionContainer {
     top: -15px !important;
+}
+/* Shift page up so now-playing footer doesn't block anything */
+.layout-desktop:has(.nowPlayingBar:not(.hide)) .content-primary,
+.layout-desktop:has(.nowPlayingBar:not(.hide)) .padded-bottom-page,
+.layout-desktop:has(.nowPlayingBar:not(.hide)) .page,
+.layout-desktop:has(.nowPlayingBar:not(.hide)) .pageWithAbsoluteTabs .pageTabContent {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 8em) !important;
 }
 
 
@@ -1040,9 +1047,9 @@ html,
     height: 58% !important;
 }
 .layout-desktop #slides-container .backdrop-container,
-.layout-desktop #slides-container .gradient-overlay,
 .layout-desktop #slides-container .backdrop-overlay,
-.layout-desktop #slides-container .backdrop {
+.layout-desktop #slides-container .backdrop,
+.layout-desktop #slides-container .gradient-overlay {
     mask-image: none !important;
     -webkit-mask-image: none !important;
 }
