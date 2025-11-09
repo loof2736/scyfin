@@ -627,14 +627,42 @@ html,
     margin: unset;
 }
 
-/* Alternative mobile group section card */
+/* Mobile media details page */
 .layout-mobile .itemDetailsGroup {
     background: var(--secondary-background-color) !important;
     padding: 15px 20px 5px 20px !important;
     border-radius: var(--rounded-cards) !important;
 }
-.layout-mobile .detailPageContent {
-    padding-right: 0 !important;
+.layout-mobile .detailPagePrimaryContent .itemsContainer.scrollX,
+.layout-mobile .detailPageSecondaryContainer .emby-scroller  {
+    margin-inline: -5% !important;
+    padding-inline: 5% !important;
+}
+.layout-mobile .detailSection {
+    display: flex !important;
+}
+.layout-mobile .detailSection {
+    display: flex;
+    flex-direction: column;
+}
+.layout-mobile .detailSection .detailSectionContent {
+    order: 1;
+}
+.layout-mobile .detailSection .recordingFields {
+    order: 2;
+}
+.layout-mobile .detailSection .trackSelections {
+    order: 3;
+}
+.layout-mobile .detailSection .itemDetailsGroup {
+    order: 4;
+}
+.layout-mobile .detailSection .nextUpSection {
+    padding-top: 15px !important;
+    order: 5;
+}
+.layout-mobile .detailSection #listChildrenCollapsible {
+    order: 6;
 }
 
 /* Add card around description */
@@ -652,7 +680,7 @@ html,
 .layout-mobile .detailSectionContent {
     background: var(--secondary-background-color) !important;
     border-radius: var(--rounded-cards) !important;
-    padding: 10px 20px !important;
+    padding: 0px 20px 10px 20px !important;
 }
 
 /* Add card around track selection */
@@ -695,9 +723,6 @@ html,
 .layout-desktop .detailPagePrimaryContent {
     padding-left: 20.4vw !important;
 }
-.layout-mobile .detailPagePrimaryContent {
-    padding-right: 5% !important;
-}
 /* Padding for 2:3 posters */
 .layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailSection {
     min-height: 29vw !important;
@@ -717,7 +742,7 @@ html,
 
 /* Media detail page */
 /* Change page layout to grid */
-.detailPageWrapperContainer .detailPagePrimaryContainer {
+.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContainer {
     display: grid;
     grid-template-areas:
         "ribbon   ribbon"
@@ -741,44 +766,44 @@ html,
 
     grid-template-columns: minmax(auto, 18.3vw) 1fr;
 }
-.detailPageWrapperContainer .detailPagePrimaryContent,
-.detailPageWrapperContainer .detailSection {
+.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContent,
+.layout-desktop .detailPageWrapperContainer .detailSection {
     display: contents;
 }
-.detailPageWrapperContainer .detailRibbon {
+.layout-desktop .detailPageWrapperContainer .detailRibbon {
     grid-area: ribbon;
     margin-bottom: 25px !important;
 }
-.detailPageWrapperContainer .detailImageContainer {
+.layout-desktop .detailPageWrapperContainer .detailImageContainer {
     grid-area: image;
     margin-bottom: 1.3vw !important;
 }
-.detailPageWrapperContainer .detailSectionContent {
+.layout-desktop .detailPageWrapperContainer .detailSectionContent {
     grid-area: scontent;
     margin-right: max(env(safe-area-inset-right),3.3%) !important;
 }
-.detailPageWrapperContainer .trackSelections {
+.layout-desktop .detailPageWrapperContainer .trackSelections {
     grid-area: tselection;
 }
-.detailPageWrapperContainer .itemDetailsGroup {
+.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
     grid-area: igroup;
 }
-.detailPageWrapperContainer .detailSectionContent,
-.detailPageWrapperContainer .trackSelections,
-.detailPageWrapperContainer .itemDetailsGroup {
+.layout-desktop .detailPageWrapperContainer .detailSectionContent,
+.layout-desktop .detailPageWrapperContainer .trackSelections,
+.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
     margin-left: 2.1vw !important;
     align-self: start;
 }
-.detailPageWrapperContainer .nextUpSection {
+.layout-desktop .detailPageWrapperContainer .nextUpSection {
     grid-area: nextup;
 }
-.detailPageWrapperContainer #listChildrenCollapsible {
+.layout-desktop .detailPageWrapperContainer #listChildrenCollapsible {
     grid-area: children;
 }
-.detailPageWrapperContainer .collectionItems {
+.layout-desktop .detailPageWrapperContainer .collectionItems {
     grid-area: citems;
 }
-.detailPageWrapperContainer .programGuideSection {
+.layout-desktop .detailPageWrapperContainer .programGuideSection {
     grid-area: pguide;
 }
 /* Move episode title */
