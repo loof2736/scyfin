@@ -284,9 +284,6 @@ html,
     top: -17px !important;
 }
 /* Mobile fixes */
-.layout-mobile .headroom--unpinned {
-    transform: translateY(-50%);
-}
 .layout-mobile .sectionTabs {
     margin-left: auto !important;
     margin-right: auto !important;
