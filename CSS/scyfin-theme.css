@@ -697,7 +697,7 @@ html,
 /* Re-position title */
 .layout-desktop .infoWrapper {
     margin-top: 245px !important;
-    margin-left: 20.8vw !important;
+    margin-left: 20.9vw !important;
 }
 .layout-desktop .detailPagePrimaryContainer {
     padding-left: 3.3% !important;
@@ -714,25 +714,6 @@ html,
     position: absolute !important;
     margin-left: 12px !important;
     margin-top: 16px !important;
-}
-
-/* Move description box */
-.layout-desktop .detailPagePrimaryContent {
-    padding-left: 20.4vw !important;
-}
-/* Padding for 2:3 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .portraitCard) .detailSection {
-    min-height: 29vw !important;
-}
-/* Padding for 16:9 posters */
-.layout-desktop .detailPageWrapperContainer:has(.detailImageContainer .backdropCard) .detailSection {
-    min-height: 12vw !important;
-}
-/* Fix for JMP */
-@supports not selector(:has(*)) {
-    .layout-desktop .detailPageWrapperContainer .detailPagePrimaryContent {
-        min-height: 29vw !important;
-    }
 }
 
 
