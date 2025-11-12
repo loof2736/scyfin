@@ -12,6 +12,13 @@
     --tertiary-background-transparent: rgba(35,35,35,0.85);
     --rounded-cards: 15px;
     --blur: 10px;
+
+    /* Alternate accents*/
+    --primary-alt1: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 1);
+    --primary-alt2: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.85);
+    --primary-alt3: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.7);
+    --primary-alt4: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.55);
+    --primary-alt5: rgb(calc(var(--primary-r) - 30), calc(var(--primary-g) - 30), calc(var(--primary-b) - 30), 0.4);
 }
 
 /* Setting accent color variable */
@@ -56,6 +63,22 @@ progress::-webkit-progress-value {
         color: var(--primary-accent-color) !important;
         background-color: var(--secondary-accent-color) !important;
     }
+}
+/* Dynamic colors for default cards */
+.defaultCardBackground1 {
+    background-color: var(--primary-alt1) !important;
+}
+.defaultCardBackground2 {
+    background-color: var(--primary-alt2) !important;
+}
+.defaultCardBackground3 {
+    background-color: var(--primary-alt3) !important;
+}
+.defaultCardBackground4 {
+    background-color: var(--primary-alt4) !important;
+}
+.defaultCardBackground5 {
+    background-color: var(--primary-alt5) !important;
 }
 
 /* Increase size of Jellyfin logo */
@@ -578,9 +601,6 @@ html,
 }
 
 /* Re-position content on details page */
-.layout-desktop .detailSection {
-    margin-right: 0 !important;
-}
 .layout-desktop .detailPageContent {
     padding-left: 3.3% !important;
     padding-right: 0 !important;
