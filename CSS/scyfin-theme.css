@@ -960,55 +960,41 @@ html,
 }
 .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
     background: var(--secondary-background-color) !important;
-    width: 400px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    min-width: 400px !important;
     border-radius: 25px !important;
-    padding: 50px !important;
-}
-/* Fix padding if login disclaimer is not present */
-.layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y:not(:has(.loginDisclaimer p)) {
-    padding-bottom: 100px !important;
-}
-/* Move cancel button */
-.layout-desktop #loginPage .manualLoginForm .btnCancel {
-    position: absolute !important;
-    background: none !important;
-    width: 100px !important;
-    margin-left: -10px !important;
-    margin-top: 70px !important;
-    text-align: left !important;
-}
-/* Shift cancel button on JMP */
-@supports not selector(:has(*)) {
-    .layout-desktop #loginPage .manualLoginForm .btnCancel {
-        margin-top: 115px !important;
-    }
-}
-.layout-desktop #loginPage .visualLoginForm {
-    position: relative !important;
-    background: var(--secondary-background-color) !important;
-    z-index: 1000 !important;
+    padding: 3em !important;
 }
 .layout-desktop #loginPage .btnForgotPassword {
+    transition: none !important;
+}
+.layout-desktop #loginPage .readOnlyContent:has(.btnManual.hide) .btnForgotPassword {
     background: none !important;
     font-weight: normal !important;
     width: 150px !important;
     text-align: right !important;
     position: absolute !important;
     margin-left: 255px !important;
-    margin-top: -195px !important;
+    top: -200px !important;
     font-size: smaller !important;
     color: rgba(255, 255, 255, 0.5) !important;
     z-index: 1 !important;
+    transition: none !important;
 }
 .layout-desktop #loginPage .loginDisclaimerContainer {
-    top: 130px !important;
+    position: absolute !important;
+    margin-top: 75px !important;
+    max-width: 400px !important;
+}
+.layout-desktop #loginPage .squareCard .cardBox {
+    margin-inline: 0.6em !important;
+}
+.layout-desktop #loginPage .readOnlyContent {
     position: relative !important;
-    left: -50px !important;
-    width: 500px !important;
-    margin-top: -35px !important;
 }
 .layout-desktop #loginPage .squareCard {
-    width: 25% !important;
+    width: 30% !important;
     font-size: smaller !important;
 }
 @media (max-width: 100em) {
@@ -1016,13 +1002,13 @@ html,
         width: 20% !important;
     }
     .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
-        width: 600px !important;
+        min-width: 600px !important;
     }
-    .layout-desktop #loginPage .btnForgotPassword {
+    .layout-desktop #loginPage .readOnlyContent:has(.btnManual.hide) .btnForgotPassword {
         margin-left: 450px !important;
     }
-    .layout-desktop #loginPage .disclaimerContainer {
-        width: 700px !important;
+    .layout-desktop #loginPage .loginDisclaimerContainer {
+        max-width: 600px !important;
     }
 }
 @media (max-width: 87.5em) {
