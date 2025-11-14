@@ -958,13 +958,16 @@ html,
     justify-content: center;
     align-items: center;
 }
+/* Login box */
 .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
     background: var(--secondary-background-color) !important;
-    width: fit-content !important;
-    height: fit-content !important;
-    min-width: 400px !important;
+    width: 450px !important;
     border-radius: 25px !important;
     padding: 3em !important;
+}
+/* Forgot password button */
+.layout-desktop #loginPage .readOnlyContent {
+    position: relative !important;
 }
 .layout-desktop #loginPage .btnForgotPassword {
     transition: none !important;
@@ -973,42 +976,32 @@ html,
     background: none !important;
     font-weight: normal !important;
     width: 150px !important;
-    text-align: right !important;
     position: absolute !important;
-    margin-left: 255px !important;
+    margin-left: 320px !important;
     top: -200px !important;
     font-size: smaller !important;
     color: rgba(255, 255, 255, 0.5) !important;
     z-index: 1 !important;
     transition: none !important;
 }
-.layout-desktop #loginPage .loginDisclaimerContainer {
-    position: absolute !important;
-    margin-top: 75px !important;
-    max-width: 400px !important;
+/* User cards */
+.layout-desktop #loginPage .squareCard {
+    width: 25% !important;
+    font-size: smaller !important;
 }
 .layout-desktop #loginPage .squareCard .cardBox {
     margin-inline: 0.6em !important;
 }
-.layout-desktop #loginPage .readOnlyContent {
-    position: relative !important;
-}
-.layout-desktop #loginPage .squareCard {
-    width: 30% !important;
-    font-size: smaller !important;
-}
+/* Scaling */
 @media (max-width: 100em) {
     .layout-desktop #loginPage .squareCard {
         width: 20% !important;
     }
     .layout-desktop #loginPage .padded-left.padded-right.padded-bottom-page.margin-auto-y {
-        min-width: 600px !important;
+        width: 600px !important;
     }
     .layout-desktop #loginPage .readOnlyContent:has(.btnManual.hide) .btnForgotPassword {
-        margin-left: 450px !important;
-    }
-    .layout-desktop #loginPage .loginDisclaimerContainer {
-        max-width: 600px !important;
+        margin-left: 470px !important;
     }
 }
 @media (max-width: 87.5em) {
