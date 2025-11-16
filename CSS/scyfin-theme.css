@@ -863,13 +863,15 @@ html,
     background-size: contain !important;
     border-radius: var(--rounded-cards);
 }
-/* Move up content if no backdrop image is present - I might make this work at some point, right now it causes the page to jump around when it is loading
+/* Move up content if no backdrop image is present */
 @supports selector(:has(*)) {
     .layout-desktop:not(:has(.backdropContainer .backdropImage)) #itemBackdrop {
-        height: 20vh !important;
+        height: 90px !important;
+    }
+    .layout-desktop:not(:has(.backdropContainer .backdropImage)) .mainDetailButtons {
+        margin-top: 200px !important;
     }
 }
-*/
 
 
 
