@@ -80,6 +80,11 @@ progress::-webkit-progress-value {
 .defaultCardBackground5 {
     background-color: var(--primary-alt5) !important;
 }
+/* Background colors */
+.noBackdropTransparency .detailPagePrimaryContainer,
+.noBackdropTransparency .detailPageSecondaryContainer {
+    background-color: var(--primary-background-color) !important;
+}
 
 /* Increase size of Jellyfin logo */
 .layout-desktop .pageTitleWithLogo {
@@ -556,6 +561,7 @@ html,
 /* Settings modifications */
 .emby-input,
 .emby-textarea,
+.paperList,
 .listItem:hover,
 .subtitleappearance-preview {
     border-radius: var(--rounded-cards) !important;
