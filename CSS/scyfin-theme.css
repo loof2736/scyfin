@@ -713,6 +713,10 @@ html,
     border-radius: var(--rounded-cards) !important;
     padding: 0px 20px 10px 20px !important;
 }
+/* Fix content shifting when clicking "Show more" on a long description */
+.layout-desktop .detailSectionContent .overview {
+    display: -webkit-box !important;
+}
 
 /* Add card around track selection */
 .trackSelections {
