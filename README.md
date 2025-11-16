@@ -7,8 +7,14 @@
 ---
 
 ### **Scyfin Base Theme**
+Jellyfin 10.11.X and above
 ```
 @import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');
+```
+
+Jellyfin 10.10.X and lower
+```
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.4.17/CSS/scyfin-theme.css');
 ```
 
 <img src="./images/homepage.png" alt="homepage" width="100%"/>
