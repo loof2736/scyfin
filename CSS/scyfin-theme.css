@@ -598,6 +598,11 @@ html,
 .layout-desktop #quickConnectPreferencesPage form {
     margin: auto;
 }
+/* Theme icons for certain list objects */
+.listItemIcon:not(.listItemIcon-transparent):not(.notification_important) {
+    background: var(--secondary-accent-color) !important;
+    color: var(--primary-accent-color) !important;
+}
 
 
 
