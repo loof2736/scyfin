@@ -908,6 +908,42 @@ html,
 }
 
 
+/* album art fix in artist sction*/
+/* Mobile layout */
+.layout-mobile .itemDetailPage .itemsContainer:has(.card[data-type="MusicAlbum"]) {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; 
+    gap: 15px !important;
+    display: block\9; /* Fallback */
+}
+
+/* PC/Desktop layout */
+.layout-desktop .itemDetailPage .itemsContainer:has(.card[data-type="MusicAlbum"]) {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important; 
+    gap: 20px !important; 
+    display: block\9;
+}
+
+.itemDetailPage .card[data-type="MusicAlbum"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.itemDetailPage .card[data-type="MusicAlbum"] .cardImage,
+.itemDetailPage .card[data-type="MusicAlbum"] .cardImageContainer {
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100% !important;
+}
+
+.itemDetailPage .card[data-type="MusicAlbum"] .cardBox {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 
 /* Music Player */
 .layout-desktop .appfooter:has(.nowPlayingBar:not(.hide)) {
