@@ -870,10 +870,11 @@ html,
 }
 /* Move up content if no backdrop image is present */
 @supports selector(:has(*)) {
-    .layout-desktop:not(:has(.backdropContainer .backdropImage)) #itemBackdrop {
+    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) #itemBackdrop {
         height: 165px !important;
     }
-    .layout-desktop:not(:has(.backdropContainer .backdropImage)) .mainDetailButtons {
+
+    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) .mainDetailButtons {
         margin-top: 70px !important;
     }
 }
