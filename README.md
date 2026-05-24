@@ -13,8 +13,10 @@ Jellyfin 10.11.X and above
 ```
 
 Jellyfin 10.10.X and lower
+
+Note - You should replace the "@latest" tag with "@1.4" for any options you use with this version
 ```
-@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.4.17/CSS/scyfin-theme.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@v1.4/CSS/scyfin-theme.css');
 ```
 
 <img src="./images/homepage.png" alt="homepage" width="100%"/>
