@@ -315,6 +315,24 @@ html,
     top: -17px !important;
 }
 /* Mobile fixes */
+.layout-mobile .headerTop {
+    justify-content: space-between !important;
+}
+
+.layout-mobile .headerLeft {
+    height: 45px !important;
+    background-color: var(--primary-background-transparent) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(var(--blur)) !important;
+    flex-grow: unset !important;
+    -webkit-flex-grow: unset !important;
+}
+
+.layout-mobile .pageTitleWithDefaultLogo {
+    width: unset !important;
+    aspect-ratio: 4 / 1 !important;
+}
+
 .layout-mobile .sectionTabs {
     margin-left: auto !important;
     margin-right: auto !important;
