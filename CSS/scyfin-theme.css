@@ -1029,6 +1029,10 @@ html,
     z-index: 1 !important;
     transition: none !important;
 }
+/* Move "forgot password" button if the "cancel" button is hidden */
+.layout-desktop #loginPage:has(.manualLoginForm .btnCancel.hide) .readOnlyContent:has(.btnManual.hide) .btnForgotPassword {
+    top: -146px !important;
+}
 /* User cards */
 .layout-desktop #loginPage .squareCard {
     width: 25% !important;
