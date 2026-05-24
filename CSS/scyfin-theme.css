@@ -942,6 +942,18 @@ html,
     padding-bottom: calc(env(safe-area-inset-bottom) + 8em) !important;
 }
 
+/* Fix album list alignment on artist page */
+.layout-mobile div[data-type="MusicAlbum"] .itemsContainer {
+    padding-right: 0 !important;
+    gap: 0 1.2em !important;
+}
+.layout-mobile div[data-type="MusicAlbum"] .itemsContainer .overflowSquareCard {
+    width: 42.9vw !important;
+}
+.layout-mobile div[data-type="MusicAlbum"] .itemsContainer .overflowSquareCard .cardBox {
+    margin-right: 0 !important;
+}
+
 
 
 /* Display size scaling */
