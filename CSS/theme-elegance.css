@@ -1,0 +1,12 @@
+/* Variables */
+:root {
+    --primary-background-color: rgba(0,0,0,0.9);
+    --secondary-background-color: rgba(2,2,2,0.9);
+    --primary-background-transparent: rgba(2,2,2,0.2);
+}
+
+/* Increase backdrop image brightness and add some blur */
+.backgroundContainer.withBackdrop {
+  background-color: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
