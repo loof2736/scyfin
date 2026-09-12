@@ -778,7 +778,7 @@ html:not(:has(#reactRoot main)) {
 
 /* Add card around top-right buttons */
 .mainDetailButtons {
-    background: var(--primary-background-transparent) !important;
+    background: #ffffff09 !important;
     border-radius: 100px !important;
     backdrop-filter: blur(var(--blur)) !important;
 }
