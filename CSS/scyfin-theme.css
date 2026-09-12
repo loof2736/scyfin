@@ -161,6 +161,8 @@ progress::-webkit-progress-value {
 
 
 
+
+
 /* Rounded cards */
 .cardContent,
 .cardPadder,
@@ -178,6 +180,8 @@ progress::-webkit-progress-value {
 .itemSelectionPanel .checkboxOutline {
     margin: 7px !important;
 }
+
+
 
 
 
@@ -256,6 +260,7 @@ progress::-webkit-progress-value {
 
 
 
+
 /* Custom button color */
 .navMenuOption-selected {
     background: var(--secondary-accent-color) !important;
@@ -268,7 +273,6 @@ html,
 .noBackdropTransparency .detailPageSecondaryContainer {
     background-color: var(--primary-background-color) !important;
 }
-
 
 /* Transparent header bar */
 .skinHeader {
@@ -378,6 +382,8 @@ html,
         transform: translateY(-60%);
     }
 }
+
+
 
 
 
@@ -566,6 +572,8 @@ html,
 
 
 
+
+
 /* Settings modifications */
 .emby-input,
 .emby-textarea,
@@ -611,26 +619,156 @@ html,
 
 
 
-/* Resize show/movie image on details page */
-.layout-desktop .detailImageContainer .card {
-    top: 1.8em !important;
-    width: 18.3vw !important;
-    position: static !important;
-    margin-bottom: 0 !important;
+
+
+/* Media detail page */
+
+/* Post-v12 */
+html:has(#reactRoot main) {
+    /* Re-order detail elements (track selection, description, etc) */
+    & .detailSection {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+    }
+    & .detailSection .detailSectionContent {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        box-ordinal-group: 1;
+    }
+    & .detailSection .recordingFields {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        box-ordinal-group: 2;
+    }
+    & .detailSection .trackSelections {
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+        box-ordinal-group: 3;
+    }
+    & .detailSection .itemDetailsGroup {
+        -webkit-box-ordinal-group: 4;
+        -moz-box-ordinal-group: 4;
+        box-ordinal-group: 4;
+    }
+
+    /* Adjust padding of detail elements */
+    & [dir=ltr] .detailPagePrimaryContent {
+        padding-left: calc(25vw + 6.6%) !important;
+    }
+
+    /* Re-position title */
+    &.layout-desktop .infoWrapper {
+        padding-left: calc(25vw + 6.6% + 12px) !important;
+    }
+    &.layout-desktop .nameContainer {
+        margin-top: -52px !important;
+    }
 }
 
-/* Re-position content on details page */
-.layout-desktop .detailPageContent {
-    padding-left: 3.3% !important;
-    padding-right: 0 !important;
-}
+/* Pre-v12 */
+html:not(:has(#reactRoot main)) {
+    /* Change page layout to grid */
+    &.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContainer {
+        display: grid;
+        grid-template-areas:
+            "ribbon   ribbon"
+            "image    scontent"
+            "image    tselection"
+            "image    igroup"
+            "nextup   nextup"
+            "children children"
+            "citems   citems"
+            "pguide   pguide";
 
-/* Re-position logo */
-.layout-desktop .detailLogo,
-.layout-tv .detailLogo {
-    right: 0 !important;
-    left: 4% !important;
-    top: 10% !important;
+        grid-template-rows:
+            auto
+            max-content
+            auto
+            1fr
+            auto
+            auto
+            auto
+            auto;
+
+        grid-template-columns: minmax(auto, 18.3vw) 1fr;
+    }
+    &.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContent,
+    &.layout-desktop .detailPageWrapperContainer .detailSection {
+        display: contents;
+    }
+    &.layout-desktop .detailPageWrapperContainer .detailRibbon {
+        grid-area: ribbon;
+        margin-bottom: 25px !important;
+    }
+    &.layout-desktop .detailPageWrapperContainer .detailImageContainer {
+        grid-area: image;
+        margin-bottom: 1.3vw !important;
+    }
+    &.layout-desktop .detailPageWrapperContainer .detailSectionContent {
+        grid-area: scontent;
+        margin-right: max(env(safe-area-inset-right),3.3%) !important;
+    }
+    &.layout-desktop .detailPageWrapperContainer .trackSelections {
+        grid-area: tselection;
+    }
+    &.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
+        grid-area: igroup;
+    }
+    &.layout-desktop .detailPageWrapperContainer .detailSectionContent,
+    &.layout-desktop .detailPageWrapperContainer .trackSelections,
+    &.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
+        margin-left: 2.1vw !important;
+        align-self: start;
+    }
+    &.layout-desktop .detailPageWrapperContainer .nextUpSection {
+        grid-area: nextup;
+    }
+    &.layout-desktop .detailPageWrapperContainer #listChildrenCollapsible {
+        grid-area: children;
+    }
+    &.layout-desktop .detailPageWrapperContainer .collectionItems {
+        grid-area: citems;
+    }
+    &.layout-desktop .detailPageWrapperContainer .programGuideSection {
+        grid-area: pguide;
+    }
+
+    /* Re-position logo */
+    &.layout-desktop .detailLogo,
+    &.layout-tv .detailLogo {
+        right: 0 !important;
+        left: 4% !important;
+        top: 10% !important;
+    }
+
+    /* Re-position title */
+    &.layout-desktop .infoWrapper {
+        margin-left: 20.9vw !important;
+    }
+    &.layout-desktop .nameContainer {
+        margin-top: -48px !important;
+    }
+
+    /* Resize show/movie image */
+    &.layout-desktop .detailImageContainer .card {
+        top: 1.8em !important;
+        width: 18.3vw !important;
+        position: static !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Re-position content */
+    &.layout-desktop .detailPagePrimaryContainer,
+    &.layout-desktop .detailPageContent {
+        padding-left: 3.3% !important;
+    }
+    &.layout-desktop .detailPageContent {
+        padding-right: 0 !important;
+    }
 }
 
 /* Transparent ribbon bar */
@@ -645,6 +783,59 @@ html,
     backdrop-filter: blur(var(--blur)) !important;
 }
 
+/* Modify play button */
+.layout-desktop .mainDetailButtons .btnPlay::after {
+    content: "Play" !important;
+}
+.layout-desktop .mainDetailButtons .btnPlay {
+    position: relative !important;
+    margin-right: -85px !important;
+    padding-right: 20px !important;
+    right: 110px !important;
+    background: var(--primary-accent-color) !important;
+    border-radius: 100px !important;
+    color: var(--secondary-background-color) !important;
+}
+.layout-desktop .mainDetailButtons .detailButton {
+    -webkit-flex-direction: row !important;
+    flex-direction: row !important;
+}
+
+/* Re-position title */
+.layout-desktop .infoWrapper {
+    margin-top: 245px !important;
+}
+.layout-desktop .nameContainer {
+    display: flex;
+    flex-direction: row;
+}
+.layout-desktop .nameContainer .parentName {
+    order: 1;
+}
+.layout-desktop .nameContainer .itemName {
+    order: 2;
+}
+/* Fix for title position on post-v10.10 */
+.layout-desktop [dir="ltr"] .detailPagePrimaryContainer:not(.detailRibbon) .detailRibbon {
+    padding-left: unset !important;
+}
+.layout-desktop .nameContainer {
+    position: absolute !important;
+}
+.layout-desktop .itemMiscInfo {
+    position: absolute !important;
+    margin-left: 12px !important;
+    margin-top: 16px !important;
+}
+/* Modify original title / episode name position */
+.layout-desktop .nameContainer .itemName.originalTitle {
+    margin: .5em 20px !important;
+}
+.layout-desktop .nameContainer .itemName.infoText.subtitle {
+    margin: .5em 20px !important;
+    padding: 0px !important;
+}
+
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
     background: var(--secondary-background-color) !important;
@@ -656,11 +847,71 @@ html,
     gap: 1em;
 }
 
+/* Add card around description */
+.layout-desktop .detailSectionContent {
+    background: var(--secondary-background-color) !important;
+    border-radius: var(--rounded-cards) !important;
+    padding: 40px 20px 10px 20px !important;
+    margin-top: 44px !important;
+}
+@supports selector(:has(*)) {
+    .layout-desktop .detailPageWrapperContainer:not(:has(.itemMiscInfo-primary .mediaInfoItem)) .detailSectionContent {
+        padding: 0px 20px 10px 20px !important;
+    }
+}
+.layout-mobile .detailSectionContent {
+    background: var(--secondary-background-color) !important;
+    border-radius: var(--rounded-cards) !important;
+    padding: 0px 20px 10px 20px !important;
+}
+/* Fix content shifting when clicking "Show more" on a long description */
+.detailSectionContent .overview {
+    display: -webkit-box !important;
+}
+
+/* Add card around track selection */
+.trackSelections {
+    background: var(--secondary-background-color) !important;
+    border-radius: var(--rounded-cards) !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+}
+
+/* Fix for track select dropdowns */
+.trackSelections .selectContainer .detailTrackSelect {
+    padding: 0 10px;
+    margin-left: 10px !important;
+}
+
 /* Fix for group section labels */
 .detailsGroupItem .label, .trackSelections .selectContainer .selectLabel {
     min-width: 75px;
     flex-basis: unset;
     margin: unset;
+}
+
+/* Change crop for episode list thumbnails */
+.listItemImage {
+    background-size: contain !important;
+    border-radius: var(--rounded-cards);
+}
+
+/* Move up content if no backdrop image is present */
+@supports selector(:has(*)) {
+    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) #itemBackdrop {
+        height: 165px !important;
+    }
+
+    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) .mainDetailButtons {
+        margin-top: 70px !important;
+    }
+}
+
+/* Chapter selector labels */
+.layout-desktop .chapterCard .innerCardFooter {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 3px 15px 5px 5px !important
 }
 
 /* Mobile media details page */
@@ -701,190 +952,7 @@ html,
     order: 6;
 }
 
-/* Add card around description */
-.layout-desktop .detailSectionContent {
-    background: var(--secondary-background-color) !important;
-    border-radius: var(--rounded-cards) !important;
-    padding: 40px 20px 10px 20px !important;
-    margin-top: 44px !important;
-}
-@supports selector(:has(*)) {
-    .layout-desktop .detailPageWrapperContainer:not(:has(.itemMiscInfo-primary .mediaInfoItem)) .detailSectionContent {
-        padding: 0px 20px 10px 20px !important;
-    }
-}
-.layout-mobile .detailSectionContent {
-    background: var(--secondary-background-color) !important;
-    border-radius: var(--rounded-cards) !important;
-    padding: 0px 20px 10px 20px !important;
-}
-/* Fix content shifting when clicking "Show more" on a long description */
-.detailSectionContent .overview {
-    display: -webkit-box !important;
-}
 
-/* Add card around track selection */
-.trackSelections {
-    background: var(--secondary-background-color) !important;
-    border-radius: var(--rounded-cards) !important;
-    padding: 10px 20px !important;
-    margin-top: 20px !important;
-}
-
-/* Fix for track select dropdowns */
-.trackSelections .selectContainer .detailTrackSelect {
-    padding: 0 10px;
-    margin-left: 10px !important;
-}
-
-/* Re-position title */
-.layout-desktop .infoWrapper {
-    margin-top: 245px !important;
-    margin-left: 20.9vw !important;
-}
-.layout-desktop .detailPagePrimaryContainer {
-    padding-left: 3.3% !important;
-}
-/* Fix for title position on 10.11.X */
-.layout-desktop [dir="ltr"] .detailPagePrimaryContainer:not(.detailRibbon) .detailRibbon {
-    padding-left: unset !important;
-}
-.layout-desktop .nameContainer {
-    position: absolute !important;
-    margin-top: -48px !important;
-}
-.layout-desktop .itemMiscInfo {
-    position: absolute !important;
-    margin-left: 12px !important;
-    margin-top: 16px !important;
-}
-
-
-
-/* Media detail page */
-/* Change page layout to grid */
-.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContainer {
-    display: grid;
-    grid-template-areas:
-        "ribbon   ribbon"
-        "image    scontent"
-        "image    tselection"
-        "image    igroup"
-        "nextup   nextup"
-        "children children"
-        "citems   citems"
-        "pguide   pguide";
-
-    grid-template-rows:
-        auto
-        max-content
-        auto
-        1fr
-        auto
-        auto
-        auto
-        auto;
-
-    grid-template-columns: minmax(auto, 18.3vw) 1fr;
-}
-.layout-desktop .detailPageWrapperContainer .detailPagePrimaryContent,
-.layout-desktop .detailPageWrapperContainer .detailSection {
-    display: contents;
-}
-.layout-desktop .detailPageWrapperContainer .detailRibbon {
-    grid-area: ribbon;
-    margin-bottom: 25px !important;
-}
-.layout-desktop .detailPageWrapperContainer .detailImageContainer {
-    grid-area: image;
-    margin-bottom: 1.3vw !important;
-}
-.layout-desktop .detailPageWrapperContainer .detailSectionContent {
-    grid-area: scontent;
-    margin-right: max(env(safe-area-inset-right),3.3%) !important;
-}
-.layout-desktop .detailPageWrapperContainer .trackSelections {
-    grid-area: tselection;
-}
-.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
-    grid-area: igroup;
-}
-.layout-desktop .detailPageWrapperContainer .detailSectionContent,
-.layout-desktop .detailPageWrapperContainer .trackSelections,
-.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
-    margin-left: 2.1vw !important;
-    align-self: start;
-}
-.layout-desktop .detailPageWrapperContainer .nextUpSection {
-    grid-area: nextup;
-}
-.layout-desktop .detailPageWrapperContainer #listChildrenCollapsible {
-    grid-area: children;
-}
-.layout-desktop .detailPageWrapperContainer .collectionItems {
-    grid-area: citems;
-}
-.layout-desktop .detailPageWrapperContainer .programGuideSection {
-    grid-area: pguide;
-}
-/* Move episode title */
-.layout-desktop .nameContainer {
-    display: flex;
-    flex-direction: row;
-}
-.layout-desktop .nameContainer .parentName {
-    order: 1;
-}
-.layout-desktop .nameContainer .itemName {
-    order: 2;
-}
-/* Modify original title / episode name position */
-.layout-desktop .nameContainer .itemName.originalTitle {
-    margin: .5em 20px !important;
-}
-.layout-desktop .nameContainer .itemName.infoText.subtitle {
-    margin: .5em 20px !important;
-    padding: 0px !important;
-}
-/* Modify play button */
-.layout-desktop .mainDetailButtons .btnPlay::after {
-    content: "Play" !important;
-}
-.layout-desktop .mainDetailButtons .btnPlay {
-    position: relative !important;
-    margin-right: -85px !important;
-    padding-right: 20px !important;
-    right: 110px !important;
-    background: var(--primary-accent-color) !important;
-    border-radius: 100px !important;
-    color: var(--secondary-background-color) !important;
-}
-.layout-desktop .mainDetailButtons .detailButton {
-    -webkit-flex-direction: row !important;
-    flex-direction: row !important;
-}
-/* Change crop for list item images */
-.listItemImage {
-    background-size: contain !important;
-    border-radius: var(--rounded-cards);
-}
-/* Move up content if no backdrop image is present */
-@supports selector(:has(*)) {
-    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) #itemBackdrop {
-        height: 165px !important;
-    }
-
-    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) .mainDetailButtons {
-        margin-top: 70px !important;
-    }
-}
-
-/* Chapter selector labels */
-.layout-desktop .chapterCard .innerCardFooter {
-    display: flex !important;
-    flex-direction: row !important;
-    padding: 3px 15px 5px 5px !important
-}
 
 
 
@@ -907,6 +975,8 @@ html,
 .itemMiscInfo.itemMiscInfo-secondary {
     margin-left: 65px !important;
 }
+
+
 
 
 
@@ -957,6 +1027,8 @@ html,
 
 
 
+
+
 /* Display size scaling */
 @media (width: 1600px) {
     .layout-desktop .headerRight {
@@ -987,6 +1059,8 @@ html,
 
 
 
+
+
 /* Fixes for TV Layout */
 .layout-tv .sectionTabs {
     width: auto !important;
@@ -994,6 +1068,8 @@ html,
 .layout-tv .headerLeft {
     padding: 5px !important;
 }
+
+
 
 
 
@@ -1071,6 +1147,8 @@ html,
 
 
 
+
+
 /* Dialog box */
 .dialog {
     background-color: var(--secondary-background-color) !important;
@@ -1078,6 +1156,8 @@ html,
 .actionSheetTitle {
     margin: 10px 20px !important;
 }
+
+
 
 
 
@@ -1122,6 +1202,8 @@ html,
     background: var(--primary-background-transparent) !important;
     backdrop-filter: blur(var(--blur)) !important;
 }
+
+
 
 
 
