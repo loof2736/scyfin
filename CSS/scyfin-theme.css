@@ -839,7 +839,7 @@ html:not(:has(#reactRoot main)) {
 /* Add card around groups section */
 .layout-desktop .detailsGroupItem {
     background: var(--secondary-background-color) !important;
-    padding: 10px 20px !important;
+    padding: 8px 20px !important;
     border-radius: 20px !important;
     width: fit-content !important;
     max-width: max-content !important;
