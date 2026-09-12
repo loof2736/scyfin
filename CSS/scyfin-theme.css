@@ -654,6 +654,16 @@ html:has(#reactRoot main) {
         -moz-box-ordinal-group: 4;
         box-ordinal-group: 4;
     }
+    & .detailSection .nextUpSection {
+        -webkit-box-ordinal-group: 5;
+        -moz-box-ordinal-group: 5;
+        box-ordinal-group: 5;
+    }
+    & .detailSection #listChildrenCollapsible {
+        -webkit-box-ordinal-group: 6;
+        -moz-box-ordinal-group: 6;
+        box-ordinal-group: 6;
+    }
 
     /* Adjust padding of detail elements */
     & [dir=ltr] .detailPagePrimaryContent {
@@ -666,6 +676,17 @@ html:has(#reactRoot main) {
     }
     &.layout-desktop .nameContainer {
         margin-top: -52px !important;
+    }
+
+    /* Re-size media image */
+    &.layout-desktop .detailImageContainer .card.portraitCard {
+        width: 18.3vw !important;
+    }
+    & [dir=ltr] .detailPagePrimaryContainer:has(.detailImageContainer .card.portraitCard) .detailPagePrimaryContent {
+        padding-left: calc(18.3vw + 6.6%) !important;
+    }
+    &.layout-desktop .detailPagePrimaryContainer:has(.detailImageContainer .card.portraitCard) .infoWrapper {
+        padding-left: calc(18.3vw + 6.6% + 12px) !important;
     }
 }
 
@@ -737,14 +758,6 @@ html:not(:has(#reactRoot main)) {
         grid-area: pguide;
     }
 
-    /* Re-position logo */
-    &.layout-desktop .detailLogo,
-    &.layout-tv .detailLogo {
-        right: 0 !important;
-        left: 4% !important;
-        top: 10% !important;
-    }
-
     /* Re-position title */
     &.layout-desktop .infoWrapper {
         margin-left: 20.9vw !important;
@@ -753,9 +766,8 @@ html:not(:has(#reactRoot main)) {
         margin-top: -48px !important;
     }
 
-    /* Resize show/movie image */
+    /* Re-size/position media image */
     &.layout-desktop .detailImageContainer .card {
-        top: 1.8em !important;
         width: 18.3vw !important;
         position: static !important;
         margin-bottom: 0 !important;
@@ -769,6 +781,14 @@ html:not(:has(#reactRoot main)) {
     &.layout-desktop .detailPageContent {
         padding-right: 0 !important;
     }
+}
+
+/* Re-position logo */
+.layout-desktop .detailLogo,
+.layout-tv .detailLogo {
+    right: 0 !important;
+    left: 3.3% !important;
+    top: 10% !important;
 }
 
 /* Transparent ribbon bar */
@@ -799,6 +819,11 @@ html:not(:has(#reactRoot main)) {
 .layout-desktop .mainDetailButtons .detailButton {
     -webkit-flex-direction: row !important;
     flex-direction: row !important;
+}
+
+/* Re-position media image */
+.layout-desktop .detailImageContainer .card {
+    top: 1.8em !important;
 }
 
 /* Re-position title */
@@ -897,14 +922,11 @@ html:not(:has(#reactRoot main)) {
 }
 
 /* Move up content if no backdrop image is present */
-@supports selector(:has(*)) {
-    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) #itemBackdrop {
-        height: 165px !important;
-    }
-
-    .layout-desktop:not(:has(.backdropContainer .backdropImage, .detailLogo)) .mainDetailButtons {
-        margin-top: 70px !important;
-    }
+.layout-desktop:not(:has(.backdropContainer .backdropImage)) .itemDetailPage:has(.detailLogo.hide) #itemBackdrop {
+    height: 165px !important;
+}
+.layout-desktop:not(:has(.backdropContainer .backdropImage)) .itemDetailPage:has(.detailLogo.hide) .mainDetailButtons {
+    margin-top: 70px !important;
 }
 
 /* Chapter selector labels */
