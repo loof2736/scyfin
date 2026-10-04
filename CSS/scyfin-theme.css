@@ -326,7 +326,7 @@ html,
     max-width: 100% !important;
 }
 .layout-mobile .emby-button-foreground {
-    top: -2px !important;
+    top: -3px !important;
 }
 .layout-mobile .skinHeader {
     transition: .1s !important;
