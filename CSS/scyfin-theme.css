@@ -252,7 +252,7 @@ progress::-webkit-progress-value {
 }
 /* Fix for header buttons */
 .layout-desktop .emby-button-foreground {
-    top: -9px !important;
+    top: -10px !important;
 }
 .layout-tv .emby-button-foreground {
     top: -14px !important;
@@ -981,7 +981,7 @@ html:not(:has(#reactRoot main)) {
         margin-left: 25px !important;
     }
     .layout-desktop .headerTabs {
-        margin-top: -65px !important;
+        margin-top: -54px !important;
     }
     .layout-desktop .headerRight {
         margin-right: 15px !important;
@@ -991,7 +991,7 @@ html:not(:has(#reactRoot main)) {
         align-self: center !important;
     }
     .layout-desktop .emby-button-foreground {
-        top: -2px !important;
+        top: -5px !important;
     }
 }
 
