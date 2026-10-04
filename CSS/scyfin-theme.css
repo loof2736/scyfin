@@ -1150,13 +1150,13 @@ html:not(:has(#reactRoot main)) {
 /* Media Bar */
 /* Pre-v12 */
 html:not(:has(#reactRoot main)) {
-    & #slides-container {
+    &.layout-desktop #slides-container {
         margin-left: 250px !important;
         width: calc(100% - 250px) !important;
     }
-    & #slides-container .volume-toggle,
-    & #slides-container .pause-button,
-    & #slides-container .ss-settings-toggle {
+    &.layout-desktop #slides-container .volume-toggle,
+    &.layout-desktop #slides-container .pause-button,
+    &.layout-desktop #slides-container .ss-settings-toggle {
         top: 6rem !important;
     }
 }
