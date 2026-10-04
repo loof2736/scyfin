@@ -475,90 +475,6 @@ html,
     transform: scale(1.1);
 }
 
-/* Support for Jellyscrub plugin */
-.chapterThumbContainer {
-    background: none !important;
-    border-radius: var(--rounded-cards) !important;
-    box-shadow: unset !important;
-}
-.chapterThumb {
-    border-radius: var(--rounded-cards) !important;
-    margin-bottom: 47px !important;
-    box-shadow: 0 0 1.9vh #000 !important;
-}
-.chapterThumbTextContainer {
-    background: none !important;
-}
-.chapterThumbText {
-    text-align: center !important;
-}
-.chapterThumbText-dim {
-    display: none !important;
-}
-
-/* Support for IntroSkipper plugin */
-#skipIntro .btnSkipIntro {
-    transition: 0.2s;
-    border-radius: 100px !important;
-    backdrop-filter: blur(var(--blur)) !important;
-}
-#skipIntro .btnSkipIntro:hover {
-    transition: .2s;
-    transform: scale(1.05);
-    background: var(--primary-accent-color) !important;
-}
-#skipIntro .paper-icon-button-light:hover:not(:disabled) {
-    color: #FFF !important;
-}
-.sliderContainer:has(.mdl-slider-hoverthumb) .sliderMarker {
-    opacity: 0 !important;
-    transition: 0.2s !important;
-}
-.sliderContainer:has(.mdl-slider-hoverthumb:hover) .sliderMarker,
-.sliderContainer:has(.mdl-slider-hoverthumb:focus) .sliderMarker  {
-    opacity: 1 !important;
-    transition: 0.2s !important;
-    height: 10px !important;
-    transform: translate3d(0,40%,0) !important;
-    -webkit-transform: translate3d(0,40%,0) !important;
-}
-.sliderMarker.watched {
-    background-color: #FFFFFF90 !important;
-    z-index: 10 !important;
-}
-#skipIntro .upNextContainer {
-    padding: 0px !important;
-}
-#skipIntro .emby-button {
-    background: rgba(30, 30, 30, 0.7) !important;
-}
-#skipIntro .emby-button:hover {
-    box-shadow: 0 0 8px rgba(var(--primary-accent-color), 0.6) !important;
-}
-#skipIntro .emby-button:focus {
-    background: rgba(30, 30, 30, 0.7) !important;
-    box-shadow: unset !important;
-}
-/* Support for InPlayerEpisodePreview plugin */
-.layout-desktop #popupFocusContainer {
-    padding: 10px !important;
-}
-.layout-desktop #popupTitleContainer {
-    margin: 0px !important;
-    padding: 10px 0px 10px 0px !important;
-}
-.layout-desktop #popupContentContainer .previewEpisodeDetails {
-    position: unset !important;
-    margin: 0px 0px 6px 10px !important;
-    font-size: 13.5px !important;
-}
-.layout-desktop #popupContentContainer .previewEpisodeTitle {
-    font-size: 16.5px !important;
-}
-.layout-desktop #popupContentContainer .listItem {
-    padding: .25em .25em .25em .5em !important;
-}
-
 /* Modify player buttons */
 .material-icons.fast_rewind::before {
     content: "\e059";
@@ -1232,53 +1148,100 @@ html:not(:has(#reactRoot main)) {
 /* Plugin support */
 
 /* Media Bar */
-#slides-container {
-    margin: 125px 50px 0 300px !important;
-    width: auto !important;
+/* Pre-v12 */
+html:not(:has(#reactRoot main)) {
+    & #slides-container {
+        margin-left: 250px !important;
+        width: calc(100% - 250px) !important;
+    }
+    & #slides-container .volume-toggle,
+    & #slides-container .pause-button,
+    & #slides-container .ss-settings-toggle {
+        top: 6rem !important;
+    }
+}
+
+/* Support for Jellyscrub plugin */
+.chapterThumbContainer {
+    background: none !important;
     border-radius: var(--rounded-cards) !important;
-    height: 58% !important;
+    box-shadow: unset !important;
 }
-#slides-container .backdrop-container,
-#slides-container .backdrop-overlay,
-#slides-container .backdrop,
-#slides-container .gradient-overlay {
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
+.chapterThumb {
+    border-radius: var(--rounded-cards) !important;
+    margin-bottom: 47px !important;
+    box-shadow: 0 0 1.9vh #000 !important;
 }
-#slides-container .pause-button {
-    top: 1rem !important;
+.chapterThumbTextContainer {
+    background: none !important;
 }
-#slides-container .logo-container {
-    top: 8vh !important;
+.chapterThumbText {
+    text-align: center !important;
 }
-/* Scaling */
-@media only screen and (max-height: 767px) and (orientation: landscape) {
-    .layout-desktop #slides-container {
-        height: 50% !important;
-    }
-    .layout-desktop #slides-container .logo-container {
-        top: 10% !important;
-    }
-    .layout-desktop #slides-container .info-container {
-        top: calc(50% + -4vh) !important;
-    }
-    .layout-desktop #slides-container .genre {
-        top: calc(50% + 1vh) !important;
-    }
-    .layout-desktop #slides-container .button-container {
-        top: calc(50% + 15vh) !important;
-    }
+.chapterThumbText-dim {
+    display: none !important;
 }
-/* Mobile styling */
-.layout-mobile #slides-container {
-    margin: 120px 3.3% 0 3.3% !important;
-    height: calc(51vh + 7.5em) !important;
+
+/* Support for IntroSkipper plugin */
+#skipIntro .btnSkipIntro {
+    transition: 0.2s;
+    border-radius: 100px !important;
+    backdrop-filter: blur(var(--blur)) !important;
 }
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    .layout-mobile #slides-container .logo-container {
-        top: 50% !important;
-    }
-    .layout-mobile #slides-container .button-container {
-        top: calc(50% + 23vh) !important;
-    }
+#skipIntro .btnSkipIntro:hover {
+    transition: .2s;
+    transform: scale(1.05);
+    background: var(--primary-accent-color) !important;
+}
+#skipIntro .paper-icon-button-light:hover:not(:disabled) {
+    color: #FFF !important;
+}
+.sliderContainer:has(.mdl-slider-hoverthumb) .sliderMarker {
+    opacity: 0 !important;
+    transition: 0.2s !important;
+}
+.sliderContainer:has(.mdl-slider-hoverthumb:hover) .sliderMarker,
+.sliderContainer:has(.mdl-slider-hoverthumb:focus) .sliderMarker  {
+    opacity: 1 !important;
+    transition: 0.2s !important;
+    height: 10px !important;
+    transform: translate3d(0,40%,0) !important;
+    -webkit-transform: translate3d(0,40%,0) !important;
+}
+.sliderMarker.watched {
+    background-color: #FFFFFF90 !important;
+    z-index: 10 !important;
+}
+#skipIntro .upNextContainer {
+    padding: 0px !important;
+}
+#skipIntro .emby-button {
+    background: rgba(30, 30, 30, 0.7) !important;
+}
+#skipIntro .emby-button:hover {
+    box-shadow: 0 0 8px rgba(var(--primary-accent-color), 0.6) !important;
+}
+#skipIntro .emby-button:focus {
+    background: rgba(30, 30, 30, 0.7) !important;
+    box-shadow: unset !important;
+}
+
+/* Support for InPlayerEpisodePreview plugin */
+.layout-desktop #popupFocusContainer {
+    padding: 10px !important;
+}
+.layout-desktop #popupTitleContainer {
+    margin: 0px !important;
+    padding: 10px 0px 10px 0px !important;
+}
+.layout-desktop #popupContentContainer .previewEpisodeDetails {
+    position: unset !important;
+    margin: 0px 0px 6px 10px !important;
+    font-size: 13.5px !important;
+}
+.layout-desktop #popupContentContainer .previewEpisodeTitle {
+    font-size: 16.5px !important;
+}
+.layout-desktop #popupContentContainer .listItem {
+    padding: .25em .25em .25em .5em !important;
 }

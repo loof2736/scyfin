@@ -108,6 +108,10 @@
 /* Plugin support */
 
 /* Media Bar */
-.layout-desktop #slides-container {
-    margin: 125px 50px 0 50px !important;
+/* Pre-v12 */
+html:not(:has(#reactRoot main)) {
+    &.layout-desktop #slides-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
 }
