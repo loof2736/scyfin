@@ -921,10 +921,14 @@ html:not(:has(#reactRoot main)) {
 /* Music Player */
 .layout-desktop .appfooter:has(.nowPlayingBar:not(.hide)) {
     border-radius: var(--rounded-cards);
-    margin: 15px 15px 10px 265px;
+    margin: 15px 15px 10px 15px;
     padding: 5px;
     background: var(--tertiary-background-transparent);
     backdrop-filter: blur(var(--blur));
+    transition: margin 225ms cubic-bezier(0, 0, 0.2, 1);
+}
+.layout-desktop .appfooter:has(.nowPlayingBar:not(.hide))[aria-hidden=true] {
+    margin-left: 205px;
 }
 .layout-desktop .appfooter .nowPlayingBarInfoContainer {
     margin-left: 10px !important;
