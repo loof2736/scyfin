@@ -921,10 +921,15 @@ html:not(:has(#reactRoot main)) {
 /* Music Player */
 .layout-desktop .appfooter:has(.nowPlayingBar:not(.hide)) {
     border-radius: var(--rounded-cards);
-    margin: 15px 15px 10px 265px;
+    margin: 15px 15px 10px 15px;
     padding: 5px;
     background: var(--tertiary-background-transparent);
     backdrop-filter: blur(var(--blur));
+}
+html:not(:has(#reactRoot main)) {
+    &.layout-desktop .appfooter:has(.nowPlayingBar:not(.hide)) {
+        margin-left: calc(250px + 15px);
+    }
 }
 .layout-desktop .appfooter .nowPlayingBarInfoContainer {
     margin-left: 10px !important;
@@ -950,7 +955,6 @@ html:not(:has(#reactRoot main)) {
 .layout-desktop:has(.nowPlayingBar:not(.hide)) .pageWithAbsoluteTabs .pageTabContent {
     padding-bottom: calc(env(safe-area-inset-bottom) + 8em) !important;
 }
-
 /* Fix album list alignment on artist page */
 .layout-mobile div[data-type="MusicAlbum"] .itemsContainer {
     padding-right: 0 !important;
@@ -961,6 +965,10 @@ html:not(:has(#reactRoot main)) {
 }
 .layout-mobile div[data-type="MusicAlbum"] .itemsContainer .overflowSquareCard .cardBox {
     margin-right: 0 !important;
+}
+/* Smaller border radius for playlist items */
+.layout-desktop #playlist.nowPlayingPlaylist .listItemImage {
+    border-radius: 10px !important;
 }
 
 
