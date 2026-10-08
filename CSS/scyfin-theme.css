@@ -838,10 +838,10 @@ html:not(:has(#reactRoot main)) {
 }
 
 /* Move up content if no backdrop image is present */
-.layout-desktop:not(:has(.backdropContainer .backdropImage)) .itemDetailPage:has(.detailLogo.hide) #itemBackdrop {
+.layout-desktop:not(:has(.backgroundContainer.withBackdrop)) .itemDetailPage:has(.detailLogo.hide) #itemBackdrop {
     height: 165px !important;
 }
-.layout-desktop:not(:has(.backdropContainer .backdropImage)) .itemDetailPage:has(.detailLogo.hide) .mainDetailButtons {
+.layout-desktop:not(:has(.backgroundContainer.withBackdrop)) .itemDetailPage:has(.detailLogo.hide) .mainDetailButtons {
     margin-top: 70px !important;
 }
 
