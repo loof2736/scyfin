@@ -925,6 +925,10 @@ html:not(:has(#reactRoot main)) {
     padding: 5px;
     background: var(--tertiary-background-transparent);
     backdrop-filter: blur(var(--blur));
+    transition: margin 225ms cubic-bezier(0, 0, 0.2, 1);
+}
+.layout-desktop .appfooter:has(.nowPlayingBar:not(.hide))[aria-hidden=true] {
+    margin-left: 205px;
 }
 html:not(:has(#reactRoot main)) {
     &.layout-desktop .appfooter:has(.nowPlayingBar:not(.hide)) {
