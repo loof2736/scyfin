@@ -1,0 +1,48 @@
+.backgroundContainer.withBackdrop {
+    background-color: transparent !important;
+    background-image:
+        linear-gradient(90deg,rgba(0, 0, 0, 1) 13vw, rgba(0, 0, 0, 0.8) 17vw, rgba(0, 0, 0, 0) 30vw),
+        linear-gradient(0deg,rgba(0, 0, 0, 1) 5vh, rgba(0, 0, 0, 0) 46vh);
+    mask:
+        linear-gradient(90deg,rgba(0, 0, 0, 1) 33vw, rgba(0, 0, 0, 0) 44vw),
+        linear-gradient(180deg,rgba(0, 0, 0, 0) calc(100vw * 0.29), rgba(0, 0, 0, 1) calc(100vw * 0.39));
+    backdrop-filter: blur(300px);
+}
+
+.backdropImage {
+    background-position: top right;
+    background-size: 70vw;
+    background-repeat: repeat;
+}
+
+.noBackdropTransparency .detailPagePrimaryContainer {
+    background-color: transparent !important;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.75) 100px);
+}
+
+.layout-desktop .detailSectionContent, .trackSelections, .layout-desktop .detailsGroupItem {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+#itemDetailPage .padded-bottom-page {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.nameContainer {
+    color: white;
+    text-shadow: black 0 0 4px;
+}
+
+.detailTrackSelect:enabled {
+    background-color: rgba(122, 122, 122, 0.2) !important;
+    border: 0;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+
+.listItem:hover {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.detailLogo {
+    height: 25vh !important;
+}
