@@ -582,7 +582,7 @@ html:has(#reactRoot main) {
     }
 
     /* Adjust padding of detail elements */
-    & [dir=ltr] .detailPagePrimaryContent {
+    &.layout-desktop [dir=ltr] .detailPagePrimaryContent {
         padding-left: calc(25vw + 6.6%) !important;
     }
 
@@ -598,7 +598,7 @@ html:has(#reactRoot main) {
     &.layout-desktop .detailImageContainer .card.portraitCard {
         width: 18.3vw !important;
     }
-    & [dir=ltr] .detailPagePrimaryContainer:has(.detailImageContainer .card.portraitCard) .detailPagePrimaryContent {
+    &.layout-desktop [dir=ltr] .detailPagePrimaryContainer:has(.detailImageContainer .card.portraitCard) .detailPagePrimaryContent {
         padding-left: calc(18.3vw + 6.6%) !important;
     }
     &.layout-desktop .detailPagePrimaryContainer:has(.detailImageContainer .card.portraitCard) .infoWrapper {
